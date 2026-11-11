@@ -1,0 +1,24 @@
+# Track only the runnable website; preserve local historical materials.
+/*
+!/.gitignore
+!/README.md
+!/ASSET-SOURCES.md
+!/vercel.json
+!/index.html
+!/work.html
+!/about.html
+!/wuhan-marine-machinery.html
+!/styles.css
+!/site.js
+!/scripts/
+/scripts/*
+!/scripts/build_site.py
+!/scripts/check_site.py
+!/assets/
+/assets/*
+!/assets/portfolio/
+/.vercel/
+/dist/
+**/__pycache__/
+**/.DS_Store
+**/.env*
