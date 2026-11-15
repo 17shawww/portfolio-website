@@ -4,15 +4,16 @@ Rutgers Module 10 portfolio, continuing the existing local project and its appro
 
 ## Structure
 
-- `index.html` — Home and featured work.
-- `about.html` — background, approach/skills, relevant experience, future interests and personal interests.
-- `work.html` — six established projects, with accurate previews and ongoing labels.
-- `wuhan-marine-machinery.html` — main case study.
-- `styles.css`, `site.js` — shared design and navigation.
-- `assets/portfolio/` — selected website assets; provenance in `ASSET-SOURCES.md`.
-- `scripts/build_site.py` — builds the website into `dist/`.
-- `scripts/check_site.py` — validates pages, references, anchors and image alternative text.
-- `vercel.json` — Vercel static-site settings.
+- `index.html` — Home, with a Selected Work / Coming soon placeholder.
+- `about.html` — completed background, approach/skills, experience, goals and interests; no case-study links.
+- `work.html` — placeholder only.
+- `wuhan-marine-machinery.html`, `archive/module10-project-pages/` and project images in `assets/portfolio/` — preserved private source material, excluded from deployment.
+- `styles.css`, `site.js` — shared design and navigation, unchanged.
+- `scripts/build_site.py` — creates a clean `dist/` from a strict allowlist: three pages, styles/script, YP logo only.
+- `scripts/check_site.py` — validates references and the deployment allowlist.
+- `vercel.json` — existing Vercel static-site settings, unchanged.
+
+This is a temporary Module 10 presentation decision. Build into `dist/`; never publish the repository root. Old project paths on the current production domain must return 404.
 
 ## Build and preview
 

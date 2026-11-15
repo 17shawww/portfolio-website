@@ -22,3 +22,6 @@
 **/__pycache__/
 **/.DS_Store
 **/.env*
+
+# Preserve project presentations privately; never included in the static build.
+!/archive/

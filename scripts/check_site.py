@@ -27,6 +27,13 @@ for name,page in pages.items():
         if url.fragment and target in pages and unquote(url.fragment) not in pages[target].ids:
             errors.append(f'{name}: missing fragment {ref}')
         checked+=1
+expected={'index.html','about.html','work.html','styles.css','site.js','assets/portfolio/yp-monogram.png'}
+actual={p.relative_to(ROOT).as_posix() for p in ROOT.rglob('*') if p.is_file()}
+if actual!=expected:errors.append(f'Deployment allowlist mismatch: extra={sorted(actual-expected)}, missing={sorted(expected-actual)}')
+for name in ['index.html','work.html']:
+    text=(ROOT/name).read_text()
+    if any(term in text for term in ['Wuhan','LexFlow','CAPSO','MindAware','Chakra','wuhan-marine-machinery.html']):errors.append(f'{name}: project content in placeholder')
+if 'wuhan-marine-machinery.html' in (ROOT/'about.html').read_text():errors.append('About: case-study link should not be published')
 result={'pages':len(pages),'local_references_checked':checked,'errors':errors}
 print(json.dumps(result,ensure_ascii=False,indent=2))
 if errors:raise SystemExit(1)
