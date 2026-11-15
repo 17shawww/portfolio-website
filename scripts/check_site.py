@@ -10,7 +10,7 @@ class Page(HTMLParser):
         a=dict(attrs)
         if 'id' in a:self.ids.append(a['id'])
         if tag=='h1':self.h1+=1
-        if tag=='img' and not a.get('alt'):self.image_alt_errors.append(a.get('src'))
+        if tag=='img' and not a.get('alt') and not ('alt' in a and a.get('aria-hidden')=='true'):self.image_alt_errors.append(a.get('src'))
         for key in ['href','src']:
             if a.get(key):self.refs.append(a[key])
 pages={p.name:Page(p.read_text()) for p in ROOT.glob('*.html')}

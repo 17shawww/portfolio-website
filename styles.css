@@ -12,3 +12,24 @@
 
 /* Refinement: accessible controls and concept-image attribution. */
 .menu-toggle{min-height:44px}.visual-note{position:absolute;left:12px;bottom:10px;padding:3px 7px;background:var(--paper);color:var(--ink);font-size:10px;line-height:1.4}.text-link{display:inline-block;min-height:28px}#capso .secondary-preview img{object-fit:contain}
+
+/* Module 10 polish: existing monogram, compact placeholder and reading rhythm. */
+.hero-heading{display:flex;align-items:center;justify-content:space-between;gap:40px;margin-bottom:32px}
+.hero-heading h1{margin:0}
+.hero-signature{width:240px;height:160px;object-fit:contain;mix-blend-mode:multiply;flex-shrink:0}
+.hero-intro>.text-link{margin-top:10px;color:var(--green)}
+.work-teaser{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:28px 0 32px}
+.work-teaser .section-head{margin:0}
+.work-teaser .intro{margin:0;color:var(--muted);font-size:15px}
+.about-page .page-title{padding-bottom:48px}
+.about-page .split-section{gap:84px;padding-block:40px}
+.about-page .split-section .eyebrow{margin-bottom:14px}
+.about-page .body-copy{max-width:62ch;line-height:1.65}
+.about-page .skill-grid{gap:28px 32px}
+.about-page .skill-group h3{color:var(--green)}
+.about-page .experience li{padding-block:22px}
+.about-page .experience li:first-child{padding-top:0}
+.about-page .experience h3{margin-bottom:9px}
+.footer a:focus-visible{outline-color:var(--lime)}
+@media(max-width:1000px){.hero-signature{display:none}.about-page .split-section{gap:45px}}
+@media(max-width:680px){.hero-heading{margin-bottom:26px}.work-teaser{padding:24px 0 28px;gap:16px}.work-teaser .section-head h2{font-size:22px}.work-teaser .intro{font-size:14px;white-space:nowrap}.about-page .page-title{padding-bottom:34px}.about-page .split-section{gap:20px;padding-block:30px}.about-page .skill-grid{gap:26px 20px}}
