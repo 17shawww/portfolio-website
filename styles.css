@@ -33,3 +33,103 @@
 .footer a:focus-visible{outline-color:var(--lime)}
 @media(max-width:1000px){.hero-signature{display:none}.about-page .split-section{gap:45px}}
 @media(max-width:680px){.hero-heading{margin-bottom:26px}.work-teaser{padding:24px 0 28px;gap:16px}.work-teaser .section-head h2{font-size:22px}.work-teaser .intro{font-size:14px;white-space:nowrap}.about-page .page-title{padding-bottom:34px}.about-page .split-section{gap:20px;padding-block:30px}.about-page .skill-grid{gap:26px 20px}}
+
+/* Living Type: motion never owns the text, focus, or navigation. */
+.type-word { position: relative; display: inline-block; white-space: nowrap; }
+.type-glyph { display: inline-block; transform-origin: 50% 75%; }
+.type-replay {
+  margin-inline-start: 16px;
+  padding: 4px 0;
+  border: 0;
+  background: none;
+  color: var(--green);
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+.ink-signature {
+  position: relative;
+  flex: 0 0 240px;
+  width: 240px;
+  height: 160px;
+  padding: 0;
+  border: 0;
+  background: none;
+  mix-blend-mode: multiply;
+  cursor: pointer;
+}
+.ink-signature .hero-signature { mix-blend-mode: normal; }
+.ink-piece { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; pointer-events: none; mix-blend-mode: multiply; }
+.magnetic-label { display: inline-block; }
+
+.chapter-meter {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 0;
+  background: var(--paper);
+  color: var(--green);
+  font-size: 11px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.chapter-meter-line { position: relative; flex: 1; height: 2px; background: var(--line); }
+.chapter-meter-line::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--green);
+  transform: scaleX(var(--chapter-progress, 0));
+  transform-origin: left;
+}
+.about-page .chapter-current > div:first-child > .eyebrow { color: var(--ink); }
+.about-page .split-section { scroll-margin-top: 50px; }
+
+@media (min-width: 901px) and (min-height: 560px) {
+  .about-page .split-section > div:first-child {
+    position: sticky;
+    top: 72px;
+    align-self: start;
+  }
+}
+@media (max-width: 1000px) {
+  .hero-heading .ink-signature { display: none; }
+}
+@media (max-width: 680px) {
+  .chapter-meter { gap: 12px; letter-spacing: .05em; font-size: 10px; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+  ::view-transition-old(root) { animation-duration: 120ms; }
+  ::view-transition-new(root) { animation-duration: 180ms; }
+  .type-glyph { transition: transform 280ms cubic-bezier(.19,1.4,.38,1); }
+  .magnetic-label { transition: transform 260ms cubic-bezier(.2,1.25,.4,1); }
+  .chapter-meter-line::after { transition: transform 100ms linear; }
+  .nav a, .about-preview .button { transition: color 160ms, background-color 160ms; }
+  .nav a {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: left bottom;
+    background-size: 0 1px;
+    background-repeat: no-repeat;
+    transition: background-size 190ms ease, color 160ms ease;
+  }
+  .nav a:is(:hover, :focus-visible) { background-size: 100% 1px; }
+  .text-link, .footer a {
+    transition: text-decoration-thickness 180ms ease, text-underline-offset 180ms ease;
+  }
+  .text-link:is(:hover, :focus-visible), .footer a:is(:hover, :focus-visible) {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 7px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .type-replay { display: none; }
+  .ink-signature { pointer-events: none; }
+  .chapter-meter-line::after { transition: none; }
+}
