@@ -34,102 +34,57 @@
 @media(max-width:1000px){.hero-signature{display:none}.about-page .split-section{gap:45px}}
 @media(max-width:680px){.hero-heading{margin-bottom:26px}.work-teaser{padding:24px 0 28px;gap:16px}.work-teaser .section-head h2{font-size:22px}.work-teaser .intro{font-size:14px;white-space:nowrap}.about-page .page-title{padding-bottom:34px}.about-page .split-section{gap:20px;padding-block:30px}.about-page .skill-grid{gap:26px 20px}}
 
-/* Living Type: motion never owns the text, focus, or navigation. */
-.type-word { position: relative; display: inline-block; white-space: nowrap; }
-.type-glyph { display: inline-block; transform-origin: 50% 75%; }
-.type-replay {
-  margin-inline-start: 16px;
-  padding: 4px 0;
-  border: 0;
-  background: none;
-  color: var(--green);
-  font-size: 12px;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  cursor: pointer;
-}
-.ink-signature {
-  position: relative;
-  flex: 0 0 240px;
-  width: 240px;
-  height: 160px;
-  padding: 0;
-  border: 0;
-  background: none;
-  mix-blend-mode: multiply;
-  cursor: pointer;
-}
-.ink-signature .hero-signature { mix-blend-mode: normal; }
-.ink-piece { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; pointer-events: none; mix-blend-mode: multiply; }
-.magnetic-label { display: inline-block; }
 
-.chapter-meter {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 12px 0;
-  background: var(--paper);
-  color: var(--green);
-  font-size: 11px;
-  letter-spacing: .09em;
-  text-transform: uppercase;
-  font-weight: 700;
+/* Integrated local typography and chapter navigation. */
+@media (hover:hover) and (prefers-reduced-motion:no-preference) {
+  #home-title { transition:color 220ms ease; }
+  #home-title:hover { color:var(--green); }
 }
-.chapter-meter-line { position: relative; flex: 1; height: 2px; background: var(--line); }
-.chapter-meter-line::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--green);
-  transform: scaleX(var(--chapter-progress, 0));
-  transform-origin: left;
+html:has(.about-page) { scroll-padding-top:var(--chapter-offset, 86px); }
+.chapter-nav {
+  position:sticky;
+  top:0;
+  z-index:3;
+  background:var(--paper);
+  border-bottom:1px solid var(--line);
+  padding-top:6px;
+  margin-bottom:24px;
 }
-.about-page .chapter-current > div:first-child > .eyebrow { color: var(--ink); }
-.about-page .split-section { scroll-margin-top: 50px; }
-
-@media (min-width: 901px) and (min-height: 560px) {
-  .about-page .split-section > div:first-child {
-    position: sticky;
-    top: 72px;
-    align-self: start;
+.chapter-links { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:3px; }
+.chapter-links a {
+  display:flex; align-items:center; gap:8px;
+  padding:10px 9px; min-height:44px;
+  color:var(--muted); text-decoration:none; font-size:13px; line-height:1.3;
+  -webkit-tap-highlight-color:transparent;
+}
+.chapter-links a[aria-current=location] { color:var(--green); background:var(--sage); }
+.chapter-links a:hover { color:var(--green); }
+.chapter-links a:focus-visible { outline-offset:-3px; }
+.chapter-number { font-size:11px; color:var(--green); font-weight:700; }
+.chapter-track { height:2px; background:var(--line); margin-top:5px; }
+.chapter-track span {
+  display:block; height:100%;
+  transform:scaleX(var(--progress,0)); transform-origin:left;
+  background:var(--green);
+}
+.about-page :is(.split-section,.interests) { scroll-margin-top:0; }
+.about-page :is(.split-section,.interests):focus { outline:none; }
+.about-page :is(.split-section,.interests):focus-visible { outline:1px solid var(--green); outline-offset:3px; }
+.about-page :is(.split-section,.interests) h2 { transition:color 180ms ease; }
+.about-page .chapter-active h2 { color:var(--green); }
+@media(min-width:901px) and (min-height:560px) {
+  .about-page .split-section>div:first-child {
+    position:sticky;
+    top:calc(var(--chapter-offset,86px) + 12px);
+    align-self:start;
   }
 }
-@media (max-width: 1000px) {
-  .hero-heading .ink-signature { display: none; }
+@media(max-width:760px) {
+  .chapter-nav { padding-top:0; margin-bottom:18px; }
+  .chapter-links a { justify-content:center; padding:8px; }
+  .chapter-name { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
+  .chapter-track { margin-top:0; }
 }
-@media (max-width: 680px) {
-  .chapter-meter { gap: 12px; letter-spacing: .05em; font-size: 10px; }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  @view-transition { navigation: auto; }
-  ::view-transition-old(root) { animation-duration: 120ms; }
-  ::view-transition-new(root) { animation-duration: 180ms; }
-  .type-glyph { transition: transform 280ms cubic-bezier(.19,1.4,.38,1); }
-  .magnetic-label { transition: transform 260ms cubic-bezier(.2,1.25,.4,1); }
-  .chapter-meter-line::after { transition: transform 100ms linear; }
-  .nav a, .about-preview .button { transition: color 160ms, background-color 160ms; }
-  .nav a {
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: left bottom;
-    background-size: 0 1px;
-    background-repeat: no-repeat;
-    transition: background-size 190ms ease, color 160ms ease;
-  }
-  .nav a:is(:hover, :focus-visible) { background-size: 100% 1px; }
-  .text-link, .footer a {
-    transition: text-decoration-thickness 180ms ease, text-underline-offset 180ms ease;
-  }
-  .text-link:is(:hover, :focus-visible), .footer a:is(:hover, :focus-visible) {
-    text-decoration-thickness: 2px;
-    text-underline-offset: 7px;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .type-replay { display: none; }
-  .ink-signature { pointer-events: none; }
-  .chapter-meter-line::after { transition: none; }
+@media(prefers-reduced-motion:reduce) {
+  .about-page :is(.split-section,.interests) h2 { transition:none; }
 }
