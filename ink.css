@@ -1,0 +1,28 @@
+:root { font-family:Arial,Helvetica,sans-serif; color:#17201b; background:#faf9f6; }
+* { box-sizing:border-box; }
+body { margin:0; }
+.studio { width:min(1120px,calc(100% - 80px)); margin:0 auto; padding:48px 0 27px; }
+.eyebrow { color:#315a39; font-weight:700; text-transform:uppercase; letter-spacing:.13em; font-size:11px; }
+h1 { font-size:clamp(54px,7.3vw,101px); font-weight:500; letter-spacing:-.065em; line-height:1; margin:11px 0; }
+header > p:last-child,#ink-help { color:#59625b; line-height:1.5; }
+.ink-controls { display:flex; justify-content:space-between; gap:12px; margin:27px 0 10px; }
+.ink-controls > div { display:flex; gap:7px; }
+button { border:1px solid #d9ddd5; background:transparent; color:#315a39; padding:10px 13px; min-height:44px; font:inherit; font-size:13px; cursor:pointer; }
+button[aria-pressed=true] { background:#e8ede2; border-color:#315a39; font-weight:700; }
+button:focus-visible,canvas:focus-visible { outline:2px solid #315a39; outline-offset:3px; }
+.paper { position:relative; background:#f2f1e8; border:1px solid #dbddd2; }
+canvas { display:block; width:100%; height:clamp(330px,57vh,550px); touch-action:none; cursor:crosshair; }
+.ink-reticle { display:none; position:absolute; width:13px; height:13px; border:1px solid #315a39; border-radius:50%; transform:translate(-50%,-50%); pointer-events:none; }
+.paper:has(canvas:focus-visible) .ink-reticle { display:block; }
+#ink-help { font-size:13px; margin:13px 0 0; }
+@media(max-width:640px) { .studio { width:calc(100% - 36px); padding-top:27px; } canvas { height:55vh; min-height:320px; } }
+
+button { -webkit-tap-highlight-color:transparent; }
+
+/* One compact size control; color and clearing remain the only other tools. */
+.ink-controls { align-items:center; flex-wrap:wrap; }
+.brush-size { display:flex; align-items:center; gap:10px; font-size:13px; color:#315a39; margin-left:auto; margin-right:12px; }
+.brush-size input { width:130px; min-height:44px; accent-color:#315a39; cursor:pointer; }
+.brush-size output { width:2ch; font-variant-numeric:tabular-nums; }
+.brush-size input:focus-visible { outline:2px solid #315a39; outline-offset:3px; }
+@media(max-width:560px) { .brush-size { order:3; width:100%; margin:0; } .brush-size input { flex:1; } #clear { margin-left:auto; } }
