@@ -1,12 +1,12 @@
-"""Publish portfolio pages, branding, and Digital Ink from an explicit allowlist."""
+"""Publish portfolio pages and branding from an explicit allowlist."""
 from pathlib import Path
 import hashlib
 import shutil
 
 root = Path(__file__).resolve().parents[1]
 out = root / "dist"
-pages = ["index.html", "about.html", "work.html", "ink.html"]
-assets = ["styles.css", "site.js", "assets/portfolio/yp-monogram.png", "ink.css", "ink.js"]
+pages = ["index.html", "about.html", "work.html"]
+assets = ["styles.css", "site.js", "assets/portfolio/yp-monogram.png"]
 for name in pages + assets:
     if not (root / name).is_file():
         raise FileNotFoundError(name)

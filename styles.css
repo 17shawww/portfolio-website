@@ -88,3 +88,14 @@ html:has(.about-page) { scroll-padding-top:var(--chapter-offset, 86px); }
 @media(prefers-reduced-motion:reduce) {
   .about-page :is(.split-section,.interests) h2 { transition:none; }
 }
+
+/* Decorative mouse ink is isolated from document flow and all pointer input. */
+.cursor-ink {
+  position: fixed;
+  inset: 0 auto auto 0;
+  width: 64px;
+  height: 64px;
+  pointer-events: none;
+  z-index: 1000;
+}
+.cursor-ink[hidden] { display: none; }
