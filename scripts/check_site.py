@@ -42,6 +42,8 @@ case_images={'workbench.png','messages.png','statistics.png','management.png','a
 expected.update('assets/wmmp/'+name for name in case_images)
 expected.update({'zh/'+name for name in ['index.html','work.html','about.html','wuhan-marine-machinery.html']})
 expected.update({'localization.css','i18n.js','i18n-data.js','coming-soon.js'})
+expected.update({'ink-character.css','ink-character.js'})
+expected.update('assets/portfolio/ink/'+pose+'.webp' for pose in ('idle','look','walk','jump','sit','climb','surprise','sleep'))
 actual={p.relative_to(ROOT).as_posix() for p in ROOT.rglob('*') if p.is_file()}
 if actual!=expected:errors.append(f'Deployment allowlist mismatch: extra={sorted(actual-expected)}, missing={sorted(expected-actual)}')
 for name in ['index.html','work.html','about.html']:

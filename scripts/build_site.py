@@ -15,12 +15,14 @@ case_images = ["workbench.png", "messages.png", "statistics.png", "management.pn
                "message-list.png", "message-detail.png", "validation-error.png", "discard-confirm.png", "process-record.png", "hazard-form.png", "notification-settings.png", "statistics-detail.png", "exploration-02.png", "exploration-03.png", "exploration-05.png", "exploration-06.png", "component-status-badge.png", "component-button.png", "component-text-field.png", "component-toggle.png", "prototype-workbench-2026-08-11.png"]
 assets = ["robots.txt", "sitemap.xml", "styles.css", "site.js", "wmmp-case.css", "wmmp-case.js", "assets/portfolio/yp-monogram.png", "signature-motion.css", "signature-motion.js", "project-transitions.css", "project-transitions.js", "immersive-case.css", "immersive-case.js"]
 assets += ["localization.css", "i18n.js", "coming-soon.js"]
+assets += ["ink-character.css", "ink-character.js"]
+assets += ["assets/portfolio/ink/" + pose + ".webp" for pose in ("idle", "look", "walk", "jump", "sit", "climb", "surprise", "sleep")]
 assets += ["assets/wmmp/" + name for name in case_images]
 for name in pages + assets:
     if not (root / name).is_file():
         raise FileNotFoundError(name)
 versions = {name: hashlib.sha256((root / name).read_bytes()).hexdigest()[:12]
-            for name in ["styles.css", "site.js", "wmmp-case.css", "wmmp-case.js", "signature-motion.css", "signature-motion.js", "project-transitions.css", "project-transitions.js", "immersive-case.css", "immersive-case.js", "localization.css", "i18n.js", "coming-soon.js"]}
+            for name in ["styles.css", "site.js", "wmmp-case.css", "wmmp-case.js", "signature-motion.css", "signature-motion.js", "project-transitions.css", "project-transitions.js", "immersive-case.css", "immersive-case.js", "localization.css", "i18n.js", "coming-soon.js", "ink-character.css", "ink-character.js"]}
 # Rebuild generated output so an older case study/image cannot survive locally
 # or in a restored build cache. Source files outside dist are never removed.
 if out.is_symlink():

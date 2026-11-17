@@ -57,3 +57,13 @@
 !/scripts/localize_site.py
 !/scripts/check_localization.py
 !/docs/BILINGUAL-PORTFOLIO-PHASE10.md
+
+# Phase 11: review-only SVG character prototype; never part of the production build.
+!/prototypes/
+/prototypes/*
+!/prototypes/ink-character/
+/prototypes/ink-character/dist/
+/prototypes/ink-character/art-direction/dist/
+/prototypes/ink-character/painted/dist/
+!/ink-character.css
+!/ink-character.js

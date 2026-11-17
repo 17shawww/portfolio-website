@@ -289,11 +289,6 @@
     "zh": "还在探索、尝试，也在梳理故事。这里尚未发布新的案例。",
     "keep": false
   },
-  "136630cb73ac": {
-    "en": "Back to preview ↶",
-    "zh": "返回预览 ↶",
-    "keep": false
-  },
   "dec7a0dcb919": {
     "en": "About Yixiao Peng: industrial design background, Rutgers UX Design studies, research, interface design and prototyping.",
     "zh": "关于 Yixiao Peng：工业设计背景、罗格斯大学用户体验设计学习，以及调研、界面设计与原型实践。",
@@ -3213,5 +3208,10 @@
     "en": "1277113023@qq.com ↗",
     "zh": "1277113023@qq.com ↗",
     "keep": true
+  },
+  "3cb214560ec2": {
+    "en": "Make the ink character jump",
+    "zh": "让墨笔角色跳一下",
+    "keep": false
   }
 }

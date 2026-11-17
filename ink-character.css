@@ -1,0 +1,175 @@
+/* Complete paintings move inside reserved editorial space. */
+.ink-actor {
+  --ink-size: 90px;
+  position: relative;
+  display: block;
+  width: var(--ink-size);
+  height: var(--ink-size);
+  flex: 0 0 var(--ink-size);
+  pointer-events: none;
+  user-select: none;
+  isolation: isolate;
+}
+.ink-plate {
+  position: absolute;
+  inset: 0;
+  transform: translate(var(--ink-lean, 0px), var(--ink-rise, 0px)) rotate(var(--ink-tilt, 0deg));
+  transform-origin: 50% 88%;
+  transition: transform var(--motion-standard, 220ms) var(--motion-ease, ease);
+}
+.ink-plate img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.ink-home-line {
+  display: flex;
+  align-items: center;
+  gap: clamp(24px, 5.2vw, 74px);
+}
+.ink-home-button {
+  min-width: 48px;
+  min-height: 48px;
+  padding: 0 8px 6px;
+  position: relative;
+  background: none;
+  border: 0;
+}
+.ink-home-button:not(:disabled) { cursor: pointer; }
+.ink-home-button:focus-visible { outline-offset: 4px; }
+.ink-home { --ink-size: clamp(68px, 7.4vw, 108px); }
+.ink-home .ink-plate { transition-duration: 250ms; }
+.ink-home[data-pose="jump"] .ink-plate { --ink-rise: -11px; --ink-tilt: -2deg; }
+.ink-home-button::before,
+.ink-home-button::after,
+.ink-coming::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  inset: auto 16% 2px 16%;
+  height: 4px;
+  background: #315a397a;
+  clip-path: polygon(0 68%, 21% 36%, 63% 18%, 99% 25%, 88% 42%, 100% 54%, 65% 55%, 27% 78%);
+}
+.ink-home-button::before { opacity: .55; }
+.ink-home-button::after,
+.ink-coming::after {
+  opacity: 0;
+  transform: scaleX(.7);
+  transition: opacity var(--motion-standard, 220ms) ease, transform var(--motion-standard, 220ms) ease;
+}
+.ink-home-button:has([data-pose="jump"])::after { opacity: .76; transform: scaleX(1.12); }
+
+.ink-work-line {
+  display: flex;
+  gap: 16px;
+  align-items: end;
+  flex-wrap: wrap;
+}
+.ink-work { --ink-size: 54px; }
+.ink-work .ink-plate img { transform: scaleX(-1); }
+.ink-work[data-pose="walk"] .ink-plate { --ink-lean: -6px; }
+
+/* The scene lands on a short seam extended inward from the card's right edge. */
+.coming-exhibit .ink-coming {
+  --ink-size: clamp(57px, 7vw, 96px);
+  --ink-card-gutter: 14px;
+  position: absolute;
+  inset: 16px var(--ink-card-gutter) auto auto;
+  z-index: 2;
+}
+.ink-coming::before {
+  content: "";
+  position: absolute;
+  inset: auto calc(-1 * var(--ink-card-gutter)) -3px 1%;
+  height: 5px;
+  background: #315a395e;
+  clip-path: polygon(0 72%, 14% 47%, 47% 35%, 77% 22%, 100% 20%, 100% 59%, 73% 60%, 35% 65%, 12% 78%);
+}
+.ink-coming img[src$="/sleep.webp"] { height: 75%; top: auto; }
+.ink-coming img[src$="/sit.webp"] { height: 84%; top: auto; }
+.ink-coming[data-pose="surprise"] .ink-plate { --ink-rise: -4px; --ink-tilt: 1.5deg; }
+.ink-coming::after {
+  inset: auto 4% -5px 13%;
+  height: 7px;
+  background: #315a3988;
+  clip-path: polygon(0 70%, 11% 53%, 35% 40%, 66% 32%, 96% 30%, 72% 47%, 87% 55%, 48% 58%, 26% 75%);
+}
+.ink-coming[data-pose="surprise"]::after { animation: ink-card-accent 340ms var(--motion-ease, ease) both; }
+@keyframes ink-card-accent {
+  0% { opacity: 0; transform: scaleX(.62); }
+  24% { opacity: .75; }
+  100% { opacity: 0; transform: scaleX(1.12); }
+}
+.coming-exhibit .coming-trigger {
+  inset: auto auto 26px 28px;
+  padding: 0;
+  min-height: 44px;
+  align-items: center;
+  z-index: 3;
+}
+.coming-exhibit .coming-trigger > span:last-child { display: none; }
+.coming-exhibit .coming-trigger:focus-visible { outline-offset: 3px; }
+.coming-exhibit .coming-message { padding-inline-end: calc(clamp(57px, 7vw, 96px) + 40px); }
+.coming-exhibit .coming-art > span { max-inline-size: calc(100% - 27px); }
+
+/* The route and the climber share the same SVG coordinate space. */
+.ink-interest-side {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(104px, 36%);
+  gap: 14px;
+  align-items: start;
+  min-width: 0;
+}
+.ink-climb-rail {
+  position: relative;
+  min-height: 252px;
+  isolation: isolate;
+  pointer-events: none;
+}
+.ink-climb-brush, .ink-climb-anchor {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.ink-climb-brush { display: block; color: var(--green, #315a39); }
+.ink-climb-guide { opacity: .21; }
+.ink-climb-trace { opacity: .64; }
+.ink-climb-anchor { transform: translate(var(--climb-x, 21.33%), var(--climb-y, 95%)); }
+.ink-about {
+  --ink-size: clamp(98px, 9.3vw, 137px);
+  position: absolute;
+  inset: 0 auto auto 0;
+  transform: translate(-43%, -100%);
+}
+.ink-about .ink-plate { transition: none; }
+.ink-about img[src$="/sit.webp"] { height: 67%; top: auto; }
+@media (max-width: 1000px) {
+  .ink-interest-side { column-gap: 8px; }
+  .ink-climb-rail { min-height: 211px; }
+  .ink-about { --ink-size: clamp(83px, 10.8vw, 108px); }
+}
+@media (max-width: 680px) {
+  .ink-home-line { justify-content: space-between; max-width: 370px; padding-inline-end: 13px; }
+  .ink-home { --ink-size: 67px; }
+  .ink-work { --ink-size: 48px; }
+  .ink-work-line { gap: 12px; }
+  .coming-exhibit .ink-coming { --ink-size: 57px; --ink-card-gutter: 12px; inset-block-start: 12px; }
+  .coming-exhibit .coming-trigger { inset: auto auto 19px 18px; }
+  .coming-exhibit .coming-message { padding-inline-end: 84px; }
+  .ink-interest-side { grid-template-columns: minmax(0, 1fr) minmax(88px, 42%); }
+  .ink-climb-rail { min-height: 174px; }
+  .ink-about { --ink-size: 79px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ink-plate, .ink-home-button::after, .ink-coming::after { transition: none; }
+  .ink-plate { transform: none; }
+  .ink-coming[data-pose="surprise"]::after { animation: none; }
+}
