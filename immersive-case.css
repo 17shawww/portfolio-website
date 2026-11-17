@@ -1,0 +1,125 @@
+/* The flat gallery remains the layout at rest and on touch/reduced motion. */
+.p5-gallery-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 22px;
+}
+
+#exploration:has(.p2-direction-stage[hidden]) .p5-choose-direction {
+  display: none;
+}
+
+.p5-gallery-links .button {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+[data-immersive-gallery] {
+  scroll-margin-top: 78px;
+}
+
+#direction-chooser,
+#direction-comparison {
+  scroll-margin-top: 78px;
+}
+
+@supports (animation-timeline: view()) and (animation-range: entry 0% entry 85%) {
+  @media (min-width: 1000px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .js [data-immersive-gallery] > figure {
+      view-timeline: --workbench-entry block;
+    }
+
+    /* Each column arrives at a different depth. Captions, links and the
+       surrounding sections keep their original rectangular positions. */
+    .js [data-immersive-gallery]:not(:focus-within) > figure > .wm-zoom > img {
+      animation: p5-exhibition-settle linear both;
+      animation-timeline: --workbench-entry;
+      animation-range: entry 0% entry 96%;
+      pointer-events: none;
+    }
+
+    [data-immersive-gallery] > figure:nth-child(1) { --entry-x: 90px; --entry-y: 40px; --entry-z: -125px; --entry-ry: 47deg; --entry-rz: -9deg; }
+    [data-immersive-gallery] > figure:nth-child(2) { --entry-x: 0px; --entry-y: 72px; --entry-z: 65px; --entry-ry: -12deg; --entry-rz: 5deg; }
+    [data-immersive-gallery] > figure:nth-child(3) { --entry-x: -90px; --entry-y: 22px; --entry-z: -95px; --entry-ry: -49deg; --entry-rz: 11deg; }
+    [data-immersive-gallery] > figure:nth-child(4) { --entry-x: 62px; --entry-y: 56px; --entry-z: -90px; --entry-ry: 36deg; --entry-rz: -7deg; }
+    [data-immersive-gallery] > figure:nth-child(5) { --entry-x: -8px; --entry-y: 105px; --entry-z: -140px; --entry-ry: 15deg; --entry-rz: 5deg; }
+    [data-immersive-gallery] > figure:nth-child(6) { --entry-x: -66px; --entry-y: 50px; --entry-z: -70px; --entry-ry: -40deg; --entry-rz: 8deg; }
+
+    @keyframes p5-exhibition-settle {
+      from {
+        transform: perspective(710px)
+          translate3d(var(--entry-x), var(--entry-y), var(--entry-z))
+          rotateX(-27deg) rotateY(var(--entry-ry)) rotateZ(var(--entry-rz)) scale(.82);
+        animation-timing-function: cubic-bezier(.38,.05,.55,.94);
+      }
+      53% {
+        transform: perspective(710px)
+          translate3d(calc(var(--entry-x) * .39), 13px, calc(57px + var(--entry-z) * .31))
+          rotateX(-9deg) rotateY(calc(var(--entry-ry) * .46))
+          rotateZ(calc(var(--entry-rz) * .46)) scale(.97);
+        animation-timing-function: var(--motion-ease);
+      }
+      to { transform: none; }
+    }
+  }
+}
+
+/* Separate cover artwork. Phones and screenshots never receive a filter. */
+.p5-ink-cover {
+  isolation: isolate;
+}
+
+.v-opening-screens.p5-ink-cover {
+  position: relative;
+}
+
+.p5-ripple-boundary {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: clip;
+  pointer-events: none;
+}
+
+.p5-cover-ripple {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 284px;
+  height: 210px;
+  pointer-events: none;
+}
+
+.p5-cover-ripple[hidden],
+:root[data-project-transition] .p5-ripple-boundary {
+  display: none;
+}
+
+.p5-ripple-pigment {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse at 42% 47%, #38594396, transparent 68%),
+    radial-gradient(ellipse at 63% 28%, #c8d4ba85, transparent 55%),
+    repeating-radial-gradient(ellipse at 45% 58%,
+      #315440a6 0 1px, #64867278 2px 4px, #f3f1e475 5px 8px, transparent 9px 21px);
+  mask-image: radial-gradient(ellipse, #000 19%, #000b 43%, transparent 72%);
+}
+
+
+.p5-magnetic-label {
+  display: inline-block;
+  pointer-events: none;
+  transform: translate(var(--magnetic-x, 0px), var(--magnetic-y, 0px));
+}
+
+[data-immersive-magnet]:focus-visible .p5-magnetic-label {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .p5-cover-ripple { display: none; }
+  .p5-magnetic-label { transform: none; }
+}

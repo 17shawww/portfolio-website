@@ -25,3 +25,26 @@
 
 # Preserve project presentations privately; never included in the static build.
 !/archive/
+
+# Wuhan case study: scoped styles, enhancement and verified source exports.
+!/wmmp-case.css
+!/wmmp-case.js
+!/assets/wmmp/
+
+# Phase 4 motion modules and their source review.
+!/signature-motion.css
+!/signature-motion.js
+!/project-transitions.css
+!/project-transitions.js
+!/docs/
+/docs/*
+!/docs/SIGNATURE-MOTION-RESEARCH-2026-11-16.md
+
+# Phase 5 case study interactions and source review.
+!/immersive-case.css
+!/immersive-case.js
+!/docs/IMMERSIVE-CASE-RESEARCH-2026-11-16.md
+
+# Public production discovery files; historical sitemap sources remain unchanged.
+!/robots.txt
+!/sitemap.xml

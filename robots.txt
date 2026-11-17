@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yixiao-peng-portfolio.vercel.app/sitemap.xml

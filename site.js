@@ -5,19 +5,100 @@ function closeMenu(){nav.classList.remove('is-open');menuButton.setAttribute('ar
 menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')!=='true';nav.classList.toggle('is-open',open);menuButton.setAttribute('aria-expanded',String(open));menuButton.textContent=open?'Close':'Menu';});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menuButton.getAttribute('aria-expanded')==='true'){closeMenu();menuButton.focus();}});
 nav.addEventListener('click',e=>{if(e.target.closest('a'))closeMenu();});
+// A breakpoint change must not leave focus in newly hidden navigation.
+const mobileNavigation = matchMedia('(max-width: 680px)');
+mobileNavigation.addEventListener('change', ({ matches }) => {
+  const focusedLink = nav.contains(document.activeElement);
+  const focusedToggle = document.activeElement === menuButton;
+  closeMenu();
+  if (matches && focusedLink) menuButton.focus({ preventScroll: true });
+  else if (!matches && focusedToggle) nav.querySelector('[aria-current="page"]')?.focus({ preventScroll: true });
+});
 
 
-// One short entrance, with a readable heading before and after enhancement.
+
+// Shared Phase 1 motion policy. Cursor ink has its own approved, unchanged guard.
+const portfolioMotion = (() => {
+  const preference = matchMedia('(prefers-reduced-motion: reduce)');
+  const tokens = getComputedStyle(document.documentElement);
+  const animations = new Map();
+  const subscribers = new Set();
+  const entrances = new WeakSet();
+  const navigation = performance.getEntriesByType('navigation')[0];
+  const skipEntrance = Boolean(location.hash) || navigation?.type === 'back_forward' || document.documentElement.hasAttribute('data-project-transition');
+  const duration = Number.parseFloat(tokens.getPropertyValue('--motion-enter')) || 340;
+  const easing = tokens.getPropertyValue('--motion-ease').trim() || 'cubic-bezier(.2,.65,.3,1)';
+  const distance = Number.parseFloat(tokens.getPropertyValue('--motion-distance')) || 8;
+
+  function cancelAll() {
+    animations.forEach(animation => animation.cancel());
+    animations.clear();
+  }
+  function cancelFocused(event) {
+    animations.forEach((animation, element) => {
+      if (!element.contains(event.target)) return;
+      animation.cancel();
+      animations.delete(element);
+    });
+  }
+  function play(element, keyframes, options = {}) {
+    if (preference.matches || document.hidden || !element.animate || element.contains(document.activeElement)) return;
+    animations.get(element)?.cancel();
+    const animation = element.animate(keyframes, { duration, easing, ...options });
+    animations.set(element, animation);
+    const release = () => {
+      if (animations.get(element) === animation) animations.delete(element);
+    };
+    animation.finished.then(release, release);
+  }
+  preference.addEventListener('change', () => {
+    if (preference.matches) cancelAll();
+    subscribers.forEach(callback => callback(preference.matches));
+  });
+  document.addEventListener('focusin', cancelFocused);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) cancelAll(); });
+  addEventListener('pagehide', cancelAll);
+
+  function reveal(root = document) {
+    const targets = [...root.querySelectorAll('[data-entrance]')].filter(target => !entrances.has(target));
+    if (!targets.length || preference.matches || skipEntrance || !('IntersectionObserver' in window)) return;
+    let remaining = targets.length;
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        observer.unobserve(entry.target);
+        const delay = Math.min(100, Math.max(0, Number(entry.target.dataset.entranceDelay) || 0));
+        play(entry.target, [
+          { opacity: .55, transform: `translateY(${distance}px)` },
+          { opacity: 1, transform: 'translateY(0)' },
+        ], { delay });
+        if (--remaining === 0) stop();
+      });
+    }, { threshold: .12, rootMargin: '0px 0px -24px 0px' });
+    targets.forEach(target => { entrances.add(target); observer.observe(target); });
+    const stop = () => {
+      observer.disconnect();
+      subscribers.delete(onPreference);
+      removeEventListener('pagehide', stop);
+    };
+    const onPreference = reduced => { if (reduced) stop(); };
+    subscribers.add(onPreference);
+    addEventListener('pagehide', stop, { once: true });
+  }
+  return { play, reveal, skipEntrance, distance };
+})();
+
+// The existing Home entrance uses the same timings as Work/About.
 (() => {
   const title = document.querySelector('#home-title');
-  const preference = matchMedia('(prefers-reduced-motion: reduce)');
-  if (!title || preference.matches || !title.animate || location.hash) return;
-  const entrance = title.animate([
-    { opacity: .82, transform: 'translateY(8px)' },
+  if (!title || portfolioMotion.skipEntrance || title.hasAttribute('data-signature-type')) return;
+  portfolioMotion.play(title, [
+    { opacity: .82, transform: `translateY(${portfolioMotion.distance}px)` },
     { opacity: 1, transform: 'translateY(0)' },
-  ], { duration: 620, easing: 'cubic-bezier(.2,.65,.3,1)' });
-  preference.addEventListener('change', () => entrance.cancel(), { once: true });
+  ]);
 })();
+
+portfolioMotion.reveal();
 
 (() => {
   const menu = document.querySelector('.chapter-nav');

@@ -27,13 +27,37 @@ for name,page in pages.items():
         if url.fragment and target in pages and unquote(url.fragment) not in pages[target].ids:
             errors.append(f'{name}: missing fragment {ref}')
         checked+=1
-expected={'index.html','about.html','work.html','styles.css','site.js','assets/portfolio/yp-monogram.png'}
+expected={'robots.txt','sitemap.xml','index.html','about.html','work.html','wuhan-marine-machinery.html','styles.css','site.js',
+          'wmmp-case.css','wmmp-case.js','assets/portfolio/yp-monogram.png','signature-motion.css','signature-motion.js','project-transitions.css','project-transitions.js','immersive-case.css','immersive-case.js'}
+case_images={'workbench.png','messages.png','statistics.png','management.png','all-business.png',
+             'safety-form.png','exploration-01.png','exploration-04.png','foundations.png','components.png',
+             'original-workbench.jpg','original-safety.jpg',
+             'message-list.png','message-detail.png','validation-error.png','discard-confirm.png','process-record.png','hazard-form.png','notification-settings.png','statistics-detail.png','exploration-02.png','exploration-03.png','exploration-05.png','exploration-06.png','component-status-badge.png','component-button.png','component-text-field.png','component-toggle.png','prototype-workbench-2026-08-11.png'}
+expected.update('assets/wmmp/'+name for name in case_images)
 actual={p.relative_to(ROOT).as_posix() for p in ROOT.rglob('*') if p.is_file()}
 if actual!=expected:errors.append(f'Deployment allowlist mismatch: extra={sorted(actual-expected)}, missing={sorted(expected-actual)}')
-for name in ['index.html','work.html']:
-    text=(ROOT/name).read_text()
-    if any(term in text for term in ['Wuhan','LexFlow','CAPSO','MindAware','Chakra','wuhan-marine-machinery.html']):errors.append(f'{name}: project content in placeholder')
-if 'wuhan-marine-machinery.html' in (ROOT/'about.html').read_text():errors.append('About: case-study link should not be published')
+for name in ['index.html','work.html','about.html']:
+    if 'wuhan-marine-machinery.html' not in (ROOT/name).read_text():
+        errors.append(f'{name}: missing existing Wuhan case-study entry')
+if 'Coming soon.' in (ROOT/'index.html').read_text():
+    errors.append('Home: stale Selected Work placeholder')
+# Production metadata and sitemap must resolve to the approved public origin.
+import xml.etree.ElementTree as ET
+origin='https://yixiao-peng-portfolio.vercel.app/'
+for name in pages:
+    html=(ROOT/name).read_text()
+    canonical=origin+('' if name=='index.html' else name)
+    if f'<link rel="canonical" href="{canonical}">' not in html:
+        errors.append(f'{name}: missing or incorrect canonical')
+    for prop in ['og:title','og:description','og:url','og:image','og:image:alt']:
+        if f'property="{prop}"' not in html:errors.append(f'{name}: missing {prop}')
+try:
+    locations={node.text for node in ET.parse(ROOT/'sitemap.xml').iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')}
+    if locations!={origin+('' if name=='index.html' else name) for name in pages}:
+        errors.append('Sitemap must contain exactly the four public canonical pages')
+except (ET.ParseError,OSError) as exc:errors.append(f'Sitemap invalid: {exc}')
+if f'Sitemap: {origin}sitemap.xml' not in (ROOT/'robots.txt').read_text():
+    errors.append('robots.txt: missing production sitemap')
 result={'pages':len(pages),'local_references_checked':checked,'errors':errors}
 print(json.dumps(result,ensure_ascii=False,indent=2))
 if errors:raise SystemExit(1)

@@ -1,0 +1,101 @@
+/* The browser owns navigation. Matched snapshots share a single travel curve. */
+::view-transition {
+  background: var(--paper);
+}
+
+::view-transition-group(project-scene),
+::view-transition-group(project-screen-0),
+::view-transition-group(project-screen-1),
+::view-transition-group(project-title) {
+  animation-duration: var(--motion-project);
+  animation-timing-function: var(--motion-project-ease);
+}
+
+::view-transition-group(project-navigation) {
+  animation-duration: 0s;
+  z-index: 20;
+}
+
+::view-transition-old(project-navigation) { animation: none; opacity: 0; }
+::view-transition-new(project-navigation) { animation: none; }
+
+::view-transition-group(project-scene) { z-index: 2; }
+::view-transition-group(project-screen-0),
+::view-transition-group(project-screen-1) { z-index: 3; }
+::view-transition-group(project-title) { z-index: 4; }
+
+::view-transition-old(root),
+::view-transition-new(root),
+::view-transition-old(project-scene),
+::view-transition-new(project-scene),
+::view-transition-old(project-title),
+::view-transition-new(project-title) {
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) { animation: p6-paper-hold var(--motion-project) linear both; }
+::view-transition-new(root) { animation: p6-paper-open var(--motion-project) var(--motion-project-ease) both; }
+:root[data-project-transition=back]::view-transition-new(root) { animation-name: p6-paper-return; }
+
+::view-transition-image-pair(project-scene) { overflow: clip; }
+::view-transition-old(project-scene) { animation: p6-matte-hold var(--motion-project) linear both; }
+::view-transition-new(project-scene) { animation: p6-matte-open var(--motion-project) var(--motion-project-ease) both; }
+
+/* The two matched phone renders travel as single surfaces. */
+::view-transition-old(project-screen-0),
+::view-transition-old(project-screen-1) { animation: none; opacity: 0; }
+::view-transition-new(project-screen-0),
+::view-transition-new(project-screen-1) { animation: none; opacity: 1; }
+
+::view-transition-old(project-title) {
+  animation: p6-title-release var(--motion-fast) var(--motion-ease) both;
+}
+
+::view-transition-new(project-title) {
+  animation: p6-title-open var(--motion-project) var(--motion-project-ease) both;
+}
+
+:root[data-project-transition] .wm-work-visual>div { transform: none !important; transition: none; }
+
+@keyframes p6-paper-hold {
+  0%, 38% { opacity: 1; }
+  91%, 100% { opacity: 0; }
+}
+
+/* A soft diagonal edge keeps paper visible as the destination opens. */
+@keyframes p6-paper-open {
+  from { opacity: 1; clip-path: polygon(0 0, 100% 0, 100% 0, 75% 0, 52% 0, 25% 0, 0 0); }
+  42% { opacity: 1; clip-path: polygon(0 0, 100% 0, 100% 61%, 75% 55%, 52% 62%, 25% 59%, 0 66%); }
+  to { opacity: 1; clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 100%, 52% 100%, 25% 100%, 0 100%); }
+}
+
+@keyframes p6-paper-return {
+  from { opacity: 1; clip-path: polygon(0 100%, 25% 100%, 52% 100%, 75% 100%, 100% 100%, 100% 100%, 0 100%); }
+  42% { opacity: 1; clip-path: polygon(0 39%, 25% 45%, 52% 41%, 75% 43%, 100% 34%, 100% 100%, 0 100%); }
+  to { opacity: 1; clip-path: polygon(0 0, 25% 0, 52% 0, 75% 0, 100% 0, 100% 100%, 0 100%); }
+}
+
+@keyframes p6-matte-hold {
+  0%, 34% { opacity: 1; }
+  86%, 100% { opacity: 0; }
+}
+
+@keyframes p6-matte-open {
+  from { opacity: .28; clip-path: inset(0 46% 0 46% round 18px); }
+  64% { opacity: 1; clip-path: inset(0 3% 0 3% round 3px); }
+  to { opacity: 1; clip-path: inset(0); }
+}
+
+@keyframes p6-title-release {
+  0%, 24% { opacity: 1; }
+  to { opacity: 0; transform: translateY(-5px); }
+}
+
+@keyframes p6-title-open {
+  0%, 49% { clip-path: inset(0 100% 0 0); transform: translateY(6px); }
+  84%, 100% { clip-path: inset(0); transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+}

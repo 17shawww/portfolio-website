@@ -1,0 +1,21 @@
+/* Phase 4: isolated, finite signature effects. Source imagery and content remain. */
+.p4-logo-shell{position:relative;display:block;flex-shrink:0;padding:0;border:0;background:none;line-height:0;overflow:visible;mix-blend-mode:multiply}
+.p4-logo-shell>img{display:block;margin:0;mix-blend-mode:normal}
+.p4-logo-shell.p4-hero-mark{width:240px;height:160px;cursor:pointer}
+.p4-logo-shell:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+.p4-logo-shell:disabled{cursor:default}
+.p4-logo-canvas{position:absolute;pointer-events:none;mix-blend-mode:multiply;z-index:1}
+.p4-logo-canvas[hidden]{display:none}
+.p4-type-title{position:relative}
+.p4-type-original{display:inline}
+.p4-type-title.p4-type-active>.p4-type-original{opacity:0}
+.p4-type-overlay{position:absolute;inset:0;pointer-events:none;color:var(--ink);white-space:pre}
+.p4-glyph-mask{position:absolute;top:calc(var(--glyph-line-offset, 0px) - .15em);height:1.32em;overflow:clip;padding-top:.15em;box-sizing:border-box}
+.p4-glyph{display:block;transform-origin:50% 100%}
+.hero-heading.p4-parallax>h1{transform:translateY(var(--hero-drift,0px))}
+@media(max-width:1000px){.p4-logo-shell.p4-hero-mark{display:none}}
+@media(prefers-reduced-motion:reduce){
+ .hero-heading.p4-parallax>h1{transform:none}
+ .p4-type-title.p4-type-active>.p4-type-original{opacity:1}
+ .p4-type-overlay,.p4-logo-canvas{display:none}
+}
