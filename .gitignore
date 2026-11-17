@@ -48,3 +48,12 @@
 # Public production discovery files; historical sitemap sources remain unchanged.
 !/robots.txt
 !/sitemap.xml
+
+# Shared bilingual content and progressive Coming Soon disclosure.
+!/locales/
+!/i18n.js
+!/localization.css
+!/coming-soon.js
+!/scripts/localize_site.py
+!/scripts/check_localization.py
+!/docs/BILINGUAL-PORTFOLIO-PHASE10.md

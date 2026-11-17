@@ -13,7 +13,7 @@ class Page(HTMLParser):
         if tag=='img' and not a.get('alt') and not ('alt' in a and a.get('aria-hidden')=='true'):self.image_alt_errors.append(a.get('src'))
         for key in ['href','src']:
             if a.get(key):self.refs.append(a[key])
-pages={p.name:Page(p.read_text()) for p in ROOT.glob('*.html')}
+pages={p.relative_to(ROOT).as_posix():Page(p.read_text()) for p in ROOT.rglob('*.html')}
 errors=[];checked=0
 for name,page in pages.items():
     if page.h1!=1:errors.append(f'{name}: expected one h1')
@@ -22,7 +22,13 @@ for name,page in pages.items():
     for ref in page.refs:
         url=urlsplit(ref)
         if url.scheme or url.netloc:continue
-        target=unquote(url.path) or name
+        target=unquote(url.path)
+        if target.startswith('/'):
+            target=target.lstrip('/')
+        elif target:
+            target=(Path(name).parent/target).as_posix()
+        else:target=name
+        if not target or target.endswith('/') :target+='index.html'
         if not (ROOT/target).is_file():errors.append(f'{name}: missing {ref}')
         if url.fragment and target in pages and unquote(url.fragment) not in pages[target].ids:
             errors.append(f'{name}: missing fragment {ref}')
@@ -34,6 +40,8 @@ case_images={'workbench.png','messages.png','statistics.png','management.png','a
              'original-workbench.jpg','original-safety.jpg',
              'message-list.png','message-detail.png','validation-error.png','discard-confirm.png','process-record.png','hazard-form.png','notification-settings.png','statistics-detail.png','exploration-02.png','exploration-03.png','exploration-05.png','exploration-06.png','component-status-badge.png','component-button.png','component-text-field.png','component-toggle.png','prototype-workbench-2026-08-11.png'}
 expected.update('assets/wmmp/'+name for name in case_images)
+expected.update({'zh/'+name for name in ['index.html','work.html','about.html','wuhan-marine-machinery.html']})
+expected.update({'localization.css','i18n.js','i18n-data.js','coming-soon.js'})
 actual={p.relative_to(ROOT).as_posix() for p in ROOT.rglob('*') if p.is_file()}
 if actual!=expected:errors.append(f'Deployment allowlist mismatch: extra={sorted(actual-expected)}, missing={sorted(expected-actual)}')
 for name in ['index.html','work.html','about.html']:
@@ -54,7 +62,7 @@ for name in pages:
 try:
     locations={node.text for node in ET.parse(ROOT/'sitemap.xml').iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')}
     if locations!={origin+('' if name=='index.html' else name) for name in pages}:
-        errors.append('Sitemap must contain exactly the four public canonical pages')
+        errors.append('Sitemap must contain exactly the eight localized canonical pages')
 except (ET.ParseError,OSError) as exc:errors.append(f'Sitemap invalid: {exc}')
 if f'Sitemap: {origin}sitemap.xml' not in (ROOT/'robots.txt').read_text():
     errors.append('robots.txt: missing production sitemap')

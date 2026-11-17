@@ -212,3 +212,6 @@ html:has(.about-page) { scroll-padding-top:var(--chapter-offset, 86px); }
  .about-page .body-copy p{margin-bottom:20px}
  .about-page .experience li{padding-block:24px}
 }
+
+/* Two regional contact options share one quiet, vertically aligned group. */
+.contact-emails{display:grid;gap:17px;max-width:100%}.contact-email{display:grid;gap:2px;justify-items:start;min-width:0}.contact-email .email{max-width:100%;padding:4px 0}
