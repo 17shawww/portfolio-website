@@ -15,6 +15,10 @@ def translated(s,lang):
     if key not in TRANSLATIONS:raise ValueError('Missing reviewed translation: '+key)
     return s if lang=='en' else s[:len(s)-len(s.lstrip())]+TRANSLATIONS[key]+s[len(s.rstrip()):]
 def route(page,lang):return ('/zh/' if lang=='zh' else '/')+('' if page=='index.html' and lang=='en' else page)
+def companion_markup():
+    return ('<div class="ink-companion" aria-hidden="true" hidden>'
+            '<img src="/assets/portfolio/ink/idle.webp" width="296" height="760" alt="" aria-hidden="true" '
+            'draggable="false" decoding="async"></div>')
 class LocalizedPage(HTMLParser):
     def __init__(self,source,page,lang,versions):
         super().__init__(convert_charrefs=True);self.parts=[];self.skip=0;self.navs=[];self.page=page;self.lang=lang;self.versions=versions;self.feed(source)
@@ -45,7 +49,12 @@ class LocalizedPage(HTMLParser):
         self.parts.append('<'+t+''.join(' '+k+('="'+escape(v,quote=True)+'"' if v is not None else '') for k,v in a.items())+'>')
     def handle_endtag(self,t):
         if t in ('script','style'):self.skip-=1
+        if t=='body' and self.page in ('index.html', 'about.html', 'wuhan-marine-machinery.html'):
+            self.parts.append(companion_markup())
         if t=='head':
+            if self.page in ('index.html', 'about.html', 'wuhan-marine-machinery.html'):
+                self.parts.append(f'<link rel="stylesheet" href="/ink-character.css?v={self.versions["ink-character.css"]}">')
+                self.parts.append(f'<script src="/ink-character.js?v={self.versions["ink-character.js"]}" defer></script>')
             for lang in ('en','zh'):
                 self.parts.append('<link rel="alternate" hreflang="'+('zh-Hans' if lang=='zh' else 'en')+'" href="'+ORIGIN+route(self.page,lang)+'">')
             self.parts.append('<link rel="alternate" hreflang="x-default" href="'+ORIGIN+route(self.page,'en')+'"><meta property="og:locale" content="'+('zh_CN' if self.lang=='zh' else 'en_US')+'"><link rel="stylesheet" href="/localization.css?v='+self.versions['localization.css']+'"><script src="/coming-soon.js?v='+self.versions['coming-soon.js']+'" defer></script>')

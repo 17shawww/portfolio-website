@@ -105,7 +105,7 @@ portfolioMotion.reveal();
   if (!menu) return;
   const chapters = [...document.querySelectorAll('.split-section, .interests')];
   const links = [...menu.querySelectorAll('a')];
-  const fill = menu.querySelector('.chapter-track span');
+  const track = menu.querySelector('.chapter-track');
   let active = -1;
   let frame = 0;
   let destination = chapters.findIndex(chapter => '#' + chapter.id === location.hash);
@@ -131,7 +131,8 @@ portfolioMotion.reveal();
     }
     const distance = Math.max(1, bottom - tops[0]);
     const progress = atEnd ? 1 : Math.max(0, Math.min(1, (line - tops[0]) / distance));
-    fill.style.setProperty('--progress', progress);
+    track.style.setProperty('--progress', progress);
+    track.dispatchEvent(new Event('portfolio:chapterprogress'));
   }
   function schedule() {
     if (!frame) frame = requestAnimationFrame(update);

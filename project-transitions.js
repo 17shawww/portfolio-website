@@ -3,6 +3,25 @@
 (() => {
   const preference = matchMedia('(prefers-reduced-motion: reduce)');
   const root = document.documentElement;
+  // A short-lived, destination-specific handoff from the homepage portal.
+  try {
+    const key = 'portfolio-ink-portal';
+    const ticket = JSON.parse(sessionStorage.getItem(key));
+    if (ticket?.destination === location.href) {
+      sessionStorage.removeItem(key);
+      if (!preference.matches && Date.now() - ticket.timestamp < 5000) {
+        root.dataset.inkArrival = '';
+        root.dataset.inkPortalExit = '';
+        const clearArrival = () => { delete root.dataset.inkArrival; };
+        addEventListener('pageshow', () => setTimeout(clearArrival, 360), {once: true});
+        addEventListener('pagehide', () => {
+          clearArrival();
+          delete root.dataset.inkPortalExit;
+        }, {once: true});
+      }
+    }
+  } catch {}
+
   let active;
   const route = value => {
     if (!value) return '';

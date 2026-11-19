@@ -1,175 +1,215 @@
-/* Complete paintings move inside reserved editorial space. */
-.ink-actor {
-  --ink-size: 90px;
-  position: relative;
-  display: block;
-  width: var(--ink-size);
-  height: var(--ink-size);
-  flex: 0 0 var(--ink-size);
-  pointer-events: none;
+/* The desktop progress overlay replaces the visible native document track. */
+html.has-ink-scrollbar { scrollbar-width: none; }
+html.has-ink-scrollbar::-webkit-scrollbar { display: none; }
+/* Keep the About chapter separator and its active link treatment. */
+html.has-ink-scrollbar .chapter-track > span { visibility: hidden; }
+
+.ink-scrollbar[hidden], .ink-companion[hidden] { display: none; }
+.ink-scrollbar {
+  --reading: 0;
+  position: fixed;
+  inset: 78px 8px 70px auto;
+  width: 24px;
+  z-index: 5;
+  touch-action: none;
+  cursor: ns-resize;
   user-select: none;
-  isolation: isolate;
 }
-.ink-plate {
+.ink-scrollbar:focus-visible {
+  outline: 1px solid #55725a;
+  border-radius: 4px;
+}
+.ink-scrollbar svg {
   position: absolute;
   inset: 0;
-  transform: translate(var(--ink-lean, 0px), var(--ink-rise, 0px)) rotate(var(--ink-tilt, 0deg));
-  transform-origin: 50% 88%;
-  transition: transform var(--motion-standard, 220ms) var(--motion-ease, ease);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
-.ink-plate img {
+.ink-scrollbar path {
+  fill: url(#ink-cliff-pigment);
+}
+.ink-companion {
   position: absolute;
-  inset: 0;
-  margin: auto;
+  left: var(--grip-x, 15px);
+  top: calc(var(--reading) * 100%);
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+.ink-companion img {
+  position: absolute;
   display: block;
+  max-width: none;
+  pointer-events: none;
+  filter: drop-shadow(0 0 .85px rgb(247 242 226 / calc(.13 + var(--ink-lift, 0) * .39)));
+  transition: opacity 130ms ease;
+}
+.ink-climbing-pose {
+  width: 38px;
+  height: auto;
+  left: -35px;
+  top: -4px;
+  opacity: 1;
+}
+.ink-climb-cycle {
+  position: absolute;
+  left: -37.3333px;
+  top: -12px;
+  width: 42.6667px;
+  height: 60px;
+  overflow: hidden;
+  filter: drop-shadow(0 0 .85px rgb(247 242 226 / calc(.13 + var(--ink-lift, 0) * .39)));
+  transition: opacity 130ms ease;
+}
+.ink-climb-cycle[hidden], .ink-companion[data-climb-cycle] .ink-climbing-pose { display: none; }
+.ink-climb-cycle img {
+  top: 0;
+  left: 0;
+  width: 800%;
+  height: 100%;
+  filter: none;
+  transform: translateX(calc(var(--climb-cel, 0) * -12.5%));
+}
+.ink-resting-pose {
+  width: 25px;
+  height: auto;
+  left: -21px;
+  top: -24px;
+  opacity: 0;
+}
+.ink-companion[data-pose="sit"] :is(.ink-climbing-pose, .ink-climb-cycle) { opacity: 0; }
+.ink-companion[data-pose="sit"] .ink-resting-pose {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ink-companion img, .ink-climb-cycle { transition: none; }
+}
+
+/* The existing climber detaches into the portal layer for this one link. */
+.ink-portal-layer {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 50;
+  pointer-events: none;
+}
+.ink-portal-layer .ink-companion {
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.ink-portal-layer .ink-companion > :not(.ink-portal-jump) { display: none; }
+.ink-portal-layer .ink-portal-jump {
+  left: -30px;
+  top: -9px;
+  width: 46px;
+  height: auto;
+  transform: scaleX(-1);
+  transition: none;
+}
+.ink-portal-door {
+  position: absolute;
+  z-index: 2;
+  left: calc(var(--door-x) - 17px);
+  top: calc(var(--door-y) - 29px);
+  width: 34px;
+  height: 58px;
+  opacity: 0;
+  background: #1a2c23;
+  clip-path: polygon(5% 79%, 8% 35%, 23% 14%, 42% 5%, 63% 3%,
+    82% 14%, 91% 36%, 88% 61%, 96% 92%, 70% 97%, 43% 94%, 9% 98%);
+}
+.ink-portal-door::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: #284237;
+  opacity: .64;
+  clip-path: polygon(4% 91%, 10% 37%, 25% 13%, 55% 4%, 80% 19%,
+    88% 41%, 86% 96%, 73% 93%, 77% 44%, 70% 27%, 53% 15%, 32% 24%, 24% 44%, 20% 90%);
+}
+.ink-portal-veil,
+html[data-ink-arrival]::before {
+  position: fixed;
+  inset: 0;
+  background: #1a2c23;
+  pointer-events: none;
+}
+.ink-portal-veil {
+  z-index: 3;
+  clip-path: circle(0 at var(--door-x) var(--door-y));
+}
+html[data-ink-arrival]::before {
+  content: "";
+  z-index: 50;
+  animation: ink-arrival 245ms cubic-bezier(.35,.15,.36,1) both;
+}
+@keyframes ink-arrival { from { opacity: 1; } to { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  html[data-ink-arrival]::before { display: none; }
+}
+
+/* Shared track, with room for the feet below the labels inside each sticky menu. */
+:root .ink-chapter-track {
+  padding-bottom: 35px;
+  border-block-color: transparent;
+  background-image: linear-gradient(var(--line), var(--line));
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% 2px;
+}
+.ink-chapter-track > .chapter-track { display: none; }
+:root:has(.wm-nav.ink-chapter-track) .wm-section {
+  scroll-margin-top: var(--ink-chapter-nav-height, 87px);
+}
+.ink-chapter-companion {
+  --chapter-ink-size: 28px;
+  position: fixed;
+  z-index: 6;
+  width: calc(var(--chapter-ink-size) * .6875);
+  height: var(--chapter-ink-size);
+  left: var(--chapter-ink-x, 0px);
+  top: var(--chapter-ink-y, 0px);
+  transform: translate(-50%, -100%);
+}
+.ink-chapter-companion img {
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  object-position: center bottom;
+  transition: none;
 }
-
-.ink-home-line {
-  display: flex;
-  align-items: center;
-  gap: clamp(24px, 5.2vw, 74px);
+.ink-chapter-idle, .ink-chapter-jump, .ink-chapter-stride {
+  scale: var(--chapter-ink-facing, 1) 1;
 }
-.ink-home-button {
-  min-width: 48px;
-  min-height: 48px;
-  padding: 0 8px 6px;
-  position: relative;
-  background: none;
-  border: 0;
-}
-.ink-home-button:not(:disabled) { cursor: pointer; }
-.ink-home-button:focus-visible { outline-offset: 4px; }
-.ink-home { --ink-size: clamp(68px, 7.4vw, 108px); }
-.ink-home .ink-plate { transition-duration: 250ms; }
-.ink-home[data-pose="jump"] .ink-plate { --ink-rise: -11px; --ink-tilt: -2deg; }
-.ink-home-button::before,
-.ink-home-button::after,
-.ink-coming::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  inset: auto 16% 2px 16%;
-  height: 4px;
-  background: #315a397a;
-  clip-path: polygon(0 68%, 21% 36%, 63% 18%, 99% 25%, 88% 42%, 100% 54%, 65% 55%, 27% 78%);
-}
-.ink-home-button::before { opacity: .55; }
-.ink-home-button::after,
-.ink-coming::after {
-  opacity: 0;
-  transform: scaleX(.7);
-  transition: opacity var(--motion-standard, 220ms) ease, transform var(--motion-standard, 220ms) ease;
-}
-.ink-home-button:has([data-pose="jump"])::after { opacity: .76; transform: scaleX(1.12); }
-
-.ink-work-line {
-  display: flex;
-  gap: 16px;
-  align-items: end;
-  flex-wrap: wrap;
-}
-.ink-work { --ink-size: 54px; }
-.ink-work .ink-plate img { transform: scaleX(-1); }
-.ink-work[data-pose="walk"] .ink-plate { --ink-lean: -6px; }
-
-/* The scene lands on a short seam extended inward from the card's right edge. */
-.coming-exhibit .ink-coming {
-  --ink-size: clamp(57px, 7vw, 96px);
-  --ink-card-gutter: 14px;
-  position: absolute;
-  inset: 16px var(--ink-card-gutter) auto auto;
-  z-index: 2;
-}
-.ink-coming::before {
-  content: "";
-  position: absolute;
-  inset: auto calc(-1 * var(--ink-card-gutter)) -3px 1%;
-  height: 5px;
-  background: #315a395e;
-  clip-path: polygon(0 72%, 14% 47%, 47% 35%, 77% 22%, 100% 20%, 100% 59%, 73% 60%, 35% 65%, 12% 78%);
-}
-.ink-coming img[src$="/sleep.webp"] { height: 75%; top: auto; }
-.ink-coming img[src$="/sit.webp"] { height: 84%; top: auto; }
-.ink-coming[data-pose="surprise"] .ink-plate { --ink-rise: -4px; --ink-tilt: 1.5deg; }
-.ink-coming::after {
-  inset: auto 4% -5px 13%;
-  height: 7px;
-  background: #315a3988;
-  clip-path: polygon(0 70%, 11% 53%, 35% 40%, 66% 32%, 96% 30%, 72% 47%, 87% 55%, 48% 58%, 26% 75%);
-}
-.ink-coming[data-pose="surprise"]::after { animation: ink-card-accent 340ms var(--motion-ease, ease) both; }
-@keyframes ink-card-accent {
-  0% { opacity: 0; transform: scaleX(.62); }
-  24% { opacity: .75; }
-  100% { opacity: 0; transform: scaleX(1.12); }
-}
-.coming-exhibit .coming-trigger {
-  inset: auto auto 26px 28px;
-  padding: 0;
-  min-height: 44px;
-  align-items: center;
-  z-index: 3;
-}
-.coming-exhibit .coming-trigger > span:last-child { display: none; }
-.coming-exhibit .coming-trigger:focus-visible { outline-offset: 3px; }
-.coming-exhibit .coming-message { padding-inline-end: calc(clamp(57px, 7vw, 96px) + 40px); }
-.coming-exhibit .coming-art > span { max-inline-size: calc(100% - 27px); }
-
-/* The route and the climber share the same SVG coordinate space. */
-.ink-interest-side {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(104px, 36%);
-  gap: 14px;
-  align-items: start;
-  min-width: 0;
-}
-.ink-climb-rail {
-  position: relative;
-  min-height: 252px;
-  isolation: isolate;
-  pointer-events: none;
-}
-.ink-climb-brush, .ink-climb-anchor {
+.ink-chapter-stride {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
+  overflow: hidden;
 }
-.ink-climb-brush { display: block; color: var(--green, #315a39); }
-.ink-climb-guide { opacity: .21; }
-.ink-climb-trace { opacity: .64; }
-.ink-climb-anchor { transform: translate(var(--climb-x, 21.33%), var(--climb-y, 95%)); }
-.ink-about {
-  --ink-size: clamp(98px, 9.3vw, 137px);
-  position: absolute;
-  inset: 0 auto auto 0;
-  transform: translate(-43%, -100%);
+.ink-chapter-stride img {
+  width: 600%;
+  transform: translateX(calc(var(--chapter-step, 0) * -100% / 6));
 }
-.ink-about .ink-plate { transition: none; }
-.ink-about img[src$="/sit.webp"] { height: 67%; top: auto; }
-@media (max-width: 1000px) {
-  .ink-interest-side { column-gap: 8px; }
-  .ink-climb-rail { min-height: 211px; }
-  .ink-about { --ink-size: clamp(83px, 10.8vw, 108px); }
+.ink-chapter-companion .ink-chapter-stride,
+.ink-chapter-companion .ink-chapter-jump { display: none; }
+.ink-chapter-companion[data-walking] .ink-chapter-idle,
+.ink-chapter-companion[data-entering] :is(.ink-chapter-idle, .ink-chapter-stride) { display: none; }
+.ink-chapter-companion[data-walking]:not([data-entering]) .ink-chapter-stride,
+.ink-chapter-companion[data-entering] .ink-chapter-jump { display: block; }
+.ink-chapter-companion .ink-chapter-jump {
+  left: -4px;
+  width: calc(100% + 8px);
 }
-@media (max-width: 680px) {
-  .ink-home-line { justify-content: space-between; max-width: 370px; padding-inline-end: 13px; }
-  .ink-home { --ink-size: 67px; }
-  .ink-work { --ink-size: 48px; }
-  .ink-work-line { gap: 12px; }
-  .coming-exhibit .ink-coming { --ink-size: 57px; --ink-card-gutter: 12px; inset-block-start: 12px; }
-  .coming-exhibit .coming-trigger { inset: auto auto 19px 18px; }
-  .coming-exhibit .coming-message { padding-inline-end: 84px; }
-  .ink-interest-side { grid-template-columns: minmax(0, 1fr) minmax(88px, 42%); }
-  .ink-climb-rail { min-height: 174px; }
-  .ink-about { --ink-size: 79px; }
+.ink-chapter-door {
+  left: calc(50% + var(--chapter-door-x) - 8px);
+  top: auto;
+  bottom: 0;
+  width: 16px;
+  height: var(--chapter-ink-size);
 }
-@media (prefers-reduced-motion: reduce) {
-  .ink-plate, .ink-home-button::after, .ink-coming::after { transition: none; }
-  .ink-plate { transform: none; }
-  .ink-coming[data-pose="surprise"]::after { animation: none; }
+@media (max-width: 760px) {
+  :root .ink-chapter-track { padding-bottom: 27px; }
+  .ink-chapter-companion { --chapter-ink-size: 20px; }
 }

@@ -16,7 +16,7 @@ case_images = ["workbench.png", "messages.png", "statistics.png", "management.pn
 assets = ["robots.txt", "sitemap.xml", "styles.css", "site.js", "wmmp-case.css", "wmmp-case.js", "assets/portfolio/yp-monogram.png", "signature-motion.css", "signature-motion.js", "project-transitions.css", "project-transitions.js", "immersive-case.css", "immersive-case.js"]
 assets += ["localization.css", "i18n.js", "coming-soon.js"]
 assets += ["ink-character.css", "ink-character.js"]
-assets += ["assets/portfolio/ink/" + pose + ".webp" for pose in ("idle", "look", "walk", "jump", "sit", "climb", "surprise", "sleep")]
+assets += ["assets/portfolio/ink/" + pose + ".webp" for pose in ("idle", "look", "walk", "jump", "sit", "climb", "surprise", "sleep", "climb-cycle", "walk-cycle")]
 assets += ["assets/wmmp/" + name for name in case_images]
 for name in pages + assets:
     if not (root / name).is_file():
