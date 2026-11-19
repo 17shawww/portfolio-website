@@ -11,8 +11,10 @@ pages = PAGES
 case_images = ["workbench.png", "messages.png", "statistics.png", "management.png",
                "all-business.png", "safety-form.png", "exploration-01.png",
                "exploration-04.png", "foundations.png", "components.png",
-               "original-workbench.jpg", "original-safety.jpg",
+               "original-workbench.jpg", "original-safety.jpg", "original-messages.jpg",
                "message-list.png", "message-detail.png", "validation-error.png", "discard-confirm.png", "process-record.png", "hazard-form.png", "notification-settings.png", "statistics-detail.png", "exploration-02.png", "exploration-03.png", "exploration-05.png", "exploration-06.png", "component-status-badge.png", "component-button.png", "component-text-field.png", "component-toggle.png", "prototype-workbench-2026-08-11.png"]
+case_demo = ["index.html", "assets/index-ipdpVm6X.js", "assets/index-DQ4IFDZL.css",
+             "assets/login-industrial-C9ytOitd.png", "assets/workbench-harbor-Bp7slw5B.png"]
 assets = ["robots.txt", "sitemap.xml", "styles.css", "site.js", "wmmp-case.css", "wmmp-case.js", "assets/portfolio/yp-monogram.png", "signature-motion.css", "signature-motion.js", "project-transitions.css", "project-transitions.js", "immersive-case.css", "immersive-case.js"]
 assets += ["localization.css", "i18n.js", "coming-soon.js"]
 assets += ["ink-character.css", "ink-character.js"]
@@ -23,11 +25,15 @@ assets += ["assets/wmmp/r6-" + screen + ".png" for screen in (
     "message-inbox", "message-task", "safety-registration", "safety-rectification", "production-form",
     "required-state", "discard-state", "notification-settings", "statistics-trend", "statistics-breakdown",
 )]
+assets += ["assets/wmmp/" + name for name in (
+    "editorial.css", "r6-workbench-task-overview.png", "figma-library-overview.png",
+)]
+assets += ["assets/wmmp/demo/" + name for name in case_demo]
 for name in pages + assets:
     if not (root / name).is_file():
         raise FileNotFoundError(name)
 versions = {name: hashlib.sha256((root / name).read_bytes()).hexdigest()[:12]
-            for name in ["styles.css", "site.js", "wmmp-case.css", "wmmp-case.js", "signature-motion.css", "signature-motion.js", "project-transitions.css", "project-transitions.js", "immersive-case.css", "immersive-case.js", "localization.css", "i18n.js", "coming-soon.js", "ink-character.css", "ink-character.js"]}
+            for name in ["styles.css", "site.js", "wmmp-case.css", "wmmp-case.js", "signature-motion.css", "signature-motion.js", "project-transitions.css", "project-transitions.js", "immersive-case.css", "immersive-case.js", "localization.css", "i18n.js", "coming-soon.js", "ink-character.css", "ink-character.js", "assets/wmmp/editorial.css"]}
 # Rebuild generated output so an older case study/image cannot survive locally
 # or in a restored build cache. Source files outside dist are never removed.
 if out.is_symlink():

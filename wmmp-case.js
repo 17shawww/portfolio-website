@@ -7,11 +7,13 @@
   let frame = 0;
   function update() {
     frame = 0;
-    const line = navigation.getBoundingClientRect().height + 36;
+    const menu = navigation.getBoundingClientRect();
+    const line = menu.height + 36;
     const atEnd = innerHeight + scrollY >= document.documentElement.scrollHeight - 4;
     const index = atEnd ? sections.length - 1 : Math.max(0, sections.findLastIndex(section => section.getBoundingClientRect().top <= line));
     const changed = links[index].getAttribute('aria-current') !== 'location';
-    if (changed && navigation.getBoundingClientRect().top <= 1 && navigation.scrollWidth > navigation.clientWidth) {
+    if (!changed) return;
+    if (changed && menu.top <= 1 && navigation.scrollWidth > navigation.clientWidth) {
       const target = links[index];
       navigation.scrollTo({ left: target.offsetLeft - navigation.clientWidth / 2 + target.offsetWidth / 2, behavior: 'instant' });
     }
@@ -73,320 +75,14 @@
     request.then(ok => { if (!ok) imageCache.delete(src); });
     return request;
   }
-  function arrowIndex(event, index, count) {
-    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
-    if (event.key === 'ArrowRight') return (index + 1) % count;
-    if (event.key === 'ArrowLeft') return (index - 1 + count) % count;
-    if (event.key === 'Home') return 0;
-    if (event.key === 'End') return count - 1;
-  }
   function imageInfo(link) {
     const figure = link.closest('figure');
     const caption = figure.querySelector('figcaption');
-    const heading = caption.querySelector('b');
-    const title = heading?.textContent || caption.firstChild?.textContent || link.querySelector('img').alt;
-    const clone = caption.cloneNode(true);
-    clone.querySelector('b')?.remove();
-    clone.querySelectorAll('button, details').forEach(element => element.remove());
-    const description = [...clone.childNodes].map(node => node.textContent.trim()).filter(Boolean).join(' ');
-    const notes = caption.querySelector('.p2-direction-notes dl');
-    const reading = notes ? [...notes.querySelectorAll('dd')].map(item => `${item.previousElementSibling.textContent}: ${item.textContent}`).join(' ') : '';
-    return { src: link.href, alt: link.querySelector('img').alt, title: title.trim(), description: reading ? `Visual interpretation. ${reading}` : description || link.querySelector('img').alt };
-  }
-
-  // Phase 3: evidence stays in HTML. A shared controller adds manual exploration.
-  document.querySelectorAll('[data-story]').forEach(root => {
-    const kind = root.dataset.story;
-    const stage = root.querySelector('.p3-panels');
-    const panels = [...stage.children].map(disclosure => {
-      // Native disclosures are the no-JS baseline. Regions avoid details' internal
-      // layout wrapper so enhanced panels can share one stable grid track.
-      const panel = document.createElement('article');
-      panel.id = disclosure.id;panel.className = disclosure.className;
-      panel.dataset.label = disclosure.dataset.label;
-      panel.append(disclosure.querySelector('.p3-panel-content'));
-      disclosure.replaceWith(panel);
-      return panel;
-    });
-    const controls = root.querySelector('.p3-story-controls');
-    const status = root.querySelector('.p3-story-status');
-    const branches = [...root.querySelectorAll('.v-ia-branch')];
-    const choices = [];
-    let current = kind === 'ia' ? -1 : 0;
-    let request = 0;
-    function button(label, index, destination) {
-      const control = document.createElement('button');
-      control.type = 'button';control.textContent = label;
-      if (index >= 0) control.setAttribute('aria-controls', panels[index].id);
-      control.addEventListener('click', () => select(index));
-      control.addEventListener('keydown', event => {
-        const next = arrowIndex(event, choices.indexOf(control), choices.length);
-        if (next === undefined) return;
-        event.preventDefault();choices[next].focus();choices[next].click();
-      });
-      destination.append(control);choices.push(control);
-      return control;
-    }
-    if (kind === 'ia') button('Full architecture overview', -1, controls);
-    panels.forEach((panel, index) => button(
-      kind === 'ia' ? `Explore ${panel.dataset.label} ↓` : panel.dataset.label,
-      index, branches[index] || controls,
-    ));
-    function commit(index, animate) {
-      panels.forEach((panel, i) => {
-        const hidden = i !== index;
-        panel.hidden = hidden;panel.inert = hidden;
-        panel.setAttribute('aria-hidden', String(hidden));
-      });
-      stage.hidden = index < 0;
-      choices.forEach((choice, i) => choice.setAttribute('aria-pressed', String(i === index + (kind === 'ia' ? 1 : 0))));
-      branches.forEach((branch, i) => branch.classList.toggle('p3-branch-selected', i === index));
-      current = index;
-      status.textContent = index < 0 ? 'Full four-destination overview. Select a destination to inspect its route examples.' : `${panels[index].dataset.label} selected.`;
-      if (animate && index >= 0) enter(panels[index].querySelector('.p3-panel-content'));
-      schedule();
-    }
-    async function select(index) {
-      const id = ++request;
-      if (index < 0 || index === current) {
-        stage.removeAttribute('aria-busy');commit(index, false);return;
-      }
-      stage.setAttribute('aria-busy', 'true');status.textContent = 'Loading source artifact…';
-      const images = [...panels[index].querySelectorAll('img[src]')];
-      const ready = await Promise.all(images.map(image => prepareImage(image.src)));
-      if (id !== request) return;
-      stage.removeAttribute('aria-busy');commit(index, true);
-      if (ready.includes(false)) status.textContent += ' Image unavailable; its original-file link remains available.';
-    }
-    root.classList.add('p3-enhanced');
-    controls.hidden = false;
-    commit(current, false);
-  });
-
-  // Keep every original thumbnail/link. Selection adds a larger view, not a final-design claim.
-  const directionGrid = document.querySelector('.v-direction-grid');
-  const directionStage = document.querySelector('.p2-direction-stage');
-  if (directionGrid && directionStage) {
-    const figures = [...directionGrid.children];
-    const controls = document.createElement('div');
-    controls.className = 'p2-direction-controls';
-    controls.setAttribute('role', 'group');
-    controls.setAttribute('aria-label', 'Select a Workbench exploration');
-    const status = document.createElement('p');
-    status.className = 'wm-caption';
-    status.setAttribute('role', 'status');
-    let request = 0;
-    let current = -1;
-    const buttons = figures.map((figure, index) => {
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.textContent = `${String(index + 1).padStart(2, '0')} / ${figure.querySelector('figcaption b').textContent}`;
-      button.setAttribute('aria-pressed', 'false');
-      button.setAttribute('aria-controls', 'direction-preview');
-      controls.append(button);
-      button.addEventListener('click', () => select(index));
-      button.addEventListener('keydown', event => {
-        const next = arrowIndex(event, index, figures.length);
-        if (next === undefined) return;
-        event.preventDefault(); buttons[next].focus(); select(next);
-      });
-      const shortcut = button.cloneNode(true);
-      shortcut.textContent = 'Explore direction';
-      shortcut.setAttribute('aria-label', `Explore direction ${String(index + 1).padStart(2, '0')}: ${figure.querySelector('figcaption b').textContent}`);
-      shortcut.removeAttribute('aria-pressed');
-      shortcut.addEventListener('click', () => {
-        select(index);
-        buttons[index].focus({ preventScroll: true });
-        directionStage.scrollIntoView({ block: 'start', behavior: 'instant' });
-      });
-      figure.append(shortcut);
-      return button;
-    });
-    const preview = document.createElement('div');
-    preview.id = 'direction-preview';
-    preview.className = 'p2-direction-preview';
-    directionStage.append(controls, preview, status);
-    directionStage.hidden = false;
-    async function select(index) {
-      if (current === index && !preview.hasAttribute('aria-busy')) return;
-      const id = ++request;
-      preview.setAttribute('aria-busy', 'true');
-      status.textContent = 'Loading direction…';
-      const source = figures[index].querySelector('a[data-enlarge]');
-      const ok = await prepareImage(source.href);
-      if (id !== request) return;
-      const figure = figures[index].cloneNode(true);
-      figure.querySelectorAll(':scope > button').forEach(button => button.remove());
-      figure.querySelector('a').dataset.viewerSource = 'directions';
-      const notes = figure.querySelector('details');
-      const copy = document.createElement('div');
-      const label = document.createElement('span'); label.className = 'wm-label'; label.textContent = `Selected exploration / ${String(index + 1).padStart(2, '0')}`;
-      const title = document.createElement('h3'); title.textContent = figures[index].querySelector('figcaption b').textContent;
-      copy.append(label, title, notes.querySelector('dl').cloneNode(true));
-      const note = document.createElement('p'); note.className = 'wm-caption'; note.textContent = 'Visual interpretation of an exploration; not a validated or approved selection.'; copy.append(note);
-      figure.querySelector('figcaption').textContent = `Direction ${String(index + 1).padStart(2, '0')}`;
-      preview.replaceChildren(figure, copy);
-      buttons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === index)));
-      figures.forEach((item, i) => item.classList.toggle('p2-selected', i === index));
-      current = index;
-      preview.removeAttribute('aria-busy');
-      status.textContent = ok ? `Direction ${String(index + 1).padStart(2, '0')} selected. All six thumbnails and the comparison below remain available.` : 'Image could not load. Use View detail to open its original file, or choose another direction.';
-      enter(preview);
-    }
-    select(0);
-  }
-
-  // The preserved 01/04 comparison is the default; visitors can inspect any distinct pair.
-  const directionPair = document.querySelector('.r-iteration-pair');
-  if (directionGrid && directionPair) {
-    const sources = [...directionGrid.children];
-    const controls = document.createElement('div');controls.className = 'p2-pair-controls';
-    const status = document.createElement('p');status.className = 'wm-caption';status.setAttribute('role', 'status');
-    const selected = [0, 3], requests = [0, 0];
-    const selects = ['Left direction', 'Right direction'].map((text, column) => {
-      const label = document.createElement('label');label.textContent = text;
-      const select = document.createElement('select');
-      sources.forEach((source, index) => {
-        const option = document.createElement('option');option.value = index;
-        option.textContent = `${String(index + 1).padStart(2, '0')} / ${source.querySelector('figcaption b').textContent}`;
-        select.append(option);
-      });
-      select.value = selected[column];label.append(select);controls.append(label);
-      select.addEventListener('change', async () => {
-        const index = Number(select.value), id = ++requests[column];selected[column] = index;syncOptions();
-        select.setAttribute('aria-busy', 'true');status.textContent = 'Loading comparison…';
-        const ok = await prepareImage(sources[index].querySelector('a').href);
-        if (id !== requests[column]) return;
-        const figure = sources[index].cloneNode(true);
-        figure.classList.remove('p2-selected');figure.querySelectorAll(':scope > button').forEach(button => button.remove());
-        figure.querySelector('details').open = true;
-        directionPair.children[column].replaceWith(figure);
-        select.removeAttribute('aria-busy');
-        status.textContent = ok ? `Comparing directions ${String(selected[0] + 1).padStart(2, '0')} and ${String(selected[1] + 1).padStart(2, '0')}.` : 'Image could not load; its original link remains available.';
-        enter(figure);
-      });
-      return select;
-    });
-    function syncOptions() {
-      selects.forEach((select, column) => [...select.options].forEach(option => { option.disabled = Number(option.value) === selected[1 - column]; }));
-    }
-    syncOptions();directionPair.before(controls, status);
-  }
-
-  // Non-equivalent captures: contained side-by-side views with an optional toggle.
-  const comparison = document.querySelector('.p2-comparison');
-  if (comparison) {
-    const controls = comparison.querySelector('.p2-compare-controls');
-    const images = [...comparison.querySelectorAll('figure')];
-    const buttons = ['Side by side', 'Original', 'Redesigned'].map((label, index) => {
-      const button = document.createElement('button'); button.type = 'button'; button.textContent = label;
-      button.setAttribute('aria-pressed', String(index === 0));
-      button.addEventListener('click', () => select(index));
-      button.addEventListener('keydown', event => { const next = arrowIndex(event, index, 3); if (next === undefined) return; event.preventDefault();buttons[next].focus();select(next); });
-      controls.append(button); return button;
-    });
-    function select(index) {
-      images.forEach((image, i) => { image.hidden = index !== 0 && i !== index - 1; });
-      buttons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === index)));
-      comparison.classList.toggle('p2-single', index !== 0);
-      enter(comparison.querySelector('.p2-compare-images'));
-    }
-    controls.setAttribute('role', 'group');controls.hidden = false;
-  }
-
-  const tabs = [...document.querySelectorAll('.v-flow-tabs [role="tab"]')];
-  const panels = [...document.querySelectorAll('.v-flow-panel')];
-  function activateTab(index, focus = false) {
-    tabs.forEach((tab, i) => {
-      tab.setAttribute('aria-selected', String(i === index));
-      tab.tabIndex = i === index ? 0 : -1;
-      panels[i].hidden = i !== index;
-    });
-    if (focus) tabs[index].focus();
-    enter(panels[index]);
-  }
-  tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => activateTab(index));
-    tab.addEventListener('keydown', event => {
-      let next;
-      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
-      if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
-      if (event.key === 'Home') next = 0;
-      if (event.key === 'End') next = tabs.length - 1;
-      if (next === undefined) return;
-      event.preventDefault();
-      activateTab(next, true);
-    });
-  });
-  if (tabs.length) activateTab(0);
-
-  // Existing screenshots/captions remain the source for synchronized selection.
-  panels.forEach((panel, panelIndex) => {
-    const steps = [...panel.querySelectorAll('.v-flow-step')];
-    const controls = panel.querySelector('.r-step-controls');
-    if (!controls || !steps.length) return;
-    controls.setAttribute('role', 'group');
-    const status = document.createElement('p');
-    status.className = 'p2-step-description'; status.setAttribute('role', 'status');
-    controls.after(status);
-    let request = 0;
-    let current = 0;
-    const buttons = steps.map((step, index) => {
-      step.id = `screen-${panelIndex}-${index}`;
-      const button = document.createElement('button');button.type = 'button';
-      button.setAttribute('aria-controls', step.id);
-      button.textContent = `${String(index + 1).padStart(2, '0')}  ${step.querySelector('figcaption b').textContent}`;
-      controls.append(button);return button;
-    });
-    function commit(index, animate) {
-      steps.forEach((step, i) => { step.hidden = i !== index; });
-      buttons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === index)));
-      const caption = steps[index].querySelector('figcaption');
-      status.textContent = `${index + 1} of ${steps.length} — ${caption.querySelector('b').textContent}. ${caption.querySelector('span').textContent}`;
-      current = index;
-      if (animate) enter(steps[index]);
-      schedule();
-    }
-    async function select(index) {
-      const id = ++request;
-      if (current === index) { controls.removeAttribute('aria-busy');commit(index, false); return; }
-      controls.setAttribute('aria-busy', 'true');status.textContent = 'Loading screen…';
-      const ok = await prepareImage(steps[index].querySelector('a[data-enlarge]').href);
-      if (id !== request) return;
-      controls.removeAttribute('aria-busy');
-      commit(index, true);
-      if (!ok) status.textContent += ' Image unavailable; the original-image link remains available.';
-    }
-    buttons.forEach((button, index) => {
-      button.addEventListener('click', () => select(index));
-      button.addEventListener('keydown', event => {
-        const next = arrowIndex(event, index, steps.length);
-        if (next === undefined) return;
-        event.preventDefault();buttons[next].focus();select(next);
-      });
-    });
-    commit(0, false);
-  });
-
-  const preference = matchMedia('(prefers-reduced-motion: reduce)');
-  if ('IntersectionObserver' in window && !preference.matches) {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      });
-    }, { threshold: .05 });
-    // Only section headings transition; evidence and body content always remain visible.
-    document.querySelectorAll('.wm-section-head').forEach(element => {
-      element.classList.add('wm-reveal');
-      observer.observe(element);
-    });
-    preference.addEventListener('change', () => {
-      if (!preference.matches) return;
-      observer.disconnect();
-      document.querySelectorAll('.wm-reveal').forEach(element => element.classList.add('is-visible'));
-    });
+    const image = link.querySelector('img');
+    const heading = caption?.querySelector('strong');
+    const title = heading?.textContent.trim() || image.alt;
+    const description = caption?.querySelector('strong + span')?.textContent.trim() || image.alt;
+    return { src: link.href, alt: image.alt, title, description };
   }
 
   // Native dialog owns focus containment; grouped browsing never changes the page below it.
@@ -401,7 +97,7 @@
   const next = dialog.querySelector('[data-next]');
   const position = dialog.querySelector('[data-position]');
   const status = dialog.querySelector('.p2-viewer-status');
-  let opener, group = [], groupName = '', index = 0, requested = 0, request = 0, closing = false;
+  let opener, group = [], groupRoot, index = 0, requested = 0, request = 0, closing = false;
   let scrollState;
   function lockScroll() {
     const root = document.documentElement, page = document.body;
@@ -429,7 +125,8 @@
     detail.src = info.src;detail.alt = info.alt;detail.hidden = !ok;
     title.textContent = info.title;caption.textContent = info.description;
     original.href = info.src;
-    dialog.querySelector('[data-gallery-name]').textContent = groupName;
+    const groupHeading = document.getElementById(groupRoot?.getAttribute('aria-labelledby'));
+    dialog.querySelector('[data-gallery-name]').textContent = groupHeading?.textContent.trim() || 'Design detail';
     position.textContent = `${index + 1} / ${group.length} — ${info.title}`;
     previous.disabled = next.disabled = group.length < 2;
     status.textContent = ok ? '' : 'This image could not load. Try another image or open its full-size file.';
@@ -442,15 +139,14 @@
     event.preventDefault();
     if (dialog.open) return;
     opener = link;
-    const source = link.dataset.viewerSource === 'directions' ? [...directionGrid.querySelectorAll('a[data-enlarge]')].find(item => item.href === link.href) : link;
-    const root = source.closest('[data-gallery]');
-    group = root ? [...root.querySelectorAll('a[data-enlarge]')] : [source];
-    groupName = root?.dataset.gallery || 'Design detail';
-    index = requested = Math.max(0, group.indexOf(source));
+    groupRoot = link.closest('[data-gallery]');
+    group = groupRoot ? [...groupRoot.querySelectorAll('a[data-enlarge]')] : [link];
+    index = requested = Math.max(0, group.indexOf(link));
     // No old image or caption should flash when opening a different group.
     detail.hidden = true;detail.removeAttribute('src');caption.textContent = '';position.textContent = '';
-    const info = imageInfo(source); title.textContent = info.title;original.href = info.src;
-    dialog.querySelector('[data-gallery-name]').textContent = groupName;
+    const info = imageInfo(link); title.textContent = info.title;original.href = info.src;
+    const groupHeading = document.getElementById(groupRoot?.getAttribute('aria-labelledby'));
+    dialog.querySelector('[data-gallery-name]').textContent = groupHeading?.textContent.trim() || 'Design detail';
     previous.disabled = next.disabled = group.length < 2;
     closing = false;dialog.classList.remove('p2-closing');
     lockScroll();dialog.showModal();body.scrollTop = 0;

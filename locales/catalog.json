@@ -3438,5 +3438,550 @@
     "en": "The outline highlights the inline error beside the required crew field in the demo.",
     "zh": "框线标出演示中班组名称必填项旁的错误提示。",
     "keep": false
+  },
+  "6489f3517e0e": {
+    "en": "Wuhan Marine",
+    "zh": "武汉船机",
+    "keep": false
+  },
+  "d1f840c5cdfd": {
+    "en": "Back to Work",
+    "zh": "返回作品列表",
+    "keep": false
+  },
+  "bc690c7c89d2": {
+    "en": "Mobile operations platform",
+    "zh": "移动综合管理平台",
+    "keep": false
+  },
+  "83e7af773bf6": {
+    "en": "Workbench → Business tools",
+    "zh": "工作台 → 业务工具",
+    "keep": false
+  },
+  "7d1bb55e1d04": {
+    "en": "Task overview → Pending messages",
+    "zh": "任务概览 → 待办消息",
+    "keep": false
+  },
+  "9799bbb21500": {
+    "en": "Messages → Business inbox → Task detail",
+    "zh": "消息首页 → 业务收件箱 → 任务详情",
+    "keep": false
+  },
+  "b0f4483dc05a": {
+    "en": "Safety Production → Hazard rectification",
+    "zh": "安全生产 → 隐患整改",
+    "keep": false
+  },
+  "bd8047744e58": {
+    "en": "Design library",
+    "zh": "设计资产",
+    "keep": false
+  },
+  "d39a76358ef3": {
+    "en": "Page and field specification",
+    "zh": "页面与字段规范",
+    "keep": false
+  },
+  "f51e26c15337": {
+    "en": "AI-assisted prototype",
+    "zh": "AI 辅助交互原型",
+    "keep": false
+  },
+  "c5eaf1654801": {
+    "en": "Try the r6 prototype",
+    "zh": "试用 r6 交互原型",
+    "keep": false
+  },
+  "a2eb72cdd0bb": {
+    "en": "The demo uses mock data. Open with any non-empty account and password.",
+    "zh": "演示使用模拟数据，输入任意非空账号和密码即可进入。",
+    "keep": false
+  },
+  "71b2d427c4b6": {
+    "en": "Images from the original product and the r6 handoff retain the Chinese interface. English captions explain the key controls.",
+    "zh": "原产品与 r6 交付截图保留真实中文界面。",
+    "keep": false
+  },
+  "1afc3b2f89d5": {
+    "en": "A mobile redesign for finding and handling everyday shipyard tasks.",
+    "zh": "面向船厂日常工作，重新梳理移动端的任务入口与处理路径。",
+    "keep": false
+  },
+  "f4ce25a16262": {
+    "en": "Explore the redesign",
+    "zh": "查看核心改版",
+    "keep": false
+  },
+  "b53ddd9f91b9": {
+    "en": "r6 Workbench with a task overview followed by routine business shortcuts",
+    "zh": "r6 工作台将任务概览放在常用业务上方",
+    "keep": false
+  },
+  "929ccfcbff21": {
+    "en": "Pending crane reporting task with a deadline, workflow status and actions",
+    "zh": "待处理的起重作业报工详情，显示截止时间、流转状态及操作",
+    "keep": false
+  },
+  "0dfb7d39936a": {
+    "en": "Pending task detail",
+    "zh": "待处理任务详情",
+    "keep": false
+  },
+  "4c59574ff606": {
+    "en": "Case study chapters",
+    "zh": "案例章节",
+    "keep": false
+  },
+  "d4b1ea5708dd": {
+    "en": "Overview",
+    "zh": "项目概览",
+    "keep": false
+  },
+  "e578c36b2ecf": {
+    "en": "The Challenge",
+    "zh": "核心挑战",
+    "keep": false
+  },
+  "7ee60d4fa606": {
+    "en": "Design Thinking",
+    "zh": "设计思路",
+    "keep": false
+  },
+  "7d269aef70f4": {
+    "en": "The Redesign",
+    "zh": "核心改版",
+    "keep": false
+  },
+  "d9cf312f9d2e": {
+    "en": "Outcome & Reflection",
+    "zh": "交付与反思",
+    "keep": false
+  },
+  "eaf4e44caccd": {
+    "en": "01 / Overview",
+    "zh": "01 / 项目概览",
+    "keep": false
+  },
+  "dc6057658977": {
+    "en": "The existing mobile platform brings production, safety and internal services into one app. I worked within its established workflows to clarify where tasks start and how they are handled.",
+    "zh": "原平台将生产、安全与内部服务整合在一个应用中。我在既有业务流程下，梳理任务从哪里开始，以及进入后如何处理。",
+    "keep": false
+  },
+  "29ef9b2afe18": {
+    "en": "My role",
+    "zh": "我的职责",
+    "keep": false
+  },
+  "cfbc52ad62d9": {
+    "en": "Product analysis, information architecture, UX/UI design and AI-assisted frontend prototyping.",
+    "zh": "产品分析、信息架构、UX/UI 设计与 AI 辅助前端原型开发。",
+    "keep": false
+  },
+  "f130ab1ad0d7": {
+    "en": "Submitted for handoff",
+    "zh": "已提交交接",
+    "keep": false
+  },
+  "6d2b8637306f": {
+    "en": "Editable design assets, a page and field inventory, and an interactive prototype with mock data.",
+    "zh": "可编辑设计资产、页面与字段清单，以及使用模拟数据的交互原型。",
+    "keep": false
+  },
+  "cc138c27c9e6": {
+    "en": "02 / The Challenge",
+    "zh": "02 / 核心挑战",
+    "keep": false
+  },
+  "f22dcfeb658d": {
+    "en": "Where the original interface fell short",
+    "zh": "从找到任务，到跟进与填报",
+    "keep": false
+  },
+  "df18a9b96715": {
+    "en": "The platform served several shipyard operations. I reviewed the existing screens and records to find where the interface could better support the work already in place.",
+    "zh": "一个移动端覆盖船厂多项业务。我对照原界面与项目资料，找出哪些环节可以在既有业务流程下做得更清楚。",
+    "keep": false
+  },
+  "98cc039fe013": {
+    "en": "Finding where to start",
+    "zh": "任务从哪里开始",
+    "keep": false
+  },
+  "a13fda52873b": {
+    "en": "The Workbench presented business shortcuts at similar visual weight, leaving the user to recognize which system handled their task.",
+    "zh": "原工作台的业务入口视觉权重接近。要找到入口，得先判断手头任务归哪个系统。",
+    "keep": false
+  },
+  "c19a6607e8d8": {
+    "en": "Finding what needs action",
+    "zh": "哪条消息需要处理",
+    "keep": false
+  },
+  "a3d7e1b0905e": {
+    "en": "The Message Center was organized by business system. The entry screen showed the systems, while the actionable item and its context sat further down the path.",
+    "zh": "消息中心按业务系统组织。首屏能找到业务入口，具体待办及其上下文还要进入下一级查看。",
+    "keep": false
+  },
+  "66661dab94d7": {
+    "en": "Knowing what to enter",
+    "zh": "什么情况下需要补填",
+    "keep": false
+  },
+  "096460ba3c7e": {
+    "en": "Forms looked similar but asked for different information. A hazard record needs responsibility and evidence fields; a machining record can ask for additional reasons depending on prior answers.",
+    "zh": "表单外观相似，规则各异。隐患整改需要责任信息和证据，加工记录则根据前面的回答决定是否补填原因。",
+    "keep": false
+  },
+  "ac85234c474a": {
+    "en": "Open the complete original Message Center screenshot",
+    "zh": "查看原消息中心完整截图",
+    "keep": false
+  },
+  "01820abefd5e": {
+    "en": "Original Message Center with business entries for safety production and training",
+    "zh": "原消息中心列出安全生产和培训信息的业务入口",
+    "keep": false
+  },
+  "8e9dbcab2db8": {
+    "en": "Original Message Center · business-system entries",
+    "zh": "原消息中心 · 按业务系统进入",
+    "keep": false
+  },
+  "1d57351e0db9": {
+    "en": "03 / Design Thinking",
+    "zh": "03 / 设计思路",
+    "keep": false
+  },
+  "c288c7339c77": {
+    "en": "Map the work before changing the UI",
+    "zh": "从业务到界面",
+    "keep": false
+  },
+  "bd73bd34afa3": {
+    "en": "I used the PRD to identify who raises, receives and follows up on work. Then I traced those responsibilities through System Map and Page Tree, down to the screens and fields they depended on.",
+    "zh": "我先从 PRD 梳理任务由谁发起、谁接收、谁跟进，再沿系统图和页面树，把这些职责对应到实际的入口、页面与字段。",
+    "keep": false
+  },
+  "05f692acfbd9": {
+    "en": "r6 information architecture · responsibilities of the four main destinations",
+    "zh": "r6 信息架构 · 四个主入口各自承担的职责",
+    "keep": false
+  },
+  "691fffe5c4fd": {
+    "en": "Message Center",
+    "zh": "消息中心",
+    "keep": false
+  },
+  "6388d3e4b9d4": {
+    "en": "Browse activity by system and period",
+    "zh": "按业务系统和周期查看数据",
+    "keep": false
+  },
+  "99f4bac7166e": {
+    "en": "Find account and notification settings",
+    "zh": "查看账户与通知设置",
+    "keep": false
+  },
+  "09f1987f6ad3": {
+    "en": "PRD workflow · System Map V1 · IA proposal",
+    "zh": "PRD 业务流程 · 系统图 V1 · 信息架构方案",
+    "keep": false
+  },
+  "1ae9f374d932": {
+    "en": "Separate the task overview from the business catalog",
+    "zh": "区分任务概览与业务清单",
+    "keep": false
+  },
+  "375caa186b34": {
+    "en": "The PRD traces work from initiation to follow-up. The map shows that the Workbench also serves as a directory. I kept both jobs on the Workbench, with an expandable task overview above regular shortcuts and a separate All Businesses entry.",
+    "zh": "PRD 记录了任务从发起到跟进的过程，系统图也显示工作台承担业务目录的作用。我保留这两种用途：可展开的任务概览放在常用业务上方，完整清单从「全部业务」进入。",
+    "keep": false
+  },
+  "82f619ad93e1": {
+    "en": "Page Tree V1 · r6 navigation",
+    "zh": "页面树 V1 · r6 导航",
+    "keep": false
+  },
+  "fbbd8f35f25e": {
+    "en": "Keep business ownership visible in messages",
+    "zh": "在消息里保留业务归属",
+    "keep": false
+  },
+  "d1144fb62bb9": {
+    "en": "The page tree showed that the same business area can appear under Workbench and Messages. I kept business groups in Messages so readers can tell which system a pending item belongs to. The detail then brings together its source, deadline and workflow status.",
+    "zh": "页面树显示，同一业务可从工作台和消息进入。我保留消息按业务分组的方式，让待办事项的归属可辨，再把来源、截止时间和流转状态集中在详情页。",
+    "keep": false
+  },
+  "c7963d83f784": {
+    "en": "Message path",
+    "zh": "看消息路径",
+    "keep": false
+  },
+  "c1ece953033e": {
+    "en": "Original form screenshots · August 7 field review",
+    "zh": "原始表单截图 · 8 月 7 日字段核对",
+    "keep": false
+  },
+  "7f92f3e64c67": {
+    "en": "Reuse the form pattern and preserve field rules",
+    "zh": "复用表单结构，保留各自的字段规则",
+    "keep": false
+  },
+  "3fb11e8f51f6": {
+    "en": "The field review distinguished reporting and responsible departments for hazard rectification, and documented when dispatch and pickup reasons apply in machining. I reused input and validation patterns in both forms. When the source only showed a list or status, I kept the existing form structure.",
+    "zh": "核对原图时，我区分了隐患整改的发起人部门与整改责任部门，也整理了加工记录中派工、领工原因的条件。两类表单共用输入与校验方式。如果原资料只有列表或状态页，就保留现有表单结构。",
+    "keep": false
+  },
+  "08232021d2c2": {
+    "en": "Safety form",
+    "zh": "看安全表单",
+    "keep": false
+  },
+  "5628a94048ba": {
+    "en": "04 / The Redesign",
+    "zh": "04 / 核心改版",
+    "keep": false
+  },
+  "564c7bb2876e": {
+    "en": "Workbench, messages and safety forms",
+    "zh": "工作台、消息与安全表单",
+    "keep": false
+  },
+  "de5738c5aee8": {
+    "en": "Task overview above business shortcuts",
+    "zh": "把任务概览放在业务入口上方",
+    "keep": false
+  },
+  "e3ab1e02e9a9": {
+    "en": "r6 gives the task overview a place above frequent business shortcuts and puts the full catalog behind its own link.",
+    "zh": "r6 在常用业务上方显示任务概览，并提供单独入口打开完整业务清单。",
+    "keep": false
+  },
+  "ad2d4539a619": {
+    "en": "Original and r6 Workbench",
+    "zh": "原工作台与 r6 工作台",
+    "keep": false
+  },
+  "763d94a9d09f": {
+    "en": "Original Workbench",
+    "zh": "原工作台",
+    "keep": false
+  },
+  "097c798a02c4": {
+    "en": "The business shortcuts have similar visual weight.",
+    "zh": "各业务快捷入口的视觉权重接近。",
+    "keep": false
+  },
+  "dcede06f9c66": {
+    "en": "Open full original Workbench screenshot",
+    "zh": "查看原工作台完整截图",
+    "keep": false
+  },
+  "e4aaedce0393": {
+    "en": "Original Workbench showing business shortcuts with similar visual weight",
+    "zh": "原工作台的业务快捷入口视觉权重接近",
+    "keep": false
+  },
+  "0b8c93a13bce": {
+    "en": "r6 Workbench · Overview expanded",
+    "zh": "r6 工作台 · 已展开任务概览",
+    "keep": false
+  },
+  "cf409a937a62": {
+    "en": "The task overview and business shortcuts occupy distinct areas.",
+    "zh": "任务概览和常用业务分区呈现。",
+    "keep": false
+  },
+  "d438be679792": {
+    "en": "Open full r6 Workbench screenshot",
+    "zh": "查看 r6 工作台完整截图",
+    "keep": false
+  },
+  "0b26639368a7": {
+    "en": "Expanded r6 task overview showing pending tasks above business shortcuts",
+    "zh": "展开的 r6 任务概览，待办位于常用业务入口上方",
+    "keep": false
+  },
+  "64e2025e0e1e": {
+    "en": "From pending messages to task detail",
+    "zh": "从待办消息到任务详情",
+    "keep": false
+  },
+  "129e105ca335": {
+    "en": "Swipe or use the arrow keys to follow the four steps.",
+    "zh": "横向滑动，或用方向键浏览四个步骤。",
+    "keep": false
+  },
+  "ab3b44998f67": {
+    "en": "Path from Workbench to a pending task",
+    "zh": "从工作台到待办任务的路径",
+    "keep": false
+  },
+  "2befd26822e8": {
+    "en": "Expand the task overview and select Pending.",
+    "zh": "展开任务概览，点击「待办」。",
+    "keep": false
+  },
+  "c13928f0366c": {
+    "en": "Choose Crane Reporting under business messages.",
+    "zh": "在业务待处理中选择起重作业报工。",
+    "keep": false
+  },
+  "1cac92ecbed5": {
+    "en": "Open full r6 Message Center screenshot",
+    "zh": "查看 r6 消息中心完整截图",
+    "keep": false
+  },
+  "410c996ae0b8": {
+    "en": "Message Center showing business modules with pending items",
+    "zh": "消息中心内列出各业务模块及待处理事项",
+    "keep": false
+  },
+  "a2f9257f59e1": {
+    "en": "Business inbox",
+    "zh": "业务收件箱",
+    "keep": false
+  },
+  "322b97a8c888": {
+    "en": "Open the pending crane report.",
+    "zh": "打开待处理的起重报工记录。",
+    "keep": false
+  },
+  "ef5a1f6e398d": {
+    "en": "Open full business inbox screenshot",
+    "zh": "查看业务收件箱完整截图",
+    "keep": false
+  },
+  "97795733e96b": {
+    "en": "Crane reporting inbox with pending and sent tabs",
+    "zh": "起重作业报工系统的收件箱，包含待处理和已发送",
+    "keep": false
+  },
+  "9ce56c9248e7": {
+    "en": "Review its source, deadline and workflow status.",
+    "zh": "查看任务来源、截止时间与流转状态。",
+    "keep": false
+  },
+  "033d82a128ac": {
+    "en": "Open full task detail screenshot",
+    "zh": "查看待处理任务详情完整截图",
+    "keep": false
+  },
+  "dadbeb668af8": {
+    "en": "Hazard rectification form",
+    "zh": "隐患整改表单",
+    "keep": false
+  },
+  "e0f86d5994c6": {
+    "en": "I checked the original hazard records to identify fields the redesign needed to keep, including department, classification and corrective evidence.",
+    "zh": "对照原始隐患记录，保留部门、隐患分类和整改证据等字段。",
+    "keep": false
+  },
+  "a1099234954e": {
+    "en": "Open full hazard rectification screenshot",
+    "zh": "查看隐患整改表单完整截图",
+    "keep": false
+  },
+  "64b1f2c925d3": {
+    "en": "Hazard rectification form with required department fields and a save-draft action",
+    "zh": "隐患整改闭环表单，显示必填部门字段及保存草稿操作",
+    "keep": false
+  },
+  "daebacb5d0d1": {
+    "en": "Required responsibility fields",
+    "zh": "必填的责任信息",
+    "keep": false
+  },
+  "55d485360ebb": {
+    "en": "Reporting department and responsible department are separate required fields.",
+    "zh": "发起人部门和整改责任部门分开填写，且均为必填。",
+    "keep": false
+  },
+  "371afc5a733f": {
+    "en": "Save a draft or submit for review",
+    "zh": "保存草稿或提交复核",
+    "keep": false
+  },
+  "2194439de8e2": {
+    "en": "A draft is stored locally. In the prototype, submitting for review checks required fields.",
+    "zh": "草稿保存在本机。在原型中提交复核时会检查必填字段。",
+    "keep": false
+  },
+  "b2fb433a798d": {
+    "en": "05 / Outcome & Reflection",
+    "zh": "05 / 交付与反思",
+    "keep": false
+  },
+  "5d91e623cf69": {
+    "en": "Design assets and a runnable prototype",
+    "zh": "交付设计资产与可运行原型",
+    "keep": false
+  },
+  "d56db376dabc": {
+    "en": "The August 2026 r6 package was submitted for handoff so the team could inspect the design, page inventory and demo together.",
+    "zh": "2026 年 8 月提交 r6 交付包，便于团队对照查看设计稿、页面清单与前端演示。",
+    "keep": false
+  },
+  "870a843fc687": {
+    "en": "Open the full Figma library overview",
+    "zh": "查看完整的 Figma 库概览",
+    "keep": false
+  },
+  "ea60968fda4d": {
+    "en": "Overview sheet from the editable Figma design library",
+    "zh": "可编辑 Figma 设计库的概览页",
+    "keep": false
+  },
+  "96982cbacf55": {
+    "en": "Figma library overview · r6 handoff export",
+    "zh": "Figma 设计库概览 · r6 交付导出",
+    "keep": false
+  },
+  "28189822cf63": {
+    "en": "Figma screens, reusable components, styles and offline exports.",
+    "zh": "Figma 界面、可复用组件、样式及离线导出。",
+    "keep": false
+  },
+  "34f65ebc97bd": {
+    "en": "37 page entries, 18 form configurations and 199 field definitions.",
+    "zh": "37 个页面条目、18 个表单配置、199 个字段定义。",
+    "keep": false
+  },
+  "a994ea041171": {
+    "en": "An AI-assisted Vue implementation with mock data, delivered as source and a static demo.",
+    "zh": "使用 AI 辅助开发的 Vue 原型，以模拟数据运行，交付源码和静态演示。",
+    "keep": false
+  },
+  "a1fab1210546": {
+    "en": "Checked in the prototype",
+    "zh": "已有原型检查记录",
+    "keep": false
+  },
+  "36e64ea96cc5": {
+    "en": "Local checks covered the Workbench-to-message route, message detail and return, required fields, and local draft saving.",
+    "zh": "本地检查覆盖了从工作台进入消息、查看详情并返回、必填校验，以及在本机保存草稿。",
+    "keep": false
+  },
+  "c0b4a9c61b78": {
+    "en": "Still to verify",
+    "zh": "仍需真实场景验证",
+    "keep": false
+  },
+  "93ac52175c23": {
+    "en": "Employee feedback and usability outcomes remain unverified. Production rollout and integration with live services are also unconfirmed.",
+    "zh": "员工反馈和实际使用效果尚未验证。正式上线与真实服务接入也未确认。",
+    "keep": false
+  },
+  "e46f0d8f48f3": {
+    "en": "What I would validate next",
+    "zh": "我下一步想验证什么",
+    "keep": false
+  },
+  "401f4533ac24": {
+    "en": "Reviewing the original forms taught me where a shared pattern could simplify the UI and where business rules had to stay explicit. The AI-assisted build let me check navigation and validation in a working demo. I would next observe employees finding a pending task and preparing a hazard correction, focusing on where roles or next steps are still unclear.",
+    "zh": "逐项对照原表单，让我看清哪些界面模式可以复用，哪些业务规则必须写清。AI 辅助构建的原型让我能实际检查跳转与校验。下一步，我希望观察员工查找待办和填写隐患整改，了解角色分工或下一步操作在哪些地方仍不清楚。",
+    "keep": false
   }
 }
