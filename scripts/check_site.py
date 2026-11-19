@@ -40,6 +40,11 @@ case_images={'workbench.png','messages.png','statistics.png','management.png','a
              'original-workbench.jpg','original-safety.jpg',
              'message-list.png','message-detail.png','validation-error.png','discard-confirm.png','process-record.png','hazard-form.png','notification-settings.png','statistics-detail.png','exploration-02.png','exploration-03.png','exploration-05.png','exploration-06.png','component-status-badge.png','component-button.png','component-text-field.png','component-toggle.png','prototype-workbench-2026-08-11.png'}
 expected.update('assets/wmmp/'+name for name in case_images)
+expected.update('assets/wmmp/r6-'+screen+'.png' for screen in (
+    'workbench', 'messages', 'statistics', 'management',
+    'message-inbox', 'message-task', 'safety-registration', 'safety-rectification', 'production-form',
+    'required-state', 'discard-state', 'notification-settings', 'statistics-trend', 'statistics-breakdown',
+))
 expected.update({'zh/'+name for name in ['index.html','work.html','about.html','wuhan-marine-machinery.html']})
 expected.update({'localization.css','i18n.js','i18n-data.js','coming-soon.js'})
 expected.update({'ink-character.css','ink-character.js'})

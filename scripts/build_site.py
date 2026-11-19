@@ -18,6 +18,11 @@ assets += ["localization.css", "i18n.js", "coming-soon.js"]
 assets += ["ink-character.css", "ink-character.js"]
 assets += ["assets/portfolio/ink/" + pose + ".webp" for pose in ("idle", "look", "walk", "jump", "sit", "climb", "surprise", "sleep", "climb-cycle", "walk-cycle")]
 assets += ["assets/wmmp/" + name for name in case_images]
+assets += ["assets/wmmp/r6-" + screen + ".png" for screen in (
+    "workbench", "messages", "statistics", "management",
+    "message-inbox", "message-task", "safety-registration", "safety-rectification", "production-form",
+    "required-state", "discard-state", "notification-settings", "statistics-trend", "statistics-breakdown",
+)]
 for name in pages + assets:
     if not (root / name).is_file():
         raise FileNotFoundError(name)

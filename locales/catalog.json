@@ -2454,9 +2454,9 @@
     "zh": "下一张 →",
     "keep": false
   },
-  "7d2f76879f40": {
-    "en": "Full-size image; scroll to inspect",
-    "zh": "原尺寸图片；可滚动查看",
+  "f09247433bef": {
+    "en": "Image preview",
+    "zh": "图片预览",
     "keep": false
   },
   "40657d93434a": {
@@ -3208,5 +3208,235 @@
     "en": "1277113023@qq.com ↗",
     "zh": "1277113023@qq.com ↗",
     "keep": true
+  },
+  "b32778a9ab6c": {
+    "en": "Final handoff: Workbench screen",
+    "zh": "最终交付版：工作台界面",
+    "keep": false
+  },
+  "75ad68c70c43": {
+    "en": "Final handoff / 2026",
+    "zh": "最终交付版 / 2026",
+    "keep": false
+  },
+  "9d7ba34ce5bc": {
+    "en": "Final handoff: Statistics screen",
+    "zh": "最终交付版：统计界面",
+    "keep": false
+  },
+  "ab7c5f75f533": {
+    "en": "Final handoff: Messages screen",
+    "zh": "最终交付版：消息界面",
+    "keep": false
+  },
+  "80a33d5026f5": {
+    "en": "Four screens from the final handoff",
+    "zh": "最终交付版的四个主界面",
+    "keep": false
+  },
+  "f6e17e3bfa2f": {
+    "en": "Workbench · Messages · Statistics · Management (mock data)",
+    "zh": "工作台 · 消息 · 统计 · 管理（模拟数据）",
+    "keep": false
+  },
+  "a71d19276fde": {
+    "en": "Enlarge: final handoff Workbench screen",
+    "zh": "放大查看：最终交付版工作台界面",
+    "keep": false
+  },
+  "08f0c28681e7": {
+    "en": "Enlarge: final handoff Messages screen",
+    "zh": "放大查看：最终交付版消息界面",
+    "keep": false
+  },
+  "a2170e9fdcaa": {
+    "en": "Enlarge: final handoff Statistics screen",
+    "zh": "放大查看：最终交付版统计界面",
+    "keep": false
+  },
+  "aa2bcb268ad8": {
+    "en": "Enlarge: final handoff Management screen",
+    "zh": "放大查看：最终交付版管理界面",
+    "keep": false
+  },
+  "19914d3b1f7e": {
+    "en": "Final handoff: Management screen",
+    "zh": "最终交付版：管理界面",
+    "keep": false
+  },
+  "3aeef860d5a5": {
+    "en": "The r6 demo starts on Crane Operations. Open Reporting Trend, then By Crew to reach the breakdown and its export entry.",
+    "zh": "r6 演示默认选择起重作业报工系统。打开「报工趋势」，再选「按班组」即可查看分布及导出入口。",
+    "keep": false
+  },
+  "0cb4c1ef1b8b": {
+    "en": "In the r6 machining form, saving with an empty required field shows an inline error. Canceling after an edit opens a confirmation. Notification controls are under Management.",
+    "zh": "在 r6 加工记录中，必填项为空时保存会显示字段提示，编辑后取消则会打开确认框。消息通知设置从管理页进入。",
+    "keep": false
+  },
+  "8f5c3da5629c": {
+    "en": "The r6 demo includes separate entries for safety registration, hazard rectification and machining records. The field audit is the reference for their structure.",
+    "zh": "r6 演示分别提供安全事项登记、隐患整改和加工记录入口。各表单的组织方式参考了原有字段核查。",
+    "keep": false
+  },
+  "7fa705103431": {
+    "en": "Compare the information hierarchy in the original Workbench and the r6 handoff. The screenshots use different framing and data.",
+    "zh": "对照原始工作台与 r6 交付版的信息层级。两张截图的取景与数据不同。",
+    "keep": false
+  },
+  "059c5c132214": {
+    "en": "In the r6 demo, open the Crane Operations inbox and select the pending lifting report for details and available actions.",
+    "zh": "在 r6 演示中打开起重作业报工系统的收件箱，再选择待处理的吊装报工，查看详情和可用操作。",
+    "keep": false
+  },
+  "48fa537ad9e0": {
+    "en": "These screenshots come from the r6 frontend and use the package’s mock data.",
+    "zh": "这些截图来自 r6 前端，使用交付包内的模拟数据。",
+    "keep": false
+  },
+  "3ac166085015": {
+    "en": "Show the period on the trend and its crew breakdown so readers can keep track of what they are comparing.",
+    "zh": "趋势页和班组分布页都显示统计周期，方便读者理解当前比较的范围。",
+    "keep": false
+  },
+  "4aeefe662f9b": {
+    "en": "Four main screens and four interaction examples from the August 10 r6 frontend handoff.",
+    "zh": "2026 年 8 月 10 日 r6 前端交付版的四个主界面与四组交互示例。",
+    "keep": false
+  },
+  "262558d96771": {
+    "en": "Statistics → reporting trend → crew breakdown",
+    "zh": "统计 → 报工趋势 → 按班组分布",
+    "keep": false
+  },
+  "88aa948b2401": {
+    "en": "Shift and identity at the top, followed by frequent services and safety alerts.",
+    "zh": "顶部展示班次与身份，下方依次呈现高频业务和安全提醒。",
+    "keep": false
+  },
+  "cdbcd2f49e8f": {
+    "en": "Enlarge: r6 handoff Workbench",
+    "zh": "放大查看：r6 交付版工作台",
+    "keep": false
+  },
+  "d1dc1925bf54": {
+    "en": "Interaction states / final handoff",
+    "zh": "交互状态 / 最终交付版",
+    "keep": false
+  },
+  "406b17a62051": {
+    "en": "Safety & forms / final handoff",
+    "zh": "安全与表单 / 最终交付版",
+    "keep": false
+  },
+  "fc7f70bfd6b3": {
+    "en": "r6 handoff Workbench",
+    "zh": "r6 交付版工作台",
+    "keep": false
+  },
+  "78165645dc64": {
+    "en": "Workbench / original and final handoff",
+    "zh": "工作台 / 原始界面与最终交付版",
+    "keep": false
+  },
+  "f0ff1c0272d9": {
+    "en": "Statistics / final handoff",
+    "zh": "统计 / 最终交付版",
+    "keep": false
+  },
+  "fc7b7fedc7fa": {
+    "en": "r6 frontend / semantic accents",
+    "zh": "r6 前端 / 业务语义色",
+    "keep": false
+  },
+  "a9cdaf510ad2": {
+    "en": "Messages / final handoff",
+    "zh": "消息 / 最终交付版",
+    "keep": false
+  },
+  "837423713ef2": {
+    "en": "Final handoff · r6",
+    "zh": "最终交付版 · r6",
+    "keep": false
+  },
+  "4a1a20864e8d": {
+    "en": "Reporting metrics and seven-day trend",
+    "zh": "报工指标与近七日趋势",
+    "keep": false
+  },
+  "876871771d6c": {
+    "en": "Open editable Figma design ↗",
+    "zh": "查看可编辑的 Figma 设计 ↗",
+    "keep": false
+  },
+  "4b064668e75d": {
+    "en": "Final handoff · August 10, 2026",
+    "zh": "最终交付版 · 2026 年 8 月 10 日",
+    "keep": false
+  },
+  "d3b56d164f76": {
+    "en": "Compare by crew",
+    "zh": "按班组比较",
+    "keep": false
+  },
+  "10c17231660b": {
+    "en": "Crew shares and an export entry",
+    "zh": "班组占比与导出入口",
+    "keep": false
+  },
+  "cfe360c2f040": {
+    "en": "Enlarge: Compare by crew",
+    "zh": "放大查看：按班组比较",
+    "keep": false
+  },
+  "c9aa28c5e7dc": {
+    "en": "I worked on product analysis, IA, UX/UI and prototype development with AI-assisted execution. This page draws on original product screenshots, Figma exports, the r6 frontend build and project documentation. New diagrams are editorial reconstructions of those sources.",
+    "zh": "我负责产品分析、信息架构、体验与界面设计，并借助 AI 开发前端原型。本页资料来自原产品截图、Figma 导出、r6 前端构建与项目文档。新增图表根据这些资料整理绘制。",
+    "keep": false
+  },
+  "0a330f400561": {
+    "en": "Enlarge: r6 Workbench / frequent services",
+    "zh": "放大查看：r6 工作台 / 高频业务",
+    "keep": false
+  },
+  "c1504996b051": {
+    "en": "r6 Workbench / frequent services",
+    "zh": "r6 工作台 / 高频业务",
+    "keep": false
+  },
+  "ea06c0e1c2c3": {
+    "en": "The outline highlights the frequent services beneath the shift and identity card.",
+    "zh": "框线标出班次与身份卡片下方的高频业务区。",
+    "keep": false
+  },
+  "f33312c16a8a": {
+    "en": "Enlarge: r6 Messages / business inboxes",
+    "zh": "放大查看：r6 消息 / 业务收件箱",
+    "keep": false
+  },
+  "82dd1cc354e8": {
+    "en": "r6 Messages / business inboxes",
+    "zh": "r6 消息 / 业务收件箱",
+    "keep": false
+  },
+  "0631035219a4": {
+    "en": "The outline highlights the named business inboxes. Workbench retains its separate service shortcuts.",
+    "zh": "框线标出按业务系统命名的收件箱。工作台继续提供各业务的快捷入口。",
+    "keep": false
+  },
+  "8a87f19e9f3a": {
+    "en": "Enlarge: r6 machining form / required-field error",
+    "zh": "放大查看：r6 加工记录 / 必填项错误",
+    "keep": false
+  },
+  "d745ee8e230e": {
+    "en": "r6 machining form / required-field error",
+    "zh": "r6 加工记录 / 必填项错误",
+    "keep": false
+  },
+  "e06566c0af8b": {
+    "en": "The outline highlights the inline error beside the required crew field in the demo.",
+    "zh": "框线标出演示中班组名称必填项旁的错误提示。",
+    "keep": false
   }
 }
