@@ -3983,5 +3983,10 @@
     "en": "Reviewing the original forms taught me where a shared pattern could simplify the UI and where business rules had to stay explicit. The AI-assisted build let me check navigation and validation in a working demo. I would next observe employees finding a pending task and preparing a hazard correction, focusing on where roles or next steps are still unclear.",
     "zh": "逐项对照原表单，让我看清哪些界面模式可以复用，哪些业务规则必须写清。AI 辅助构建的原型让我能实际检查跳转与校验。下一步，我希望观察员工查找待办和填写隐患整改，了解角色分工或下一步操作在哪些地方仍不清楚。",
     "keep": false
+  },
+  "91961e174390": {
+    "en": "Explore Case Study",
+    "zh": "查看案例",
+    "keep": false
   }
 }

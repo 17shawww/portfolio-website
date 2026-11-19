@@ -21,20 +21,7 @@
 .work-teaser{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:28px 0 32px}
 .work-teaser .section-head{margin:0}
 .work-teaser .intro{margin:0;color:var(--muted);font-size:15px}
-/* A single existing project makes the landing page a useful entry into the work. */
-.work-teaser.home-project{align-items:start;gap:48px;padding-block:32px 40px}
-.work-teaser.home-project>.section-head{flex-shrink:0}
-.home-case{display:flex;gap:24px;max-width:680px;text-decoration:none;padding:12px;min-width:0}
-.home-case-image{background:var(--sage);padding:12px;flex:0 0 96px;align-self:start}
-.home-case-image img{width:72px;height:auto}
-.home-case-copy{display:flex;flex-direction:column;align-items:start;gap:8px;min-width:0}
-.home-case-copy .eyebrow{font-size:10px;margin:0}
-.home-case-copy strong{font-size:27px;font-weight:500;letter-spacing:-.035em;line-height:1.15}
-.home-case-copy>span:not(.eyebrow):not(.home-case-cta){font-size:15px;line-height:1.5;color:var(--muted)}
-.home-case-cta{font-size:13px;font-weight:600;color:var(--green);text-decoration:underline;text-underline-offset:4px}
-.home-case:focus-visible{outline-offset:3px}
 .experience-case{margin-top:12px;color:var(--green);min-height:44px;padding-block:10px}
-@media(max-width:760px){.work-teaser.home-project{flex-direction:column;gap:18px}.home-case{width:100%;padding:8px 0;gap:18px}.home-case-copy strong{font-size:24px}.home-case-image{flex-basis:82px;padding:10px}.home-case-image img{width:62px}.home-case-copy .eyebrow{font-size:9px}.home-case-copy>span:not(.eyebrow):not(.home-case-cta){font-size:14px}}
 .about-page .page-title{padding-bottom:48px}
 .about-page .split-section{gap:84px;padding-block:40px}
 .about-page .split-section .eyebrow{margin-bottom:14px}
@@ -160,14 +147,9 @@ html:has(.about-page) { scroll-padding-top:var(--chapter-offset, 86px); }
 /* Phase 8: editorial composition, using the established type and motion. */
 .hero-heading{justify-content:flex-start;gap:clamp(32px,4.5vw,68px)}
 .hero{padding-bottom:48px}
-.home-case{max-width:760px;gap:28px}
-.home-case-image{flex-basis:128px;padding:14px}
-.home-case-image img{width:100px}
-.home-case-copy strong{font-size:30px}
 .about-page .split-section{padding-block:48px}
 .about-page .experience h3{font-size:19px;letter-spacing:-.02em}
 .about-page .body-copy{line-height:1.7}
-@media(max-width:1000px){.home-case-image{flex-basis:104px;padding:12px}.home-case-image img{width:80px}.home-case-copy strong{font-size:26px}}
 @media(max-width:680px){
  .hero{padding:28px 0 24px}
  .hero-heading{margin-bottom:20px}
@@ -176,11 +158,6 @@ html:has(.about-page) { scroll-padding-top:var(--chapter-offset, 86px); }
  .hero-intro{font-size:16px;line-height:1.5}
  .hero-intro small{font-size:12px;line-height:1.5;margin-top:10px}
  .hero-intro>.text-link{margin-top:6px;min-height:32px;padding-top:4px}
- .work-teaser.home-project{padding-block:22px 30px;gap:12px}
- .home-case{gap:18px}
- .home-case-image{flex-basis:88px;padding:10px}
- .home-case-image img{width:68px}
- .home-case-copy strong{font-size:24px}
  .about-page .split-section{padding-block:32px}
  .about-page .body-copy p{margin-bottom:20px}
  .about-page .experience li{padding-block:24px}
@@ -203,12 +180,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, select:focus-visib
   outline: var(--editorial-focus);
 }
 .footer a:focus-visible { outline-color: var(--lime); }
-.home-project .home-case { padding-inline: 0; }
-.home-case-image {
-  background: var(--editorial-wash);
-  transition: transform var(--motion-standard) var(--motion-ease);
-}
-.home-case-cta, .work-page .wm-work-copy .button .p5-magnetic-label, .pre-footer .button {
+.work-page .wm-work-copy .button .p5-magnetic-label, .pre-footer .button {
   text-decoration-line: underline;
   text-decoration-thickness: 1px;
   text-decoration-color: currentColor;
@@ -253,9 +225,113 @@ a:focus-visible, button:focus-visible, summary:focus-visible, select:focus-visib
 }
 @media (hover:hover) and (pointer:fine) {
   :is(.chapter-links, .wm-nav) > a:hover { color: var(--editorial-active); }
-  .home-case:hover .home-case-cta,
   .work-page .wm-work-copy .button:hover, .pre-footer .button:hover { text-underline-offset: .5em; }
 }
-@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
-  .home-case:hover .home-case-image { transform: translateY(var(--editorial-lift)); }
+
+/* Home feature. The card remains the existing portal and keyboard link. */
+.home-feature {
+  --feature-paper: #f0f3e9;
+  --feature-muted: #d8e4da;
+  --feature-accent: #c2dab5;
+  border-top: var(--editorial-rule);
+  padding-block: clamp(24px, 3.4vw, 49px) clamp(34px, 5vw, 72px);
+}
+.home-feature > h2 {
+  margin: 0 0 clamp(16px, 2.4vw, 34px);
+  font-size: clamp(23px, 2.8vw, 37px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -.05em;
+}
+.home-feature > .home-case {
+  display: grid;
+  grid-template-columns: minmax(0, .76fr) minmax(0, 1.24fr);
+  align-items: center;
+  gap: clamp(26px, 4vw, 62px);
+  padding: clamp(25px, 4.8vw, 68px);
+  background: #162c23;
+  color: var(--feature-paper);
+  text-decoration: none;
+}
+.home-feature > .home-case:focus-visible { outline-offset: 5px; }
+.home-feature-copy > * { margin: 0; }
+.home-feature-kicker {
+  color: var(--feature-accent);
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.home-feature-copy h3 {
+  margin-block: 16px;
+  font-size: clamp(33px, 4.7vw, 68px);
+  font-weight: 500;
+  line-height: .98;
+  letter-spacing: -.065em;
+  text-wrap: balance;
+}
+.home-feature-copy .home-feature-summary {
+  max-width: 30ch;
+  color: var(--feature-muted);
+  font-size: clamp(16px, 1.6vw, 23px);
+  line-height: 1.4;
+}
+.home-feature .home-case-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  min-height: 44px;
+  margin-top: 17px;
+  color: var(--feature-paper);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.home-feature-label {
+  text-decoration: underline;
+  text-underline-offset: .35em;
+  transition: text-underline-offset var(--motion-fast) var(--motion-ease);
+}
+.home-feature-arrow { transition: transform var(--motion-standard) var(--motion-ease); }
+.home-feature-art {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .76fr);
+  align-items: end;
+  gap: clamp(14px, 2.5vw, 37px);
+  width: min(100%, 482px);
+  justify-self: center;
+}
+.home-feature-art figure { margin: 0; min-width: 0; }
+.home-feature-art .home-feature-detail { margin-bottom: clamp(14px, 2.8vw, 38px); }
+.home-feature-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: clamp(12px, 1.6vw, 24px);
+  box-shadow: 0 14px 32px #071b1380;
+  transition: transform var(--motion-standard) var(--motion-ease);
+}
+.home-feature-art figcaption {
+  margin-top: 8px;
+  color: var(--feature-muted);
+  font-size: 12px;
+  line-height: 1.3;
+}
+:lang(zh) .home-feature-kicker { letter-spacing: .08em; }
+:lang(zh) .home-feature-copy h3 { letter-spacing: -.045em; line-height: 1.1; }
+
+@media (hover: hover) and (pointer: fine) {
+  .home-feature .home-case:is(:hover, :focus-visible) .home-feature-label { text-underline-offset: .52em; }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .home-feature .home-case:hover .home-feature-main img { transform: translateY(-5px); }
+  .home-feature .home-case:hover .home-feature-detail img { transform: translateY(-3px); }
+  .home-feature .home-case:hover .home-feature-arrow { transform: translate(2px, -2px); }
+}
+@media (max-width: 680px) {
+  .home-feature > .home-case { grid-template-columns: minmax(0, 1fr); gap: 19px; padding: 25px 17px 22px; }
+  .home-feature-copy h3 { margin-block: 9px 10px; font-size: clamp(34px, 9vw, 49px); }
+  .home-feature .home-case-cta { margin-top: 5px; }
+  .home-feature-art { grid-template-columns: minmax(0, 1fr) minmax(0, .72fr); }
 }
