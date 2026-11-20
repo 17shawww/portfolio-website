@@ -74,3 +74,24 @@ No external research or Figma writes. Original source imagery is unchanged. New 
 - `assets/wmmp/r6-workbench-task-overview.png` is a browser capture of the expanded task overview in the August 10, 2026 r6 mock-data build.
 - `assets/wmmp/figma-library-overview.png` is the original library overview export from the r6 Figma handoff.
 - `assets/wmmp/demo/` contains the five unchanged static files from the r6 mock-data handoff build. It demonstrates the project UI and basic interactions without a production backend.
+
+### About photo edit
+
+The following WebP derivatives are cropped and compressed from the local `myphpto/` archive. The exports omit original camera metadata. No source image or video is copied into the build.
+
+| Derivative | Source | Placement |
+|---|---|---|
+| portrait.webp, portrait-small.webp | IMG_20260718_150341.jpg | Mountain portrait |
+| model.webp | IMG_7687.HEIC | Physical model |
+| climb.webp | acf7ccc196334128b8e95c1a072e020b.mov, frame at approximately 76% | Indoor bouldering |
+| detail.webp | IMG_20260728_212138.jpg | Hand detail |
+| guitar.webp | IMG_6913.HEIC | Electric guitar |
+| sim.webp | IMG_7698.HEIC | Racing simulator |
+| snow.webp | 07000f340d8a5a5ffd2fd2d3d7fd1efd.JPG | Snow outing |
+| cat.webp | IMG_0908.HEIC | Cat portrait |
+| steam-cs2.webp, steam-apex.webp, steam-wukong.webp, steam-elden-ring.webp | IMG_2408.PNG | Cover crops from the Xiaoheihe Steam library record. May 2026 playtime is transcribed as bilingual page text. |
+
+### About design-process excerpts
+
+- `assets/about/footwear-sketch.webp` is cropped from the original embedded sketch image in Figma P3 (`GuYfShMFNR1hMUyR0JHdhx`), node `1:4` within the Sketch section. The export crops blank space from the source layer.
+- `sensory-garden-sketch.webp` uses the original embedded garden drawing from Figma P2 (`jCSMKpd72Wx8nkYRDtVoSX`), node `260:198`, with outer margins cropped.

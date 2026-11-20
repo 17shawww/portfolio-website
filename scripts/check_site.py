@@ -56,6 +56,10 @@ expected.update('assets/wmmp/demo/'+name for name in (
     'index.html', 'assets/index-ipdpVm6X.js', 'assets/index-DQ4IFDZL.css',
     'assets/login-industrial-C9ytOitd.png', 'assets/workbench-harbor-Bp7slw5B.png',
 ))
+expected.update('assets/about/'+name for name in (
+    'about.css', 'portrait.webp', 'portrait-small.webp', 'model.webp', 'footwear-sketch.webp', 'sensory-garden-sketch.webp',
+    'climb.webp', 'detail.webp', 'guitar.webp', 'sim.webp', 'snow.webp', 'cat.webp', 'steam-cs2.webp', 'steam-apex.webp', 'steam-wukong.webp', 'steam-elden-ring.webp',
+))
 expected.update({'zh/'+name for name in ['index.html','work.html','about.html','wuhan-marine-machinery.html']})
 expected.update({'localization.css','i18n.js','i18n-data.js','coming-soon.js'})
 expected.update({'ink-character.css','ink-character.js'})

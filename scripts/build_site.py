@@ -29,11 +29,12 @@ assets += ["assets/wmmp/" + name for name in (
     "editorial.css", "r6-workbench-task-overview.png", "figma-library-overview.png",
 )]
 assets += ["assets/wmmp/demo/" + name for name in case_demo]
+assets += ["assets/about/" + name for name in ("about.css", "portrait.webp", "portrait-small.webp", "model.webp", "footwear-sketch.webp", "sensory-garden-sketch.webp", "climb.webp", "detail.webp", "guitar.webp", "sim.webp", "snow.webp", "cat.webp", "steam-cs2.webp", "steam-apex.webp", "steam-wukong.webp", "steam-elden-ring.webp")]
 for name in pages + assets:
     if not (root / name).is_file():
         raise FileNotFoundError(name)
 versions = {name: hashlib.sha256((root / name).read_bytes()).hexdigest()[:12]
-            for name in ["styles.css", "site.js", "wmmp-case.css", "wmmp-case.js", "signature-motion.css", "signature-motion.js", "project-transitions.css", "project-transitions.js", "immersive-case.css", "immersive-case.js", "localization.css", "i18n.js", "coming-soon.js", "ink-character.css", "ink-character.js", "assets/wmmp/editorial.css"]}
+            for name in ["styles.css", "site.js", "wmmp-case.css", "wmmp-case.js", "signature-motion.css", "signature-motion.js", "project-transitions.css", "project-transitions.js", "immersive-case.css", "immersive-case.js", "localization.css", "i18n.js", "coming-soon.js", "ink-character.css", "ink-character.js", "assets/wmmp/editorial.css", "assets/about/about.css"]}
 # Rebuild generated output so an older case study/image cannot survive locally
 # or in a restored build cache. Source files outside dist are never removed.
 if out.is_symlink():

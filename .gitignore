@@ -17,6 +17,7 @@
 !/assets/
 /assets/*
 !/assets/portfolio/
+!/assets/about/
 /.vercel/
 /dist/
 **/__pycache__/

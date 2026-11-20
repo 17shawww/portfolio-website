@@ -3988,5 +3988,265 @@
     "en": "Explore Case Study",
     "zh": "查看案例",
     "keep": false
+  },
+  "1678e796a405": {
+    "en": "01 / Meet the Designer",
+    "zh": "01 / 认识我",
+    "keep": false
+  },
+  "6d9c5a961e33": {
+    "en": "Hi, I’m Yixiao.",
+    "zh": "你好，我是 Yixiao。",
+    "keep": false
+  },
+  "cbd2d754422a": {
+    "en": "UX & Product Designer",
+    "zh": "用户体验与产品设计师",
+    "keep": false
+  },
+  "96967c138282": {
+    "en": "I started with physical products. At Rutgers, I’m bringing that perspective to digital experiences.",
+    "zh": "从工业设计出发，我在罗格斯大学继续探索人与数字产品的关系。",
+    "keep": false
+  },
+  "1d5209c233f5": {
+    "en": "Yixiao beside a window with mountains in the background",
+    "zh": "窗边的人像，背后是连绵的山脉",
+    "keep": false
+  },
+  "a9941319120d": {
+    "en": "Yixiao Peng · A view from the mountains",
+    "zh": "Yixiao Peng · 山间",
+    "keep": false
+  },
+  "24481692e128": {
+    "en": "Meet Yixiao",
+    "zh": "认识我",
+    "keep": false
+  },
+  "74567d3512cd": {
+    "en": "Meet",
+    "zh": "认识我",
+    "keep": false
+  },
+  "fe50ed105fe4": {
+    "en": "Journey",
+    "zh": "经历",
+    "keep": false
+  },
+  "ab188f09ae03": {
+    "en": "How I work",
+    "zh": "设计方法",
+    "keep": false
+  },
+  "e083bd83e9d3": {
+    "en": "Process",
+    "zh": "方法",
+    "keep": false
+  },
+  "d5e5ec6402b1": {
+    "en": "Beyond the screen",
+    "zh": "屏幕之外",
+    "keep": false
+  },
+  "e2849c853676": {
+    "en": "Offscreen",
+    "zh": "生活",
+    "keep": false
+  },
+  "7a82d8999cfd": {
+    "en": "02 / My Journey",
+    "zh": "02 / 我的经历",
+    "keep": false
+  },
+  "df5ea4ab3353": {
+    "en": "From objects to interfaces.",
+    "zh": "从实物到界面",
+    "keep": false
+  },
+  "05a33d9424d8": {
+    "en": "Industrial design undergraduate studies.",
+    "zh": "工业设计本科。",
+    "keep": false
+  },
+  "51ad0314e50a": {
+    "en": "Master of Business & Science · User Experience Design.",
+    "zh": "商业与科学硕士 · 用户体验设计方向。",
+    "keep": false
+  },
+  "4e5ac04983ca": {
+    "en": "Summer 2026 UX/UI internship on an enterprise mobile platform.",
+    "zh": "2026 年夏季 UX/UI 实习，参与企业移动平台设计。",
+    "keep": false
+  },
+  "66229b9f677f": {
+    "en": "A faceted physical model with a dark exterior",
+    "zh": "深色多面外壳的实体模型",
+    "keep": false
+  },
+  "d651d1c91cbc": {
+    "en": "A physical model from my photo archive",
+    "zh": "照片里的实体模型",
+    "keep": false
+  },
+  "6cd6f6fe8285": {
+    "en": "03 / How I Think & Make",
+    "zh": "03 / 我怎样做设计",
+    "keep": false
+  },
+  "db0b1ca0fb57": {
+    "en": "From notes to a working prototype.",
+    "zh": "从纸上推演到可运行原型",
+    "keep": false
+  },
+  "832a614960ab": {
+    "en": "I map the task, sketch options, then test the flow. AI helps organize notes and build prototypes. I check the output and make the design decisions.",
+    "zh": "先梳理任务，再画方案、试走流程。AI 辅助整理笔记和搭建原型，由我检查输出并作出设计决策。",
+    "keep": false
+  },
+  "31aafa99aa56": {
+    "en": "04 / Beyond the Screen",
+    "zh": "04 / 屏幕之外",
+    "keep": false
+  },
+  "031061a48d5c": {
+    "en": "A route, a riff, a race.",
+    "zh": "攀岩、吉他、赛车",
+    "keep": false
+  },
+  "92bdda6129df": {
+    "en": "Climber reaching for a hold on an indoor bouldering wall",
+    "zh": "室内抱石时，攀岩者伸手寻找岩点",
+    "keep": false
+  },
+  "1ef23e4aa723": {
+    "en": "Close-up of a hand with white powder on the palm and fingers",
+    "zh": "掌心和手指上沾着白色粉末的手部特写",
+    "keep": false
+  },
+  "fdc5fea679e5": {
+    "en": "Chalk on my hands",
+    "zh": "手上的粉",
+    "keep": false
+  },
+  "ab65d30e73e7": {
+    "en": "Yixiao playing a white electric guitar",
+    "zh": "坐着弹白色电吉他的照片",
+    "keep": false
+  },
+  "f2320b155ee3": {
+    "en": "Guitar at home",
+    "zh": "在家弹吉他",
+    "keep": false
+  },
+  "c641735507dd": {
+    "en": "A racing game played with a simulator wheel",
+    "zh": "用方向盘模拟器玩赛车游戏",
+    "keep": false
+  },
+  "febd4cf7cb7d": {
+    "en": "Sim racing",
+    "zh": "模拟赛车",
+    "keep": false
+  },
+  "4ae4924dddae": {
+    "en": "Winter sports on a snowy slope",
+    "zh": "坡面上的雪地运动照片",
+    "keep": false
+  },
+  "b1efcfb1c9b5": {
+    "en": "My gray-and-white cat sitting on a shelf",
+    "zh": "我家灰白色的猫坐在柜架上",
+    "keep": false
+  },
+  "a8093dbb2584": {
+    "en": "My cat",
+    "zh": "我家猫",
+    "keep": false
+  },
+  "e276778ca370": {
+    "en": "From my Steam library",
+    "zh": "我的 Steam 游戏精选",
+    "keep": false
+  },
+  "99f588daf63b": {
+    "en": "Playtime from my Xiaoheihe snapshot, May 2026.",
+    "zh": "游玩时长来自 2026 年 5 月的小黑盒记录。",
+    "keep": false
+  },
+  "4723c3518f50": {
+    "en": "Counter-Strike 2",
+    "zh": "Counter-Strike 2",
+    "keep": false
+  },
+  "2971c2342175": {
+    "en": "650 hours",
+    "zh": "650 小时",
+    "keep": false
+  },
+  "de782496e38a": {
+    "en": "Apex Legends",
+    "zh": "《Apex 英雄》",
+    "keep": false
+  },
+  "a56e242b61bd": {
+    "en": "525 hours",
+    "zh": "525 小时",
+    "keep": false
+  },
+  "ccc3d0618552": {
+    "en": "Black Myth: Wukong",
+    "zh": "《黑神话：悟空》",
+    "keep": false
+  },
+  "78a8193632bd": {
+    "en": "67 hours",
+    "zh": "67 小时",
+    "keep": false
+  },
+  "d3cffaa05225": {
+    "en": "Elden Ring",
+    "zh": "《艾尔登法环》",
+    "keep": false
+  },
+  "d41f67672934": {
+    "en": "42 hours",
+    "zh": "42 小时",
+    "keep": false
+  },
+  "8bbf0d022974": {
+    "en": "Skiing",
+    "zh": "滑雪",
+    "keep": false
+  },
+  "13e21bad6df8": {
+    "en": "Bouldering",
+    "zh": "室内抱石",
+    "keep": false
+  },
+  "a57944488e9b": {
+    "en": "V5!",
+    "zh": "V5！",
+    "keep": false
+  },
+  "a43bdc62560c": {
+    "en": "Four hand-drawn footwear concepts exploring different profiles and ankle heights",
+    "zh": "四张鞋型手绘，探索不同的轮廓和鞋帮高度",
+    "keep": false
+  },
+  "566ab00b19fc": {
+    "en": "Outdoor footwear · Early form sketches",
+    "zh": "户外鞋概念 · 早期形态草图",
+    "keep": false
+  },
+  "46a18caaf17f": {
+    "en": "Sensory garden plan with intersecting paths, planting and a central fountain",
+    "zh": "感官花园的平面草图，包含相交的动线、植物和中央喷泉",
+    "keep": false
+  },
+  "1f71d9109bea": {
+    "en": "Sensory Garden Labyrinth · Plan sketch",
+    "zh": "感官花园迷宫 · 平面草图",
+    "keep": false
   }
 }

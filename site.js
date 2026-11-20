@@ -103,8 +103,9 @@ portfolioMotion.reveal();
 (() => {
   const menu = document.querySelector('.chapter-nav');
   if (!menu) return;
-  const chapters = [...document.querySelectorAll('.split-section, .interests')];
-  const links = [...menu.querySelectorAll('a')];
+  const links = [...menu.querySelectorAll('.chapter-links a[href^="#"]')];
+  const chapters = links.map(link => document.getElementById(link.hash.slice(1)));
+  if (!chapters.length || chapters.some(chapter => !chapter)) return;
   const track = menu.querySelector('.chapter-track');
   let active = -1;
   let frame = 0;
