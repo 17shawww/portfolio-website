@@ -95,3 +95,17 @@ The following WebP derivatives are cropped and compressed from the local `myphpt
 
 - `assets/about/footwear-sketch.webp` is cropped from the original embedded sketch image in Figma P3 (`GuYfShMFNR1hMUyR0JHdhx`), node `1:4` within the Sketch section. The export crops blank space from the source layer.
 - `sensory-garden-sketch.webp` uses the original embedded garden drawing from Figma P2 (`jCSMKpd72Wx8nkYRDtVoSX`), node `260:198`, with outer margins cropped.
+
+## LexFlow · local case study
+
+The website uses five isolated PNG exports from the editable [LexFlow Figma file](https://www.figma.com/design/Vm6nqNKn5vQAlvqUbWG39i/p4). LawPath screens are concept UI. The professional identity and details in the recommendation are illustrative. The two physical-prototype card designs belong to the fictional Missing Works of Art scenario.
+
+| Web asset | Figma source |
+| --- | --- |
+| `assets/lexflow/web/home.png` | [Final LawPath Home](https://www.figma.com/design/Vm6nqNKn5vQAlvqUbWG39i/p4?node-id=2268-909) |
+| `assets/lexflow/web/intake.png` | [Final Case Intake](https://www.figma.com/design/Vm6nqNKn5vQAlvqUbWG39i/p4?node-id=2268-910) |
+| `assets/lexflow/web/recommendation.png` | [Signature Recommendation](https://www.figma.com/design/Vm6nqNKn5vQAlvqUbWG39i/p4?node-id=2268-911) |
+| `assets/lexflow/web/clue.png` | [Original Clue / Lost surveillance](https://www.figma.com/design/Vm6nqNKn5vQAlvqUbWG39i/p4?node-id=2321-2492) |
+| `assets/lexflow/web/evidence.png` | [Original Evidence / Transition agreement](https://www.figma.com/design/Vm6nqNKn5vQAlvqUbWG39i/p4?node-id=2321-2552) |
+
+The website layout adapts the [web asset boards](https://www.figma.com/design/Vm6nqNKn5vQAlvqUbWG39i/p4?node-id=2518-906) into responsive HTML text, source images and captions. Research is paraphrased from the original boards and the case-study research synthesis. The consultation flow follows `2213:861`, the simulation sequence follows `2402:678`, and prototype feedback is summarized from `185:536` and `217:75`. The case-study route contains no research participant photographs.

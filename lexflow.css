@@ -1,0 +1,74 @@
+.lf-work {
+  --lf-dark: #182b20;
+  --lf-panel: #243b2d;
+  --lf-light: #faf9f6;
+  --lf-soft: #d4dfd1;
+  --lf-serif: Georgia, "Songti SC", "Noto Serif CJK SC", serif;
+}
+
+.lf-text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--green);
+  font-weight: 700;
+  text-underline-offset: .27em;
+}
+
+.lf-art {
+  position: relative;
+  isolation: isolate;
+  aspect-ratio: 1.18;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 48% 48%, #34523e, var(--lf-dark) 74%);
+}
+.lf-art img {
+  position: absolute;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 14px #101b1480);
+}
+.lf-art .lf-art-app {
+  z-index: 1;
+  height: 84%;
+  top: 8%;
+  left: 50%;
+  border-radius: 12px;
+  transform: translateX(-50%);
+}
+.lf-art .lf-art-clue {
+  height: 55%;
+  top: 24%;
+  left: 12%;
+  transform: rotate(-12deg);
+}
+.lf-art .lf-art-evidence {
+  height: 60%;
+  top: 26%;
+  right: 11%;
+  transform: rotate(13deg);
+}
+
+.lf-work {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, .85fr);
+  gap: clamp(22px, 5vw, 74px);
+  align-items: center;
+  margin-block: clamp(32px, 6vw, 88px);
+  padding-top: clamp(30px, 5vw, 60px);
+  border-top: 1px solid var(--line);
+}
+.lf-work-visual { display: block; }
+.lf-work .lf-art { aspect-ratio: 1.58; }
+.lf-work-copy h2 {
+  margin: 0;
+  font: 400 clamp(48px, 7vw, 98px)/.94 var(--lf-serif);
+  letter-spacing: -.075em;
+}
+.lf-work-copy h2 a { text-decoration: none; }
+.lf-work-copy h2 a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+.lf-work-copy > p:not(.eyebrow) { max-width: 37ch; margin: 18px 0 10px; color: var(--muted); }
+.lf-work-copy .eyebrow { margin-bottom: 12px; }
+
+@media(max-width:680px){.lf-work{grid-template-columns:1fr;gap:19px}}

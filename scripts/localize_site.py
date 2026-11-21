@@ -5,7 +5,7 @@ from pathlib import Path
 import json, re
 ROOT=Path(__file__).resolve().parents[1]
 ORIGIN='https://yixiao-peng-portfolio.vercel.app'
-PAGES=['index.html','work.html','about.html','wuhan-marine-machinery.html']
+PAGES=['index.html','work.html','about.html','wuhan-marine-machinery.html','lexflow.html']
 CATALOG=json.loads((ROOT/'locales/catalog.json').read_text())
 TRANSLATIONS={v['en']:v['zh'] for v in CATALOG.values()}
 def normalize(s):return re.sub(r'\s+',' ',s).strip()
@@ -30,7 +30,7 @@ class LocalizedPage(HTMLParser):
         if t=='nav':self.navs.append(a.get('id')=='primary-navigation')
         if t=='html':a['lang']='zh-Hans' if self.lang=='zh' else 'en'
         if t in ('script','style'):self.skip+=1
-        for key in ('alt','title','aria-label'):
+        for key in ('alt','title','aria-label','data-in','data-out'):
             if a.get(key):a[key]=translated(a[key],self.lang)
         if t=='meta' and (a.get('name')=='description' or a.get('property') in ('og:title','og:description','og:image:alt')):a['content']=translated(a['content'],self.lang)
         if (t=='link' and a.get('rel')=='canonical') or (t=='meta' and a.get('property')=='og:url'):

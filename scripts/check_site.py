@@ -2,6 +2,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit, unquote
 import json
+from localize_site import PAGES
 ROOT=Path(__file__).resolve().parents[1]/'dist'
 class Page(HTMLParser):
     def __init__(self,text):
@@ -37,7 +38,7 @@ for name,page in pages.items():
         if url.fragment and target in pages and unquote(url.fragment) not in pages[target].ids:
             errors.append(f'{name}: missing fragment {ref}')
         checked+=1
-expected={'robots.txt','sitemap.xml','index.html','about.html','work.html','wuhan-marine-machinery.html','styles.css','site.js',
+expected={'robots.txt','sitemap.xml','styles.css','site.js',
           'wmmp-case.css','wmmp-case.js','assets/portfolio/yp-monogram.png','signature-motion.css','signature-motion.js','project-transitions.css','project-transitions.js','immersive-case.css','immersive-case.js'}
 case_images={'workbench.png','messages.png','statistics.png','management.png','all-business.png',
              'safety-form.png','exploration-01.png','exploration-04.png','foundations.png','components.png',
@@ -60,7 +61,9 @@ expected.update('assets/about/'+name for name in (
     'about.css', 'portrait.webp', 'portrait-small.webp', 'model.webp', 'footwear-sketch.webp', 'sensory-garden-sketch.webp',
     'climb.webp', 'detail.webp', 'guitar.webp', 'sim.webp', 'snow.webp', 'cat.webp', 'steam-cs2.webp', 'steam-apex.webp', 'steam-wukong.webp', 'steam-elden-ring.webp',
 ))
-expected.update({'zh/'+name for name in ['index.html','work.html','about.html','wuhan-marine-machinery.html']})
+expected.update(name for page in PAGES for name in (page, 'zh/'+page))
+expected.update({'lexflow.css','lexflow-case.css','lexflow-editorial.css','lexflow-case.js'})
+expected.update('assets/lexflow/web/'+name+'.png' for name in ('home', 'intake', 'recommendation', 'clue', 'evidence'))
 expected.update({'localization.css','i18n.js','i18n-data.js','coming-soon.js'})
 expected.update({'ink-character.css','ink-character.js'})
 expected.update('assets/portfolio/ink/'+pose+'.webp' for pose in ('idle','look','walk','jump','sit','climb','surprise','sleep','climb-cycle','walk-cycle'))
@@ -84,7 +87,7 @@ for name in site_pages:
 try:
     locations={node.text for node in ET.parse(ROOT/'sitemap.xml').iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')}
     if locations!={origin+('' if name=='index.html' else name) for name in site_pages}:
-        errors.append('Sitemap must contain exactly the eight localized canonical pages')
+        errors.append('Sitemap must contain exactly the localized canonical pages')
 except (ET.ParseError,OSError) as exc:errors.append(f'Sitemap invalid: {exc}')
 if f'Sitemap: {origin}sitemap.xml' not in (ROOT/'robots.txt').read_text():
     errors.append('robots.txt: missing production sitemap')

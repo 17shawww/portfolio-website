@@ -17,7 +17,8 @@ case_demo = ["index.html", "assets/index-ipdpVm6X.js", "assets/index-DQ4IFDZL.cs
              "assets/login-industrial-C9ytOitd.png", "assets/workbench-harbor-Bp7slw5B.png"]
 assets = ["robots.txt", "sitemap.xml", "styles.css", "site.js", "wmmp-case.css", "wmmp-case.js", "assets/portfolio/yp-monogram.png", "signature-motion.css", "signature-motion.js", "project-transitions.css", "project-transitions.js", "immersive-case.css", "immersive-case.js"]
 assets += ["localization.css", "i18n.js", "coming-soon.js"]
-assets += ["ink-character.css", "ink-character.js"]
+assets += ["ink-character.css", "ink-character.js", "lexflow.css", "lexflow-case.css", "lexflow-editorial.css", "lexflow-case.js"]
+assets += ["assets/lexflow/web/" + name + ".png" for name in ("home", "intake", "recommendation", "clue", "evidence")]
 assets += ["assets/portfolio/ink/" + pose + ".webp" for pose in ("idle", "look", "walk", "jump", "sit", "climb", "surprise", "sleep", "climb-cycle", "walk-cycle")]
 assets += ["assets/wmmp/" + name for name in case_images]
 assets += ["assets/wmmp/r6-" + screen + ".png" for screen in (
@@ -34,7 +35,7 @@ for name in pages + assets:
     if not (root / name).is_file():
         raise FileNotFoundError(name)
 versions = {name: hashlib.sha256((root / name).read_bytes()).hexdigest()[:12]
-            for name in ["styles.css", "site.js", "wmmp-case.css", "wmmp-case.js", "signature-motion.css", "signature-motion.js", "project-transitions.css", "project-transitions.js", "immersive-case.css", "immersive-case.js", "localization.css", "i18n.js", "coming-soon.js", "ink-character.css", "ink-character.js", "assets/wmmp/editorial.css", "assets/about/about.css"]}
+            for name in ["styles.css", "site.js", "wmmp-case.css", "wmmp-case.js", "signature-motion.css", "signature-motion.js", "project-transitions.css", "project-transitions.js", "immersive-case.css", "immersive-case.js", "localization.css", "i18n.js", "coming-soon.js", "ink-character.css", "ink-character.js", "assets/wmmp/editorial.css", "assets/about/about.css", "lexflow.css", "lexflow-case.css", "lexflow-editorial.css", "lexflow-case.js"]}
 # Rebuild generated output so an older case study/image cannot survive locally
 # or in a restored build cache. Source files outside dist are never removed.
 if out.is_symlink():

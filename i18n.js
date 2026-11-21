@@ -81,7 +81,7 @@
     }
     if(el.matches('a[href]')&&!el.hasAttribute('data-language')){
       const url=new URL(el.href,location.href);
-      if(url.origin===location.origin&&/^\/(?:zh\/)?(?:index\.html|work\.html|about\.html|wuhan-marine-machinery\.html)?$/.test(url.pathname)&&!el.getAttribute('href').startsWith('#')){
+      if(url.origin===location.origin&&/^\/(?:zh\/)?(?:index\.html|work\.html|about\.html|wuhan-marine-machinery\.html|lexflow\.html)?$/.test(url.pathname)&&!el.getAttribute('href').startsWith('#')){
         const file=url.pathname.split('/').pop();el.setAttribute('href',(language==='zh'?'/zh/':'/')+(file==='index.html'&&language==='en'?'':file|| (language==='zh'?'index.html':''))+url.search+url.hash);
       }
     }

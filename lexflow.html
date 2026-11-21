@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en" id="top">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="LexFlow is an independent legal-service concept by Yixiao Peng, connecting guided consultation in LawPath with a physical evidence system for mock-court practice.">
+<meta name="theme-color" content="#faf8f2">
+<link rel="canonical" href="https://yixiao-peng-portfolio.vercel.app/lexflow.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yixiao Peng">
+<meta property="og:title" content="LexFlow — Yixiao Peng">
+<meta property="og:description" content="LexFlow is an independent legal-service concept by Yixiao Peng, connecting guided consultation in LawPath with a physical evidence system for mock-court practice.">
+<meta property="og:url" content="https://yixiao-peng-portfolio.vercel.app/lexflow.html">
+<meta property="og:image" content="https://yixiao-peng-portfolio.vercel.app/assets/portfolio/yp-monogram.png">
+<meta property="og:image:alt" content="Yixiao Peng — YP ink monogram">
+<meta name="twitter:card" content="summary_large_image">
+<title>LexFlow — Yixiao Peng</title>
+<link rel="icon" href="assets/portfolio/yp-monogram.png">
+<link rel="stylesheet" href="lexflow-case.css">
+<link rel="stylesheet" href="lexflow-editorial.css">
+<script src="lexflow-case.js" defer></script>
+</head>
+<body class="v2">
+<a class="skip" href="#main">Skip to case study</a>
+<header class="mast shell">
+ <a class="brand" href="index.html"><img src="assets/portfolio/yp-monogram.png" width="60" height="40" alt="" aria-hidden="true"><span>YIXIAO PENG</span></a>
+ <div class="mast-right"><a href="work.html#lexflow-project">Work</a><nav class="languages" aria-label="Language" data-languages><a href="/lexflow.html" lang="en" hreflang="en">EN</a><a href="/zh/lexflow.html" lang="zh-Hans" hreflang="zh-Hans">中文</a></nav></div>
+</header>
+<main id="main">
+ <header class="hero">
+   <div class="shell hero-layout">
+     <div class="hero-title">
+       <p class="label">Service design · Independent concept</p>
+       <h1>LexFlow</h1>
+     </div>
+     <div class="hero-text">
+       <p class="deck">From the first question<br>to a case you can work through.</p>
+       <p>I designed a guided consultation prototype and a physical evidence system for mock-court practice.</p>
+       <a class="hero-link" href="#lawpath">See the design <span aria-hidden="true">↓</span></a>
+     </div>
+     <div class="hero-art">
+       <div class="hero-art-inner">
+         <a class="cover-card cover-clue" data-view href="assets/lexflow/web/clue.png"><img src="assets/lexflow/web/clue.png" width="1355" height="2350" alt="Original orange Clue card for missing surveillance footage" decoding="async"></a>
+         <a class="cover-card cover-evidence" data-view href="assets/lexflow/web/evidence.png"><img src="assets/lexflow/web/evidence.png" width="1355" height="2350" alt="Original blue Evidence card for the transport agreement with a disputed time" decoding="async"></a>
+         <a class="cover-app" data-view href="assets/lexflow/web/home.png"><img src="assets/lexflow/web/home.png" width="390" height="844" alt="LawPath concept home showing legal consultation and moot-court practice entry points" fetchpriority="high" decoding="async"></a>
+         <p class="hero-art-caption">LawPath <span aria-hidden="true">/</span> Original evidence cards</p>
+       </div>
+     </div>
+   </div>
+ </header>
+ <div class="shell overview">
+   <dl class="facts">
+     <div><dt>My role</dt><dd>Sole designer</dd></div>
+     <div><dt>Timeline</dt><dd>Oct–Dec 2024</dd></div>
+     <div><dt>Scope</dt><dd>Research, service design, UI, prototyping and qualitative testing</dd></div>
+     <div><dt>Status</dt><dd>Concept prototypes · No production launch</dd></div>
+   </dl>
+ </div>
+ <div class="chapter-strip">
+   <nav class="shell chapters" aria-label="Case study sections"><a href="#research">Research</a><a href="#service">Service</a><a href="#lawpath">LawPath</a><a href="#moot">Moot court</a><a href="#reflection">Reflection</a></nav>
+ </div>
+ <section id="research" class="shell section">
+    <header class="section-head"><p class="label">Research evidence</p><h2>The first conversation is only the beginning.</h2><p class="lede">At a law firm, I mapped where clients meet lawyers and where case work happens. Two retained interview summaries gave me distinct views of the same service.</p></header>
+    <div class="field-label"><span>Law-firm observation</span><ol><li>Reception and consultation</li><li>Case work</li><li>Mock court</li></ol></div>
+    <div class="research-diagram">
+      <article class="research-thread">
+        <div class="research-input"><span class="label">Client summary</span><h3>Unfamiliar terms. Unclear next steps.</h3><p>Timely communication helped the client follow case progress.</p></div>
+        <span class="evidence-connector" aria-hidden="true"></span>
+        <div class="research-response"><span class="label">Design opportunity</span><h3>Explain before asking people to choose.</h3></div>
+      </article>
+      <article class="research-thread">
+        <div class="research-input"><span class="label">Lawyer summary</span><h3>Evidence, coordination and document work compete for time.</h3><p>Collecting and organizing material is part of the work of moving a case forward.</p></div>
+        <span class="evidence-connector" aria-hidden="true"></span>
+        <div class="research-response"><span class="label">Design opportunity</span><h3>Give case material a structure people can work with.</h3></div>
+      </article>
+    </div>
+    <p class="evidence-note">Paraphrased from two retained summaries. Sample size and recruitment are undocumented.</p>
+ </section>
+ <section id="service" class="service">
+   <div class="shell section">
+    <header class="section-head"><p class="label">Service structure</p><h2>One journey, two forms of support.</h2><p class="lede">I used the service journey and information architecture to place digital guidance where people prepare and choose, and physical material where they compare and discuss.</p></header>
+    <div class="service-map" data-map>
+      <div class="map-key"><span>Proposed service journey</span><ul><li><i class="signal digital" aria-hidden="true"></i>Digital service</li><li><i class="signal physical" aria-hidden="true"></i>In-person touchpoint</li></ul></div>
+      <ol class="experience-map"><li data-phase="0">
+      <span class="map-index" aria-hidden="true">01</span>
+      <h3>Consultation</h3><p>Describe the case and understand the suggested professional.</p>
+      <div class="map-cell digital"><small>Digital service</small><strong>Intake and a reasoned match</strong></div>
+      <div class="map-cell physical"><small>In-person touchpoint</small><strong>Meeting with a lawyer</strong></div>
+      </li><li data-phase="1">
+      <span class="map-index" aria-hidden="true">02</span>
+      <h3>Preparation</h3><p>Gather documents and review evidence with support.</p>
+      <div class="map-cell digital"><small>Digital service</small><strong>Case records and evidence</strong></div>
+      <div class="map-cell physical"><small>In-person touchpoint</small><strong>Evidence and document work</strong></div>
+      </li><li data-phase="2">
+      <span class="map-index" aria-hidden="true">03</span>
+      <h3>Trial practice</h3><p>Compare evidence and prepare a position in a fictional case.</p>
+      <div class="map-cell digital"><small>Digital service</small><strong>Moot court entry and booking</strong></div>
+      <div class="map-cell physical"><small>In-person touchpoint</small><strong>Physical cards and role-play</strong></div>
+      </li><li data-phase="3">
+      <span class="map-index" aria-hidden="true">04</span>
+      <h3>Follow-up</h3><p>Review the case and identify next steps.</p>
+      <div class="map-cell digital"><small>Digital service</small><strong>Case review concept</strong></div>
+      <div class="map-cell physical"></div>
+      </li></ol>
+      <div class="map-switch" hidden>
+        <div class="sub-controls" aria-label="Explore a service stage"><button type="button" data-map-step="0" aria-pressed="false">Consultation</button><button type="button" data-map-step="1" aria-pressed="false">Preparation</button><button type="button" data-map-step="2" aria-pressed="false">Trial practice</button><button type="button" data-map-step="3" aria-pressed="false">Follow-up</button></div>
+        <div class="map-notes" aria-live="polite"><p data-map-panel>The intake and recommendation share the case brief, so the rationale stays visible when the client chooses.</p><p data-map-panel>The journey places digital organization alongside evidence and document work.</p><p data-map-panel>The proposed digital entry leads into rehearsal with cards, roles and discussion.</p><p data-map-panel>The journey closes with a proposed case review and next steps.</p></div>
+      </div>
+    </div>
+    <p class="evidence-note">Four-stage synthesis of the original journey. The route describes the proposed service.</p>
+   </div>
+ </section>
+ <section id="lawpath" class="shell section">
+    <header class="section-head"><p class="label">Design decision / LawPath</p><h2>Show why the recommendation fits.</h2><p class="lede">I connected the case brief to the recommendation in LawPath, the mobile prototype within LexFlow. What the client shared stays visible at the point of choice.</p></header>
+    <div class="ui-spread">
+      <figure class="figure screen">
+          <a class="media-link" data-view href="assets/lexflow/web/intake.png" aria-label="Enlarge image · Share the case">
+            <img src="assets/lexflow/web/intake.png" width="390" height="844" alt="LawPath case intake showing progress, case category and description" loading="lazy" decoding="async">
+          </a>
+          <figcaption><strong>Share the case</strong><p>Start with category and a concise description.</p></figcaption>
+        </figure>
+      <figure class="figure screen focus">
+          <a class="media-link" data-view href="assets/lexflow/web/recommendation.png" aria-label="Enlarge image · Understand the match">
+            <span class="annotated-screen"><img src="assets/lexflow/web/recommendation.png" width="390" height="844" alt="LawPath recommendation showing case context, reasons and a link to the illustrative lawyer profile" loading="lazy" decoding="async"><span class="pin" aria-hidden="true">1</span><span class="pin" aria-hidden="true">2</span><span class="pin" aria-hidden="true">3</span></span>
+          </a>
+          <figcaption><strong>Understand the match</strong><p>Review the rationale and open a profile.</p></figcaption>
+        </figure>
+      <aside class="decision-inspector" data-inspector>
+        <p class="label">Recommendation detail</p>
+        <h3>What the client can check</h3>
+        <div class="sub-controls focus-controls" hidden aria-label="Recommendation details"><button type="button" data-focus-step="0" aria-pressed="true"><span>01</span>Case context</button><button type="button" data-focus-step="1" aria-pressed="false"><span>02</span>Matching rationale</button><button type="button" data-focus-step="2" aria-pressed="false"><span>03</span>Next action</button></div>
+        <div class="focus-panels" aria-live="polite"><article data-focus-panel>
+      <h4><span aria-hidden="true">01</span> Case context</h4>
+      <div class="crop" style="--ratio:390 / 120;--offset:22.8%"><img src="assets/lexflow/web/recommendation.png" width="390" height="844" alt="" aria-hidden="true" loading="lazy"></div>
+      <p>Reflect the case category, consultation preference and location shared in intake.</p>
+      </article><article data-focus-panel>
+      <h4><span aria-hidden="true">02</span> Matching rationale</h4>
+      <div class="crop" style="--ratio:390 / 260;--offset:36.3%"><img src="assets/lexflow/web/recommendation.png" width="390" height="844" alt="" aria-hidden="true" loading="lazy"></div>
+      <p>Explain the fit through practice area, service type and availability.</p>
+      </article><article data-focus-panel>
+      <h4><span aria-hidden="true">03</span> Next action</h4>
+      <div class="crop" style="--ratio:390 / 92;--offset:87.4%"><img src="assets/lexflow/web/recommendation.png" width="390" height="844" alt="" aria-hidden="true" loading="lazy"></div>
+      <p>Offer the profile before asking the client to book.</p>
+      </article></div>
+        <p class="evidence-note">The professional profile is illustrative.</p>
+      </aside>
+    </div>
+ </section>
+ <section id="moot" class="dark">
+   <div class="shell section">
+    <header class="section-head"><p class="label">Design decision / Mock court</p><h2>Give participants something they can compare.</h2><p class="lede">I turned case material into two kinds of cards. In the fictional Missing Works of Art scenario, each kind gives participants a different job in the discussion.</p></header>
+    <div class="card-exhibit"><p class="card-case">Missing Works of Art · Fictional scenario</p>
+    <div class="card-spread">
+      <figure class="figure card">
+          <a class="media-link" data-view href="assets/lexflow/web/clue.png" aria-label="Enlarge image · CLUE · Open a question">
+            <img src="assets/lexflow/web/clue.png" width="1355" height="2350" alt="Original orange Clue card for missing surveillance footage" loading="lazy" decoding="async">
+          </a>
+          <figcaption><strong>CLUE · Open a question</strong><p>Missing surveillance footage prompts a question about the gap in the record.</p></figcaption>
+        </figure>
+      <figure class="figure card">
+          <a class="media-link" data-view href="assets/lexflow/web/evidence.png" aria-label="Enlarge image · EVIDENCE · Support a claim">
+            <img src="assets/lexflow/web/evidence.png" width="1355" height="2350" alt="Original blue Evidence card for the transport agreement with a disputed time" loading="lazy" decoding="async">
+          </a>
+          <figcaption><strong>EVIDENCE · Support a claim</strong><p>The time on the transport agreement can be compared with other accounts.</p></figcaption>
+        </figure>
+    </div></div>
+    <div class="sequence" data-sequence>
+      <div><p class="label">Facilitated practice concept</p><h3>How evidence becomes an argument</h3></div>
+      <div class="steps" data-controls hidden aria-label="Practice steps"><button type="button" data-step="0" aria-pressed="true"><span>01</span> Read the case</button><button type="button" data-step="1" aria-pressed="false"><span>02</span> Compare the evidence</button><button type="button" data-step="2" aria-pressed="false"><span>03</span> Argue and review</button></div>
+      <div class="panels" aria-live="polite"><article data-panel><p class="panel-meta">Appointment and scenario introduction</p><h4>Read the case</h4><p>Receive the scenario, identify the roles and read the available material.</p></article><article data-panel><p class="panel-meta">Evidence presentation, analysis and discussion</p><h4>Compare the evidence</h4><p>Separate context from material that can support a claim. Compare the disputed time against other accounts.</p></article><article data-panel><p class="panel-meta">Debate and review</p><h4>Argue and review</h4><p>Use the evidence to explain a position in the simulated debate, then review the reasoning.</p></article></div>
+    </div>
+   </div>
+ </section>
+ <section id="reflection" class="shell section">
+    <header class="section-head"><p class="label">Evidence and reflection</p><h2>Where people asked for more guidance.</h2><p class="lede">I tested physical mock-court materials and low-fidelity app screens qualitatively. The retained notes give me two concrete problems to investigate next.</p></header>
+    <dl class="learning">
+      <div><dt>Physical mock court</dt><dd>The scenario drew interest. The notes also record reading load and unfamiliar terms as barriers for beginners.</dd></div>
+      <div><dt>Low-fidelity app</dt><dd>Progress and document grouping were described positively. Feedback asked for clearer first-use guidance and easier evidence previews.</dd></div>
+    </dl>
+    <div class="wrap-up">
+      <div><h3>What I made</h3><p>Research synthesis, a service journey and blueprint, information architecture and user flows, the LawPath UI prototype, the original card system and qualitative feedback records.</p></div>
+      <div><h3>What I would test next</h3><p>Ask first-time participants to select evidence for an argument and explain their choice. Compare versions with and without inline term explanations.</p></div>
+    </div>
+    <p class="evidence-note">The evidence documents prototype sessions and feedback. Sample size and task outcomes are undocumented. LexFlow remained a concept.</p>
+ </section>
+</main>
+<footer class="footer"><div class="shell"><div><p class="label">Selected work</p><p>LexFlow <span>· Yixiao Peng</span></p></div><a href="#top">Back to top ↑</a></div></footer>
+<dialog id="viewer" aria-labelledby="viewer-title">
+ <div class="viewer-head"><h2 id="viewer-title">Design detail</h2><button id="close" type="button" autofocus>Close</button></div>
+ <div class="viewer-stage" tabindex="0" aria-label="Image preview"><img id="large" alt="Design detail"></div>
+ <div class="viewer-tools"><button id="zoom" type="button" aria-pressed="false" data-in="Actual pixels" data-out="Fit to window">Actual pixels</button><a id="original" href="assets/lexflow/web/home.png" target="_blank" rel="noopener">Open image file</a></div>
+</dialog>
+</body>
+</html>

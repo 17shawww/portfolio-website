@@ -4248,5 +4248,650 @@
     "en": "Sensory Garden Labyrinth · Plan sketch",
     "zh": "感官花园迷宫 · 平面草图",
     "keep": false
+  },
+  "cf9c07877a5b": {
+    "en": "LexFlow is an independent legal-service concept by Yixiao Peng, connecting guided consultation in LawPath with a physical evidence system for mock-court practice.",
+    "zh": "LexFlow 是 Yixiao Peng 的独立法律服务概念项目，将 LawPath 引导式咨询与用于模拟法庭练习的实体证据系统连接起来。",
+    "keep": false
+  },
+  "f18f75b76b00": {
+    "en": "LexFlow — Yixiao Peng",
+    "zh": "LexFlow — Yixiao Peng",
+    "keep": true
+  },
+  "d4c1a6a7587e": {
+    "en": "Skip to case study",
+    "zh": "跳至案例正文",
+    "keep": false
+  },
+  "94bccd761d1f": {
+    "en": "Service design · Independent concept",
+    "zh": "服务设计 · 独立概念项目",
+    "keep": false
+  },
+  "c702ef304808": {
+    "en": "LexFlow",
+    "zh": "LexFlow",
+    "keep": true
+  },
+  "bf8e6e0da59c": {
+    "en": "From the first question",
+    "zh": "从第一次咨询，",
+    "keep": false
+  },
+  "ec5e9c5b78b3": {
+    "en": "to a case you can work through.",
+    "zh": "到亲手演练案件。",
+    "keep": false
+  },
+  "99d651adb74f": {
+    "en": "I designed a guided consultation prototype and a physical evidence system for mock-court practice.",
+    "zh": "我设计了引导式咨询原型 LawPath，以及用于模拟法庭练习的实体证据系统。",
+    "keep": false
+  },
+  "83861d15c76b": {
+    "en": "See the design",
+    "zh": "查看设计方案",
+    "keep": false
+  },
+  "121c68d6bcc2": {
+    "en": "Original orange Clue card for missing surveillance footage",
+    "zh": "橙色原版线索卡，主题是监控录像缺失",
+    "keep": false
+  },
+  "2361ce76767a": {
+    "en": "Original blue Evidence card for the transport agreement with a disputed time",
+    "zh": "蓝色原版证据卡，呈现时间存疑的运输交接协议",
+    "keep": false
+  },
+  "e277ab1988a2": {
+    "en": "LawPath concept home showing legal consultation and moot-court practice entry points",
+    "zh": "LawPath 概念首页，显示法律咨询与模拟法庭的入口",
+    "keep": false
+  },
+  "fb4eeda22147": {
+    "en": "LawPath",
+    "zh": "LawPath",
+    "keep": true
+  },
+  "9b03c1bef54d": {
+    "en": "Original evidence cards",
+    "zh": "原版线索与证据卡",
+    "keep": false
+  },
+  "82252674cd1f": {
+    "en": "Sole designer",
+    "zh": "独立设计师",
+    "keep": false
+  },
+  "9dcff98e275f": {
+    "en": "Timeline",
+    "zh": "时间",
+    "keep": false
+  },
+  "fc399fa13ae3": {
+    "en": "Oct–Dec 2024",
+    "zh": "2024 年 10–12 月",
+    "keep": false
+  },
+  "b073f6c68ef8": {
+    "en": "Scope",
+    "zh": "职责",
+    "keep": false
+  },
+  "d60667169617": {
+    "en": "Research, service design, UI, prototyping and qualitative testing",
+    "zh": "调研、服务设计、界面、原型与定性测试",
+    "keep": false
+  },
+  "9693413435c2": {
+    "en": "Concept prototypes · No production launch",
+    "zh": "概念与原型 · 未正式上线",
+    "keep": false
+  },
+  "979d6300fd98": {
+    "en": "Research",
+    "zh": "研究证据",
+    "keep": false
+  },
+  "d677190e0a99": {
+    "en": "Service",
+    "zh": "服务路径",
+    "keep": false
+  },
+  "7fa3953bbf25": {
+    "en": "Moot court",
+    "zh": "模拟法庭",
+    "keep": false
+  },
+  "7538c2135b03": {
+    "en": "Reflection",
+    "zh": "反思",
+    "keep": false
+  },
+  "f10d58af9450": {
+    "en": "Research evidence",
+    "zh": "研究证据",
+    "keep": false
+  },
+  "c35f8245cf56": {
+    "en": "The first conversation is only the beginning.",
+    "zh": "咨询只是开始。",
+    "keep": false
+  },
+  "602d691ad277": {
+    "en": "At a law firm, I mapped where clients meet lawyers and where case work happens. Two retained interview summaries gave me distinct views of the same service.",
+    "zh": "我在律所梳理了当事人与律师会面及处理案件的场所。原始资料保留了资深律师和当事人的访谈摘要，提供了两种服务视角。",
+    "keep": false
+  },
+  "af9a1b0196f0": {
+    "en": "Law-firm observation",
+    "zh": "律所观察",
+    "keep": false
+  },
+  "f8b95b4c131a": {
+    "en": "Reception and consultation",
+    "zh": "接待与会谈",
+    "keep": false
+  },
+  "a81fc1d573ac": {
+    "en": "Case work",
+    "zh": "案件工作",
+    "keep": false
+  },
+  "f330809de78b": {
+    "en": "Mock court",
+    "zh": "模拟法庭",
+    "keep": false
+  },
+  "0d08cb5a1eb0": {
+    "en": "Client summary",
+    "zh": "当事人访谈摘要",
+    "keep": false
+  },
+  "fd737b2e89a0": {
+    "en": "Unfamiliar terms. Unclear next steps.",
+    "zh": "术语陌生，下一步不清楚。",
+    "keep": false
+  },
+  "f0ed3e4c177d": {
+    "en": "Timely communication helped the client follow case progress.",
+    "zh": "及时沟通有助于当事人理解进展。",
+    "keep": false
+  },
+  "fcf0bb5eb015": {
+    "en": "Explain before asking people to choose.",
+    "zh": "先解释，再请用户选择。",
+    "keep": false
+  },
+  "a6e60a746c24": {
+    "en": "Lawyer summary",
+    "zh": "律师访谈摘要",
+    "keep": false
+  },
+  "d97f372239f6": {
+    "en": "Evidence, coordination and document work compete for time.",
+    "zh": "取证、协调和文书工作挤在一起。",
+    "keep": false
+  },
+  "3efcd2964c09": {
+    "en": "Collecting and organizing material is part of the work of moving a case forward.",
+    "zh": "收集与梳理材料是推进案件的一部分。",
+    "keep": false
+  },
+  "aa82a0783b93": {
+    "en": "Give case material a structure people can work with.",
+    "zh": "把案情整理成可使用的材料。",
+    "keep": false
+  },
+  "3f74b81133a0": {
+    "en": "Paraphrased from two retained summaries. Sample size and recruitment are undocumented.",
+    "zh": "以上为两份留存访谈摘要的转述。总样本数与招募方式暂无记录。",
+    "keep": false
+  },
+  "53abb2728908": {
+    "en": "Service structure",
+    "zh": "服务结构",
+    "keep": false
+  },
+  "5eac42656bc3": {
+    "en": "One journey, two forms of support.",
+    "zh": "一条服务路径，两种支持方式。",
+    "keep": false
+  },
+  "57ff13be99b6": {
+    "en": "I used the service journey and information architecture to place digital guidance where people prepare and choose, and physical material where they compare and discuss.",
+    "zh": "我用服务旅程和信息架构梳理两种支持方式。数字界面帮助当事人准备与选择，实体材料帮助参与者对照与讨论。",
+    "keep": false
+  },
+  "507ab06e41fa": {
+    "en": "Proposed service journey",
+    "zh": "拟议服务体验",
+    "keep": false
+  },
+  "6f6b2ffb0f5c": {
+    "en": "Digital service",
+    "zh": "数字服务",
+    "keep": false
+  },
+  "f1cebcb23bda": {
+    "en": "In-person touchpoint",
+    "zh": "实体触点",
+    "keep": false
+  },
+  "537a956d9fb9": {
+    "en": "Consultation",
+    "zh": "咨询",
+    "keep": false
+  },
+  "584421d763c2": {
+    "en": "Describe the case and understand the suggested professional.",
+    "zh": "描述案件，了解推荐律师的理由。",
+    "keep": false
+  },
+  "a3276be596b3": {
+    "en": "Intake and a reasoned match",
+    "zh": "案件填写与解释推荐",
+    "keep": false
+  },
+  "b75318f9bd82": {
+    "en": "Meeting with a lawyer",
+    "zh": "与律师会面",
+    "keep": false
+  },
+  "cf2befb0f1a6": {
+    "en": "Preparation",
+    "zh": "准备",
+    "keep": false
+  },
+  "cf0fa2dbfc92": {
+    "en": "Gather documents and review evidence with support.",
+    "zh": "收集材料并梳理证据。",
+    "keep": false
+  },
+  "df551b3f547a": {
+    "en": "Case records and evidence",
+    "zh": "案件记录与证据管理",
+    "keep": false
+  },
+  "6d95fb08a797": {
+    "en": "Evidence and document work",
+    "zh": "证据与文书准备",
+    "keep": false
+  },
+  "eac8e391c266": {
+    "en": "Trial practice",
+    "zh": "庭审练习",
+    "keep": false
+  },
+  "2977768e17bd": {
+    "en": "Compare evidence and prepare a position in a fictional case.",
+    "zh": "在虚构案件中对照证据并准备立场。",
+    "keep": false
+  },
+  "dad8c0873e5f": {
+    "en": "Moot court entry and booking",
+    "zh": "模拟法庭入口与预约",
+    "keep": false
+  },
+  "fd515e6bdfac": {
+    "en": "Physical cards and role-play",
+    "zh": "实体卡牌与角色练习",
+    "keep": false
+  },
+  "09b2d9cd1123": {
+    "en": "Follow-up",
+    "zh": "跟进",
+    "keep": false
+  },
+  "63337e63f18a": {
+    "en": "Review the case and identify next steps.",
+    "zh": "回顾案件并梳理下一步。",
+    "keep": false
+  },
+  "d0c13874b9ae": {
+    "en": "Case review concept",
+    "zh": "案件回顾概念",
+    "keep": false
+  },
+  "a543e3253859": {
+    "en": "Explore a service stage",
+    "zh": "查看服务阶段",
+    "keep": false
+  },
+  "b412ea53d58e": {
+    "en": "The intake and recommendation share the case brief, so the rationale stays visible when the client chooses.",
+    "zh": "填写和推荐沿用同一份案件简述，当事人做选择时仍能看见理由。",
+    "keep": false
+  },
+  "0035ef31c08f": {
+    "en": "The journey places digital organization alongside evidence and document work.",
+    "zh": "在证据与文书准备环节安排数字化梳理。",
+    "keep": false
+  },
+  "74e0924f0a33": {
+    "en": "The proposed digital entry leads into rehearsal with cards, roles and discussion.",
+    "zh": "概念中的数字入口连接到实体卡片与角色讨论。",
+    "keep": false
+  },
+  "153899e5155b": {
+    "en": "The journey closes with a proposed case review and next steps.",
+    "zh": "旅程以拟议的案件回顾与下一步收尾。",
+    "keep": false
+  },
+  "76dde96f4017": {
+    "en": "Four-stage synthesis of the original journey. The route describes the proposed service.",
+    "zh": "依据原始旅程重排为四个阶段，呈现拟议服务路径。",
+    "keep": false
+  },
+  "9c57eeea75fe": {
+    "en": "Design decision / LawPath",
+    "zh": "设计决策 / LawPath",
+    "keep": false
+  },
+  "dcde024da712": {
+    "en": "Show why the recommendation fits.",
+    "zh": "先说清推荐理由，再请用户选择。",
+    "keep": false
+  },
+  "29ab4d025f08": {
+    "en": "I connected the case brief to the recommendation in LawPath, the mobile prototype within LexFlow. What the client shared stays visible at the point of choice.",
+    "zh": "在 LexFlow 的移动原型 LawPath 中，我把案件填写与律师推荐连起来。当事人做选择时，仍能看到自己提供了什么信息。",
+    "keep": false
+  },
+  "dc507bcf809f": {
+    "en": "Enlarge image · Share the case",
+    "zh": "放大图像 · 填写案件",
+    "keep": false
+  },
+  "92937fe9a56e": {
+    "en": "LawPath case intake showing progress, case category and description",
+    "zh": "LawPath 案件填写，显示步骤进度、案件类别和描述",
+    "keep": false
+  },
+  "b3bcecc7d48b": {
+    "en": "Share the case",
+    "zh": "填写案件",
+    "keep": false
+  },
+  "cb3b358ad9cc": {
+    "en": "Start with category and a concise description.",
+    "zh": "先填写案件类别和简要描述。",
+    "keep": false
+  },
+  "4f1eec2ef40b": {
+    "en": "Enlarge image · Understand the match",
+    "zh": "放大图像 · 看懂推荐理由",
+    "keep": false
+  },
+  "b945d8487333": {
+    "en": "LawPath recommendation showing case context, reasons and a link to the illustrative lawyer profile",
+    "zh": "LawPath 推荐界面，展示案件背景、推荐理由与示例律师资料入口",
+    "keep": false
+  },
+  "d4f1471a59bc": {
+    "en": "Understand the match",
+    "zh": "看懂推荐理由",
+    "keep": false
+  },
+  "25c4b9786d22": {
+    "en": "Review the rationale and open a profile.",
+    "zh": "查看推荐依据，再打开律师资料。",
+    "keep": false
+  },
+  "3081bd5bf4df": {
+    "en": "Recommendation detail",
+    "zh": "推荐界面特写",
+    "keep": false
+  },
+  "7793b0df7ff9": {
+    "en": "What the client can check",
+    "zh": "当事人可以核对什么",
+    "keep": false
+  },
+  "312d085723aa": {
+    "en": "Recommendation details",
+    "zh": "推荐界面关键细节",
+    "keep": false
+  },
+  "99605e06966a": {
+    "en": "Case context",
+    "zh": "案件背景",
+    "keep": false
+  },
+  "e09290fc6507": {
+    "en": "Matching rationale",
+    "zh": "匹配依据",
+    "keep": false
+  },
+  "365987d015f7": {
+    "en": "Next action",
+    "zh": "下一步",
+    "keep": false
+  },
+  "c577329a815f": {
+    "en": "Reflect the case category, consultation preference and location shared in intake.",
+    "zh": "将当事人填写的案件类别、咨询方式偏好和所在地带到推荐页。",
+    "keep": false
+  },
+  "6d8cea0d033b": {
+    "en": "Explain the fit through practice area, service type and availability.",
+    "zh": "用执业领域、服务类型和可预约情况解释这位律师为什么合适。",
+    "keep": false
+  },
+  "6bfa76fa9203": {
+    "en": "Offer the profile before asking the client to book.",
+    "zh": "在请当事人预约之前，先提供查看律师资料的入口。",
+    "keep": false
+  },
+  "8620cde1e0bc": {
+    "en": "The professional profile is illustrative.",
+    "zh": "界面中的律师资料为示例。",
+    "keep": false
+  },
+  "74806bd1c38b": {
+    "en": "Design decision / Mock court",
+    "zh": "设计决策 / 模拟法庭",
+    "keep": false
+  },
+  "18c4fae7d01c": {
+    "en": "Give participants something they can compare.",
+    "zh": "把案情变成能拿在手里对照的材料。",
+    "keep": false
+  },
+  "9a1e39e2352d": {
+    "en": "I turned case material into two kinds of cards. In the fictional Missing Works of Art scenario, each kind gives participants a different job in the discussion.",
+    "zh": "我把案件材料做成两类卡片。在虚构的《失踪的艺术品》案中，两类卡片分别承担不同的讨论任务。",
+    "keep": false
+  },
+  "27553d4277c5": {
+    "en": "Missing Works of Art · Fictional scenario",
+    "zh": "失踪的艺术品 · 虚构案情",
+    "keep": false
+  },
+  "49ed648675af": {
+    "en": "Enlarge image · CLUE · Open a question",
+    "zh": "放大图像 · CLUE · 提出问题",
+    "keep": false
+  },
+  "d2c83391b878": {
+    "en": "CLUE · Open a question",
+    "zh": "CLUE · 提出问题",
+    "keep": false
+  },
+  "96933c6a4ac0": {
+    "en": "Missing surveillance footage prompts a question about the gap in the record.",
+    "zh": "监控录像缺失，让参与者留意记录中尚未解释的空白。",
+    "keep": false
+  },
+  "41c4405b8c64": {
+    "en": "Enlarge image · EVIDENCE · Support a claim",
+    "zh": "放大图像 · EVIDENCE · 支撑论点",
+    "keep": false
+  },
+  "dc526370c850": {
+    "en": "EVIDENCE · Support a claim",
+    "zh": "EVIDENCE · 支撑论点",
+    "keep": false
+  },
+  "8244f915535c": {
+    "en": "The time on the transport agreement can be compared with other accounts.",
+    "zh": "运输交接协议上的时间，可以与其他说法对照。",
+    "keep": false
+  },
+  "1724d01d7379": {
+    "en": "Facilitated practice concept",
+    "zh": "模拟练习概念流程",
+    "keep": false
+  },
+  "36bd9ee9c9ba": {
+    "en": "How evidence becomes an argument",
+    "zh": "证据怎样进入论证",
+    "keep": false
+  },
+  "afe562f4c3a8": {
+    "en": "Practice steps",
+    "zh": "练习步骤",
+    "keep": false
+  },
+  "a359b9d99ad5": {
+    "en": "Read the case",
+    "zh": "阅读案情",
+    "keep": false
+  },
+  "cc96970d4286": {
+    "en": "Compare the evidence",
+    "zh": "对照证据",
+    "keep": false
+  },
+  "c42ef442db94": {
+    "en": "Argue and review",
+    "zh": "论证与回顾",
+    "keep": false
+  },
+  "4d8833690c00": {
+    "en": "Appointment and scenario introduction",
+    "zh": "预约与案情介绍",
+    "keep": false
+  },
+  "fea0bdc55b3b": {
+    "en": "Receive the scenario, identify the roles and read the available material.",
+    "zh": "了解虚构案情、角色及可用材料。",
+    "keep": false
+  },
+  "4ed3278c5a4c": {
+    "en": "Evidence presentation, analysis and discussion",
+    "zh": "证据呈现、分析与讨论",
+    "keep": false
+  },
+  "6504f6571d1c": {
+    "en": "Separate context from material that can support a claim. Compare the disputed time against other accounts.",
+    "zh": "区分背景线索和可支撑主张的材料，将有争议的时间记录与其他说法对照。",
+    "keep": false
+  },
+  "7e531f6d3328": {
+    "en": "Debate and review",
+    "zh": "辩论与回顾",
+    "keep": false
+  },
+  "67db611c4058": {
+    "en": "Use the evidence to explain a position in the simulated debate, then review the reasoning.",
+    "zh": "在模拟辩论中用证据阐述立场，再回顾论证过程。",
+    "keep": false
+  },
+  "fbf8dcffa815": {
+    "en": "Evidence and reflection",
+    "zh": "原型证据与反思",
+    "keep": false
+  },
+  "422f56b2cd4f": {
+    "en": "Where people asked for more guidance.",
+    "zh": "原型反馈指出了哪里需要更多指引。",
+    "keep": false
+  },
+  "59c9383ac85f": {
+    "en": "I tested physical mock-court materials and low-fidelity app screens qualitatively. The retained notes give me two concrete problems to investigate next.",
+    "zh": "我对实体模拟法庭材料和 App 低保真界面做了定性原型测试。留存记录给出了下一轮可继续验证的两个问题。",
+    "keep": false
+  },
+  "235dc6b073da": {
+    "en": "Physical mock court",
+    "zh": "实体模拟法庭",
+    "keep": false
+  },
+  "427e3a406570": {
+    "en": "The scenario drew interest. The notes also record reading load and unfamiliar terms as barriers for beginners.",
+    "zh": "情境故事引起了兴趣。记录也指出，阅读量和陌生术语给新手带来负担。",
+    "keep": false
+  },
+  "d9b875d24ced": {
+    "en": "Low-fidelity app",
+    "zh": "App 低保真原型",
+    "keep": false
+  },
+  "baf677ce0c9c": {
+    "en": "Progress and document grouping were described positively. Feedback asked for clearer first-use guidance and easier evidence previews.",
+    "zh": "反馈肯定了进度展示和材料分类，也提出首次使用时应有更清楚的指引，并让证据更容易预览。",
+    "keep": false
+  },
+  "b5249122c6b5": {
+    "en": "What I made",
+    "zh": "我完成的交付物",
+    "keep": false
+  },
+  "6d0fbaf37955": {
+    "en": "Research synthesis, a service journey and blueprint, information architecture and user flows, the LawPath UI prototype, the original card system and qualitative feedback records.",
+    "zh": "研究归纳、服务旅程与蓝图、信息架构和用户流程、LawPath 界面原型、实体卡牌系统与定性反馈记录。",
+    "keep": false
+  },
+  "f67029146259": {
+    "en": "What I would test next",
+    "zh": "下一轮我会验证什么",
+    "keep": false
+  },
+  "36643c2651b3": {
+    "en": "Ask first-time participants to select evidence for an argument and explain their choice. Compare versions with and without inline term explanations.",
+    "zh": "请第一次参加模拟的新手挑选支撑一个论点的证据，并解释理由。对比有无术语解释时，他们是否能理解材料并继续。",
+    "keep": false
+  },
+  "a5f3e83009b8": {
+    "en": "The evidence documents prototype sessions and feedback. Sample size and task outcomes are undocumented. LexFlow remained a concept.",
+    "zh": "现有证据记录了原型试用及定性反馈。样本数与任务结果暂无记录。LexFlow 停留在概念阶段。",
+    "keep": false
+  },
+  "8d17f34c581f": {
+    "en": "· Yixiao Peng",
+    "zh": "· Yixiao Peng",
+    "keep": true
+  },
+  "818aee33c0f4": {
+    "en": "Actual pixels",
+    "zh": "实际像素",
+    "keep": false
+  },
+  "7d7f02e18d4b": {
+    "en": "Fit to window",
+    "zh": "适合窗口",
+    "keep": false
+  },
+  "d795f44a90f4": {
+    "en": "Open image file",
+    "zh": "打开图像文件",
+    "keep": false
+  },
+  "7b57183ad50f": {
+    "en": "View the LexFlow case study",
+    "zh": "查看 LexFlow 案例",
+    "keep": false
+  },
+  "2cf415ea1f88": {
+    "en": "A guided legal consultation prototype and a physical card system for moot-court practice.",
+    "zh": "引导式法律咨询原型，以及用于模拟法庭练习的实体卡片系统。",
+    "keep": false
+  },
+  "55898ede8fa7": {
+    "en": "Read the LexFlow case study",
+    "zh": "阅读 LexFlow 案例",
+    "keep": false
   }
 }

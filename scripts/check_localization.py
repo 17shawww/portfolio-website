@@ -11,7 +11,7 @@ class Inventory(HTMLParser):
     def handle_starttag(self,tag,attrs):
         a=dict(attrs)
         if tag in ('script','style'):self.skip+=1
-        for name in ('aria-label','alt','title','data-label','data-gallery'):
+        for name in ('aria-label','alt','title','data-label','data-gallery','data-in','data-out','data-in','data-out','data-in','data-out'):
             if a.get(name):self.add(a[name])
         if tag=='meta' and (a.get('name')=='description' or a.get('property') in ('og:title','og:description','og:image:alt')):self.add(a.get('content',''))
     def handle_endtag(self,tag):

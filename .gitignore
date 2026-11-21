@@ -68,3 +68,19 @@
 /prototypes/ink-character/painted/dist/
 !/ink-character.css
 !/ink-character.js
+
+# LexFlow case study: allow the four source exports used by the site.
+!/lexflow.html
+!/lexflow.css
+!/lexflow-case.css
+!/lexflow-editorial.css
+!/lexflow-case.js
+!/assets/lexflow/
+/assets/lexflow/*
+!/assets/lexflow/web/
+/assets/lexflow/web/*
+!/assets/lexflow/web/home.png
+!/assets/lexflow/web/intake.png
+!/assets/lexflow/web/recommendation.png
+!/assets/lexflow/web/clue.png
+!/assets/lexflow/web/evidence.png
