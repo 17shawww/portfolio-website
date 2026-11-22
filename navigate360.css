@@ -58,9 +58,8 @@
 .nv-page .nv-heading > p:last-child { max-width: 60ch; margin-top: 1rem; color: var(--nv-muted); font-size: 1.05rem; line-height: 1.65; }
 .nv-metrics dt { color: var(--nv-dark); font: 500 clamp(3.5rem, 7vw, 6.5rem)/1 Georgia, serif; letter-spacing: -.07em; }
 .nv-sage { background: #eaf0e6; }
-.nv-pair { display: grid; grid-template-columns: .88fr 1.12fr; align-items: end; gap: 1.15rem; margin-top: 2rem; }
-.nv-pair figure a { background: #d8e2d8; }
-.nv-pair figcaption, .nv-journey figcaption { margin-top: .7rem; font-size: .85rem; color: var(--nv-muted); }
+.nv-page .nv-vision { max-width: 46rem; margin-top: 2rem; }
+.nv-journey figcaption { margin-top: .7rem; font-size: .85rem; color: var(--nv-muted); }
 .nv-flow { background: var(--nv-dark); color: #edf6ee; }
 .nv-flow .nv-heading :is(h2,p), .nv-flow .nv-journey figcaption { color: inherit; }
 .nv-flow .nv-heading > p:last-child, .nv-flow .nv-mobile-study p { color: #d2e4d8; }
@@ -108,7 +107,6 @@
 @media (max-width: 780px) {
   .nv-lead, .nv-work { grid-template-columns: 1fr; gap: 1.2rem; }
   .nv-hero h1 { font-size: clamp(3.6rem, 13vw, 6.3rem); }
-  .nv-pair { grid-template-columns: 1fr; align-items: start; }
 }
 @media (max-width: 590px) {
   .nv-cover { min-height: 0; }
@@ -161,8 +159,7 @@
 .nv-decision-map li strong { display: block; color: var(--nv-dark); margin-bottom: .14rem; }
 .nv-ued a { background: #fff; }
 .nv-ued img { width: 100%; max-width: 58rem; margin-inline: auto; }
-.nv-pair { grid-template-columns: 1.15fr .85fr; }
-.nv-pair img { width: 100%; }
+.nv-vision img { width: 100%; }
 .nv-compare { display: grid; grid-template-columns: .7fr 1.65fr; align-items: start; gap: clamp(1.2rem,4vw,3.5rem); margin-top: 3.25rem; }
 .nv-before { padding-top: 1rem; border-top: 1px solid var(--nv-rule); }
 .nv-page .nv-before h3 { margin-block: .7rem .5rem; color: var(--nv-dark); font: 500 clamp(1.6rem,3vw,2.8rem)/1.12 Georgia,serif; text-wrap: balance; }
@@ -202,7 +199,7 @@
 .nv-page .nv-takeaway p:last-child { max-width: 49ch; color: #d2e4d8; }
 
 @media (max-width: 780px) {
-  .nv-research-spread, .nv-compare, .nv-pair { grid-template-columns: 1fr; }
+  .nv-research-spread, .nv-compare { grid-template-columns: 1fr; }
   .nv-research-art { max-width: 28rem; }
   .nv-callouts { grid-template-columns: repeat(2,1fr); }
 }

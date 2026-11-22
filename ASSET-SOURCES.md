@@ -113,4 +113,4 @@ The website layout adapts the [web asset boards](https://www.figma.com/design/Vm
 
 ## Navigate360
 
-The case covers the Rutgers MBS Contextual Design team’s advising booking prototype. The four desktop and two mobile interface images were exported from Figma. The research affinity notes, Success Finalization storyboard, User Environment Design diagram and confirmation sketch are excerpts from the team’s Week 13 submission. The confirmation detail is a crop of the desktop export. All source documents stay in the local records.
+The case covers the Rutgers MBS Contextual Design team’s advising booking prototype. The four desktop and two mobile interface images were exported from Figma. The research affinity notes, User Environment Design diagram and confirmation sketch are excerpts from the team’s Week 13 submission. The confirmation detail is a crop of the desktop export. All source documents stay in the local records.
