@@ -4893,5 +4893,565 @@
     "en": "Read the LexFlow case study",
     "zh": "阅读 LexFlow 案例",
     "keep": false
+  },
+  "580bdc07d033": {
+    "en": "A Rutgers MBS team redesigned the Navigate360 advising flow. Yixiao Peng led the booking confirmation experience.",
+    "zh": "罗格斯大学 MBS 团队重新设计了 Navigate360 学业咨询预约流程，由 Yixiao Peng 负责预约确认体验。",
+    "keep": false
+  },
+  "5e9ca6b5cef0": {
+    "en": "A checkmark and “Appointment confirmed” give the result first.",
+    "zh": "用勾选图标和「预约成功」先给出结果。",
+    "keep": false
+  },
+  "37487f89550b": {
+    "en": "A clear status, a summary and an optional calendar action.",
+    "zh": "清楚的预约状态、摘要和可选的日历操作。",
+    "keep": false
+  },
+  "d3a513c99d0b": {
+    "en": "A task can be technically complete while still feeling incomplete to the user.",
+    "zh": "系统可以已经完成任务，用户却仍然觉得事情没有办妥。",
+    "keep": false
+  },
+  "f5d6ae77d849": {
+    "en": "Add to Calendar",
+    "zh": "添加到日历",
+    "keep": false
+  },
+  "3703dbe3804a": {
+    "en": "Advisor & Time Selection",
+    "zh": "顾问与时段选择",
+    "keep": false
+  },
+  "9a17933e596f": {
+    "en": "After a pilot, we observed six Rutgers MBS students booking an advising appointment in the existing system, then asked them about the moments they hesitated or checked again. All six completed the task.",
+    "zh": "预试之后，我们观察了六名罗格斯大学 MBS 学生在原系统中预约学业咨询，并在访谈中追问他们在哪些地方犹豫或反复核对。六人都完成了预约。",
+    "keep": false
+  },
+  "a09ff67896d1": {
+    "en": "After · Figma prototype detail",
+    "zh": "改版后 · Figma 原型局部",
+    "keep": false
+  },
+  "b7c6c6f73382": {
+    "en": "All six participants in the original study also completed the task. In the prototype test, students hesitated less, and all five moved through advisor and time selection without backtracking.",
+    "zh": "前期观察中的六人也都完成了预约。原型测试中，学生的犹豫更少，五人都在顾问与时段选择阶段顺利继续，没有回退。",
+    "keep": false
+  },
+  "25efff85a2f8": {
+    "en": "An advising booking redesign that helps Rutgers MBS students choose a goal and know when their appointment is booked.",
+    "zh": "为罗格斯大学 MBS 学生重设计学业咨询预约，让他们按目标选择服务，并清楚确认是否约好。",
+    "keep": false
+  },
+  "f89c0e38d540": {
+    "en": "Appointment summary",
+    "zh": "预约摘要",
+    "keep": false
+  },
+  "1269f3fd4159": {
+    "en": "Ask what they need in their own words",
+    "zh": "先问学生想解决什么问题",
+    "keep": false
+  },
+  "345b4b1d1d49": {
+    "en": "Before · Existing flow",
+    "zh": "改版前 · 原预约流程",
+    "keep": false
+  },
+  "29151853690a": {
+    "en": "Booking flow",
+    "zh": "预约流程",
+    "keep": false
+  },
+  "a5362b493a94": {
+    "en": "Booking flow steps",
+    "zh": "预约流程步骤",
+    "keep": false
+  },
+  "d202c709cd93": {
+    "en": "Carry their goal into the next decision",
+    "zh": "让已选目标影响下一步",
+    "keep": false
+  },
+  "fcc0df176654": {
+    "en": "Checked again after booking",
+    "zh": "完成预约后再次核对",
+    "keep": false
+  },
+  "df0a8b6fc878": {
+    "en": "Choose a goal written in the student’s own language. · Shounak Singh",
+    "zh": "用学生熟悉的表达来选择预约目标。· Shounak Singh",
+    "keep": false
+  },
+  "790fb1b462df": {
+    "en": "Close image",
+    "zh": "关闭图片",
+    "keep": false
+  },
+  "de79f81e7b35": {
+    "en": "Completed the task",
+    "zh": "完成预约任务",
+    "keep": false
+  },
+  "d743070540a1": {
+    "en": "Confirmation",
+    "zh": "预约确认",
+    "keep": false
+  },
+  "4f4852b899fb": {
+    "en": "Confirmation design",
+    "zh": "确认页设计",
+    "keep": false
+  },
+  "24173a475481": {
+    "en": "Confirmation detail with a success heading, Done status, appointment summary, next steps and Add to Calendar",
+    "zh": "确认页局部包含成功提示、完成状态、预约摘要、后续步骤和添加到日历",
+    "keep": false
+  },
+  "e5450b730aa3": {
+    "en": "Confirmation lead · UX researcher",
+    "zh": "确认体验负责人 · 用户研究",
+    "keep": false
+  },
+  "52bfe584a5fc": {
+    "en": "Delivery",
+    "zh": "交付",
+    "keep": false
+  },
+  "e34e1abfbe04": {
+    "en": "Design decision",
+    "zh": "设计决策",
+    "keep": false
+  },
+  "ff0b546fd1ad": {
+    "en": "Design process",
+    "zh": "设计推导",
+    "keep": false
+  },
+  "5e39b8bbe2c6": {
+    "en": "Desktop prototype and mobile design exploration from Figma",
+    "zh": "Figma 中的桌面原型与手机端设计探索",
+    "keep": false
+  },
+  "a448dc5444c7": {
+    "en": "Education · UX research and product design",
+    "zh": "教育 · 用户研究与产品设计",
+    "keep": false
+  },
+  "a79843b2e40d": {
+    "en": "Everyone finished. Most felt sure they were done.",
+    "zh": "五人都完成了预约，四人确信已经约好。",
+    "keep": false
+  },
+  "2edbcb8fb909": {
+    "en": "Expanded design image",
+    "zh": "放大的设计图片",
+    "keep": false
+  },
+  "eb81a808fbbd": {
+    "en": "Explain what to expect and where to change the booking.",
+    "zh": "说明后续安排，以及在哪里改期或取消。",
+    "keep": false
+  },
+  "92acc3c630d4": {
+    "en": "Five Rutgers MBS students booked a course-registration advising appointment in a moderated think-aloud test. Three also took part in the earlier research.",
+    "zh": "五名罗格斯大学 MBS 学生在主持式出声思考测试中完成同一项选课咨询预约，其中三人也参加过前期研究。",
+    "keep": false
+  },
+  "ad2e89b690c2": {
+    "en": "Four-screen booking prototype",
+    "zh": "四屏预约原型",
+    "keep": false
+  },
+  "035e40793494": {
+    "en": "From a student’s goal to a booked appointment.",
+    "zh": "从学生的问题出发，走到预约成功。",
+    "keep": false
+  },
+  "61abea57fe36": {
+    "en": "Fully confident at confirmation",
+    "zh": "在确认页明确表示有信心",
+    "keep": false
+  },
+  "063b232b7509": {
+    "en": "Give the booking a clear finish.",
+    "zh": "让学生知道预约已经办妥。",
+    "keep": false
+  },
+  "e676f683b202": {
+    "en": "Goal Selection",
+    "zh": "目标选择",
+    "keep": false
+  },
+  "e9a24c797517": {
+    "en": "Guessed what institutional labels meant",
+    "zh": "靠猜测理解校方术语",
+    "keep": false
+  },
+  "5cc11fe25ebe": {
+    "en": "Hesitated when selecting a service category",
+    "zh": "选择服务类别时犹豫",
+    "keep": false
+  },
+  "d1e758408c79": {
+    "en": "Home Dashboard",
+    "zh": "预约首页",
+    "keep": false
+  },
+  "9b50ae0932bb": {
+    "en": "I led the Success Finalization storyboard and designed the Confirmation focus place. I wanted students to know their booking had gone through, check the details in one place and leave knowing what to expect.",
+    "zh": "我负责 Success Finalization（预约收尾）故事板和 Confirmation（预约确认）任务节点的设计。我希望学生能确认预约成功，在一处核对详情，并在离开前知道接下来会发生什么。",
+    "keep": false
+  },
+  "74f2a3a552de": {
+    "en": "I now design the last screen around what people need to know before they can confidently move on.",
+    "zh": "现在设计最后一屏时，我会先问：用户还需要知道什么，才能放心地继续做下一件事？",
+    "keep": false
+  },
+  "36242eecd1bf": {
+    "en": "Interface solution",
+    "zh": "界面方案",
+    "keep": false
+  },
+  "a0c88470f28b": {
+    "en": "Iteration & reflection",
+    "zh": "迭代与反思",
+    "keep": false
+  },
+  "2ed86a0dfd22": {
+    "en": "Keep saving the appointment an optional action.",
+    "zh": "把保存日程作为可选操作。",
+    "keep": false
+  },
+  "dfce3f2d7d66": {
+    "en": "Later Figma confirmation screen · Select image to enlarge",
+    "zh": "后续 Figma 确认页 · 点击图片放大",
+    "keep": false
+  },
+  "841dfe0196e4": {
+    "en": "Make it clear when an advising appointment is booked.",
+    "zh": "让学生一眼确认预约成功。",
+    "keep": false
+  },
+  "d1ba727773dc": {
+    "en": "Make success and next steps explicit",
+    "zh": "明确告知预约结果与下一步",
+    "keep": false
+  },
+  "a7f7d0cb7b5e": {
+    "en": "Mean SUS score",
+    "zh": "平均 SUS 分数",
+    "keep": false
+  },
+  "b57bf595ec88": {
+    "en": "Mean task time",
+    "zh": "平均任务用时",
+    "keep": false
+  },
+  "eb8881401cd6": {
+    "en": "Mobile exploration of the booking confirmation screen",
+    "zh": "手机端预约确认页的设计探索",
+    "keep": false
+  },
+  "047294c74421": {
+    "en": "Mobile exploration showing stacked advising goal choices",
+    "zh": "手机端探索以纵向列表展示咨询目标",
+    "keep": false
+  },
+  "91c5556be5e4": {
+    "en": "My takeaway",
+    "zh": "我的收获",
+    "keep": false
+  },
+  "543f9dcf2cca": {
+    "en": "Navigate360",
+    "zh": "Navigate360",
+    "keep": true
+  },
+  "d0b22cb9ea63": {
+    "en": "Navigate360 desktop appointment confirmation",
+    "zh": "Navigate360 桌面版预约确认页",
+    "keep": false
+  },
+  "e3666f9f78c5": {
+    "en": "Navigate360 — Yixiao Peng",
+    "zh": "Navigate360 — Yixiao Peng",
+    "keep": true
+  },
+  "5ff68c8fdadf": {
+    "en": "One participant asked this while rereading the confirmation details.",
+    "zh": "有位参与者重读确认信息时，问了这句话。",
+    "keep": false
+  },
+  "ba7aa2e9d7ed": {
+    "en": "Open full image ↗",
+    "zh": "打开原图 ↗",
+    "keep": false
+  },
+  "5299f011f27b": {
+    "en": "Original User Environment Design diagram linking Home Dashboard, Goal Selection, Advisor and Time, and Confirmation",
+    "zh": "原始 UED 图连接首页、目标选择、顾问与时段和预约确认四个任务节点",
+    "keep": false
+  },
+  "4c2d317d4519": {
+    "en": "Original affinity notes on confusing service labels and checking the booking confirmation",
+    "zh": "原始亲和图笔记，记录了服务标签造成的困惑和反复核对预约的行为",
+    "keep": false
+  },
+  "5436e315bfe1": {
+    "en": "Original affinity notes · Clarity and trust",
+    "zh": "原始亲和图笔记 · 术语理解与预约信心",
+    "keep": false
+  },
+  "65c77d1f267b": {
+    "en": "Original confirmation screenshot pending · Observation source: team report",
+    "zh": "原系统确认页截图待补 · 观察记录来自团队报告",
+    "keep": false
+  },
+  "35193fa5aea3": {
+    "en": "Original team UED · Confirmation is the end focus place",
+    "zh": "团队原始 UED · 预约确认是流程最后一个任务节点",
+    "keep": false
+  },
+  "afd7451afc5c": {
+    "en": "Original vision sketch · Yixiao Peng",
+    "zh": "原始愿景草图 · Yixiao Peng",
+    "keep": false
+  },
+  "548271030a70": {
+    "en": "Our four-person Rutgers MBS team redesigned the Navigate360 advising appointment flow for MBS students. I led the confirmation experience, from storyboard to prototype.",
+    "zh": "我们是罗格斯大学 MBS 的四人团队，为 MBS 学生重设计了 Navigate360 学业咨询预约。我负责确认体验，从故事板推进到原型。",
+    "keep": false
+  },
+  "f3c664ee5f14": {
+    "en": "Prototype advisor and time selection filtered to the chosen goal",
+    "zh": "原型按所选目标筛选顾问和可预约时段",
+    "keep": false
+  },
+  "0bafe12ed0d1": {
+    "en": "Prototype goal selection with course planning and graduation progress options",
+    "zh": "原型目标选择页展示课程规划和毕业进度等选项",
+    "keep": false
+  },
+  "3224f66174cc": {
+    "en": "Prototype home with a Book advising action and goal shortcuts",
+    "zh": "原型首页展示咨询预约入口和常用目标快捷操作",
+    "keep": false
+  },
+  "7e6f4cf43deb": {
+    "en": "Prototype testing",
+    "zh": "原型测试",
+    "keep": false
+  },
+  "a5db861ea531": {
+    "en": "Purpose, advisor, time and meeting format are together.",
+    "zh": "把目的、顾问、时间和会面形式放在一起。",
+    "keep": false
+  },
+  "b9f8abd2e570": {
+    "en": "Read the Navigate360 case study",
+    "zh": "阅读 Navigate360 案例",
+    "keep": false
+  },
+  "f8dd0cccbd9e": {
+    "en": "Research & problem discovery",
+    "zh": "研究与问题发现",
+    "keep": false
+  },
+  "3536e690fdd3": {
+    "en": "Research insight",
+    "zh": "研究观察",
+    "keep": false
+  },
+  "d9e88b4fcd14": {
+    "en": "Results are from one five-person course prototype study. The Figma screens above include later explorations.",
+    "zh": "结果来自一次五人课程原型测试。上方的 Figma 画面还包括后续设计探索。",
+    "keep": false
+  },
+  "97daef46ee0d": {
+    "en": "Review the booking and decide whether to add it to a calendar. · Yixiao Peng",
+    "zh": "核对预约详情，并按需添加到日历。· Yixiao Peng",
+    "keep": false
+  },
+  "8ab92cba748e": {
+    "en": "Rutgers MBS · 4 designers",
+    "zh": "罗格斯大学 MBS · 四人团队",
+    "keep": false
+  },
+  "05f50df7909a": {
+    "en": "Rutgers MBS · Contextual Design",
+    "zh": "罗格斯大学 MBS · 情境设计",
+    "keep": false
+  },
+  "921327badd53": {
+    "en": "See advisors and times relevant to the selected goal. · Yuan Feng",
+    "zh": "查看与预约目标相关的顾问和时段。· Yuan Feng",
+    "keep": false
+  },
+  "3f114e10b19b": {
+    "en": "Show that the booking went through and give students the details they need before leaving.",
+    "zh": "明确告知预约已成功，把离开页面前需要核对的信息集中展示。",
+    "keep": false
+  },
+  "716b96f1845a": {
+    "en": "Start with a prominent booking entry and common student goals. · Pranu Sharma",
+    "zh": "突出预约入口与常见学生目标。· Pranu Sharma",
+    "keep": false
+  },
+  "79eb909fd7cb": {
+    "en": "Student-facing goals replace service jargon.",
+    "zh": "用学生熟悉的目标替代校方术语。",
+    "keep": false
+  },
+  "5eb858367b8f": {
+    "en": "Students booked successfully and still double-checked.",
+    "zh": "学生约上了，却还要反复确认。",
+    "keep": false
+  },
+  "b1e9dd659926": {
+    "en": "Students guessed what labels meant",
+    "zh": "学生靠猜测理解标签",
+    "keep": false
+  },
+  "ae977d868bcd": {
+    "en": "Students paused or reread similar options",
+    "zh": "学生在相似选项间停顿或重读",
+    "keep": false
+  },
+  "632f3d5552ed": {
+    "en": "Students verified an already completed booking",
+    "zh": "预约成功后，学生仍要再次核对",
+    "keep": false
+  },
+  "2e747f2d0ec2": {
+    "en": "Success Finalization storyboard · Yixiao Peng",
+    "zh": "预约收尾故事板 · Yixiao Peng",
+    "keep": false
+  },
+  "84031919ffee": {
+    "en": "Success feedback",
+    "zh": "成功反馈",
+    "keep": false
+  },
+  "25b128ae6598": {
+    "en": "System status",
+    "zh": "系统状态",
+    "keep": false
+  },
+  "5985039f106d": {
+    "en": "Team",
+    "zh": "团队",
+    "keep": false
+  },
+  "e03bfe663d8d": {
+    "en": "Team prototype",
+    "zh": "团队原型",
+    "keep": false
+  },
+  "2300e78d45d4": {
+    "en": "Test wording that spells out which notification to expect and when. The later Figma version shows an email message we can bring into that test.",
+    "zh": "测试更明确的通知文案，说明会收到什么、什么时候收到。后续 Figma 画面中的邮件提示可以作为复测起点。",
+    "keep": false
+  },
+  "85c14426bf3b": {
+    "en": "The advisor list is filtered by goal.",
+    "zh": "按目标筛选顾问，再选可预约时段。",
+    "keep": false
+  },
+  "78cc76cd4efc": {
+    "en": "The mobile exploration keeps the same order and stacks the goal choices and booking summary for narrow screens. These Figma screens illustrate the direction.",
+    "zh": "手机端探索沿用同一顺序，将目标选项和预约摘要纵向排列，以适应窄屏。这两张 Figma 界面展示了这个设计方向。",
+    "keep": false
+  },
+  "e96ce85bbdf7": {
+    "en": "The same decisions on a smaller screen.",
+    "zh": "在小屏上保留同样的决策顺序。",
+    "keep": false
+  },
+  "142063773e9b": {
+    "en": "The team kept the redesign to one task. Students start with what they need, see relevant advisors and times, then get a clear confirmation.",
+    "zh": "团队把重设计聚焦在一项任务上。学生先选自己需要的帮助，再查看相关顾问和时段，最后获得清楚的预约确认。",
+    "keep": false
+  },
+  "f5d66da944d3": {
+    "en": "The “Done” indicator shows where the flow ends.",
+    "zh": "用「已完成」标明流程已经走完。",
+    "keep": false
+  },
+  "4c802faecbd5": {
+    "en": "Try a short explanation or contextual tooltip beside overlapping options, then see whether students can distinguish them on the first try.",
+    "zh": "在容易混淆的选项旁加一行说明或情境提示，再看学生能否第一次就分清它们。",
+    "keep": false
+  },
+  "c2c8e6c9228e": {
+    "en": "Use goals students recognize, such as “Plan my courses.”",
+    "zh": "用学生熟悉的目标来命名，例如「规划选课」。",
+    "keep": false
+  },
+  "833b2eaeaf66": {
+    "en": "Use the selected goal to narrow the advisor and time options.",
+    "zh": "根据已选目标缩小顾问和时段的选择范围。",
+    "keep": false
+  },
+  "84192c79ff0f": {
+    "en": "View the Navigate360 case study",
+    "zh": "查看 Navigate360 案例",
+    "keep": false
+  },
+  "f52c66a2aa6b": {
+    "en": "We used User Environment Design to map each decision to a screen. Goal Selection would translate a student’s need into a service category. Confirmation would give them what they needed to finish.",
+    "zh": "我们用 User Environment Design（UED）把每项决策放到对应界面。目标选择页负责把学生需求对应到服务类别，确认页负责交代预约结果和后续安排。",
+    "keep": false
+  },
+  "c27fe5726f47": {
+    "en": "What Happens Next",
+    "zh": "接下来会怎样",
+    "keep": false
+  },
+  "119f518a30cb": {
+    "en": "What I would test next.",
+    "zh": "下一轮我会验证什么？",
+    "keep": false
+  },
+  "0fa49159740f": {
+    "en": "What each screen needed to do.",
+    "zh": "每一屏该解决什么？",
+    "keep": false
+  },
+  "8e87e7235dfa": {
+    "en": "What the prototype test showed",
+    "zh": "原型测试结果",
+    "keep": false
+  },
+  "be40f6678fda": {
+    "en": "Yixiao Peng’s Success Finalization storyboard showing a student reviewing the appointment summary and adding it to a calendar",
+    "zh": "Yixiao Peng 的预约收尾故事板，画出学生核对预约摘要并添加到日历的过程",
+    "keep": false
+  },
+  "d9cb62a4638f": {
+    "en": "Yixiao Peng’s original hand-drawn booking confirmation sketch",
+    "zh": "Yixiao Peng 的预约确认页原始手绘草图",
+    "keep": false
+  },
+  "925a821dec85": {
+    "en": "participant asked about an email or calendar invitation",
+    "zh": "位参与者询问是否会收到邮件或日历邀请",
+    "keep": false
+  },
+  "7edc52e4cfc2": {
+    "en": "participants hesitated between similar goals",
+    "zh": "位参与者在相似目标之间犹豫",
+    "keep": false
+  },
+  "a67b0edf4e2b": {
+    "en": "“Is that it? Am I done?”",
+    "zh": "「这样就结束了吗？我约好了吗？」",
+    "keep": false
+  },
+  "3640a0dc681d": {
+    "en": "← All work",
+    "zh": "← 返回作品列表",
+    "keep": false
   }
 }

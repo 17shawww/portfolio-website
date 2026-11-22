@@ -84,3 +84,11 @@
 !/assets/lexflow/web/recommendation.png
 !/assets/lexflow/web/clue.png
 !/assets/lexflow/web/evidence.png
+
+# Navigate360 case study and selected source exports.
+!/navigate360.html
+!/navigate360.css
+!/navigate360.js
+!/assets/navigate360/
+/assets/navigate360/*
+!/assets/navigate360/*.jpg

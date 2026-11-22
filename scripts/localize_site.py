@@ -5,7 +5,7 @@ from pathlib import Path
 import json, re
 ROOT=Path(__file__).resolve().parents[1]
 ORIGIN='https://yixiao-peng-portfolio.vercel.app'
-PAGES=['index.html','work.html','about.html','wuhan-marine-machinery.html','lexflow.html']
+PAGES=['index.html','work.html','about.html','wuhan-marine-machinery.html','lexflow.html','navigate360.html']
 CATALOG=json.loads((ROOT/'locales/catalog.json').read_text())
 TRANSLATIONS={v['en']:v['zh'] for v in CATALOG.values()}
 def normalize(s):return re.sub(r'\s+',' ',s).strip()

@@ -109,3 +109,8 @@ The website uses five isolated PNG exports from the editable [LexFlow Figma file
 | `assets/lexflow/web/evidence.png` | [Original Evidence / Transition agreement](https://www.figma.com/design/Vm6nqNKn5vQAlvqUbWG39i/p4?node-id=2321-2552) |
 
 The website layout adapts the [web asset boards](https://www.figma.com/design/Vm6nqNKn5vQAlvqUbWG39i/p4?node-id=2518-906) into responsive HTML text, source images and captions. Research is paraphrased from the original boards and the case-study research synthesis. The consultation flow follows `2213:861`, the simulation sequence follows `2402:678`, and prototype feedback is summarized from `185:536` and `217:75`. The case-study route contains no research participant photographs.
+
+
+## Navigate360
+
+The case covers the Rutgers MBS Contextual Design team’s advising booking prototype. The four desktop and two mobile interface images were exported from Figma. The research affinity notes, Success Finalization storyboard, User Environment Design diagram and confirmation sketch are excerpts from the team’s Week 13 submission. The confirmation detail is a crop of the desktop export. All source documents stay in the local records.

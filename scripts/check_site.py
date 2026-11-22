@@ -62,6 +62,8 @@ expected.update('assets/about/'+name for name in (
     'climb.webp', 'detail.webp', 'guitar.webp', 'sim.webp', 'snow.webp', 'cat.webp', 'steam-cs2.webp', 'steam-apex.webp', 'steam-wukong.webp', 'steam-elden-ring.webp',
 ))
 expected.update(name for page in PAGES for name in (page, 'zh/'+page))
+expected.update({'navigate360.css', 'navigate360.js'})
+expected.update('assets/navigate360/' + name + '.jpg' for name in ('home', 'goal', 'advisor', 'confirm', 'mobile-goal', 'mobile-confirm', 'confirmation-sketch', 'research-affinity', 'success-storyboard', 'ued', 'confirmation-detail'))
 expected.update({'lexflow.css','lexflow-case.css','lexflow-editorial.css','lexflow-case.js'})
 expected.update('assets/lexflow/web/'+name+'.png' for name in ('home', 'intake', 'recommendation', 'clue', 'evidence'))
 expected.update({'localization.css','i18n.js','i18n-data.js','coming-soon.js'})

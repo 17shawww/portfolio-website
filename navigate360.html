@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en" id="top">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#faf9f6">
+<meta name="description" content="A Rutgers MBS team redesigned the Navigate360 advising flow. Yixiao Peng led the booking confirmation experience.">
+<title>Navigate360 — Yixiao Peng</title>
+<link rel="canonical" href="https://yixiao-peng-portfolio.vercel.app/navigate360.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yixiao Peng">
+<meta property="og:title" content="Navigate360 — Yixiao Peng">
+<meta property="og:description" content="A Rutgers MBS team redesigned the Navigate360 advising flow. Yixiao Peng led the booking confirmation experience.">
+<meta property="og:url" content="https://yixiao-peng-portfolio.vercel.app/navigate360.html">
+<meta property="og:image" content="https://yixiao-peng-portfolio.vercel.app/assets/navigate360/confirm.jpg">
+<meta property="og:image:alt" content="Navigate360 desktop appointment confirmation">
+<link rel="icon" href="assets/portfolio/yp-monogram.png">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="navigate360.css">
+<script src="site.js" defer></script>
+<script src="navigate360.js" defer></script>
+</head>
+<body class="nv-page">
+<a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="wrap header-inner"><a class="brand" href="index.html" aria-label="Yixiao Peng — Home"><img class="logo" src="assets/portfolio/yp-monogram.png" width="64" height="54" alt="YP monogram"><span>YIXIAO PENG</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu</button><nav class="nav" id="primary-navigation" aria-label="Main navigation"><a href="index.html">Home</a><a href="work.html">Work</a><a href="about.html">About</a></nav></div></header>
+<main id="main">
+  <header class="nv-hero">
+    <div class="wrap">
+      <div class="nv-lead">
+        <div>
+          <p class="nv-kicker">Rutgers MBS · Contextual Design</p>
+          <h1>Navigate360</h1>
+        </div>
+        <div class="nv-lead-copy">
+          <p class="nv-deck">Make it clear when an advising appointment is booked.</p>
+          <p>Our four-person Rutgers MBS team redesigned the Navigate360 advising appointment flow for MBS students. I led the confirmation experience, from storyboard to prototype.</p>
+        </div>
+      </div>
+      <div class="nv-cover">
+        <a class="nv-cover-desktop" data-nv-image href="assets/navigate360/confirm.jpg"><img src="assets/navigate360/confirm.jpg" width="1690" height="1235" alt="Navigate360 desktop appointment confirmation" fetchpriority="high"></a>
+        <a class="nv-cover-mobile" data-nv-image href="assets/navigate360/mobile-confirm.jpg"><img src="assets/navigate360/mobile-confirm.jpg" width="588" height="1100" alt="Mobile exploration of the booking confirmation screen"></a>
+      </div>
+      <p class="nv-cover-caption">Desktop prototype and mobile design exploration from Figma</p>
+      <dl class="nv-facts">
+        <div><dt>My role</dt><dd>Confirmation lead · UX researcher</dd></div>
+        <div><dt>Team</dt><dd>Rutgers MBS · 4 designers</dd></div>
+        <div><dt>Delivery</dt><dd>Four-screen booking prototype</dd></div>
+      </dl>
+      <nav class="nv-index" aria-label="Case study chapters">
+        <a href="#research">Research</a><a href="#process">Process</a><a href="#confirmation">Confirmation design</a><a href="#flow">Booking flow</a><a href="#testing">Prototype testing</a><a href="#iteration">Reflection</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="nv-section wrap" id="research" aria-labelledby="nv-research">
+    <div class="nv-heading">
+      <p class="nv-kicker">Research &amp; problem discovery</p>
+      <h2 id="nv-research">Students booked successfully and still double-checked.</h2>
+      <p>After a pilot, we observed six Rutgers MBS students booking an advising appointment in the existing system, then asked them about the moments they hesitated or checked again. All six completed the task.</p>
+    </div>
+    <div class="nv-research-spread">
+      <div class="nv-findings">
+        <article>
+          <strong>5<span>/6</span></strong>
+          <div><div class="nv-sample" aria-hidden="true" style="--observed:5"></div><h3>Guessed what institutional labels meant</h3>
+          <p>Use goals students recognize, such as “Plan my courses.”</p></div>
+        </article>
+        <article>
+          <strong>4<span>/6</span></strong>
+          <div><div class="nv-sample" aria-hidden="true" style="--observed:4"></div><h3>Hesitated when selecting a service category</h3>
+          <p>Use the selected goal to narrow the advisor and time options.</p></div>
+        </article>
+        <article>
+          <strong>3<span>/6</span></strong>
+          <div><div class="nv-sample" aria-hidden="true" style="--observed:3"></div><h3>Checked again after booking</h3>
+          <p>Show that the booking went through and give students the details they need before leaving.</p></div>
+        </article>
+      </div>
+      <figure class="nv-research-art">
+        <a data-nv-image href="assets/navigate360/research-affinity.jpg"><img src="assets/navigate360/research-affinity.jpg" width="1130" height="1450" alt="Original affinity notes on confusing service labels and checking the booking confirmation" loading="lazy"></a>
+        <figcaption>Original affinity notes · Clarity and trust</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="nv-section nv-process" id="process" aria-labelledby="nv-process">
+    <div class="wrap">
+      <div class="nv-heading">
+        <p class="nv-kicker">Design process</p>
+        <h2 id="nv-process">What each screen needed to do.</h2>
+        <p>We used User Environment Design to map each decision to a screen. Goal Selection would translate a student’s need into a service category. Confirmation would give them what they needed to finish.</p>
+      </div>
+      <div class="nv-decision-map">
+        <div class="nv-map-head" aria-hidden="true"><span>Research insight</span><span>Design decision</span><span>Interface solution</span></div>
+        <ol>
+          <li><span>Students guessed what labels meant</span><span>Ask what they need in their own words</span><span><strong>Goal Selection</strong>Student-facing goals replace service jargon.</span></li>
+          <li><span>Students paused or reread similar options</span><span>Carry their goal into the next decision</span><span><strong>Advisor &amp; Time Selection</strong>The advisor list is filtered by goal.</span></li>
+          <li><span>Students verified an already completed booking</span><span>Make success and next steps explicit</span><span><strong><a href="#confirmation">Confirmation</a></strong>A clear status, a summary and an optional calendar action.</span></li>
+        </ol>
+      </div>
+      <figure class="nv-ued">
+        <a data-nv-image href="assets/navigate360/ued.jpg"><img src="assets/navigate360/ued.jpg" width="1400" height="710" alt="Original User Environment Design diagram linking Home Dashboard, Goal Selection, Advisor and Time, and Confirmation" loading="lazy"></a>
+        <figcaption>Original team UED · Confirmation is the end focus place</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="nv-section nv-sage" id="confirmation" aria-labelledby="nv-confirmation">
+    <div class="wrap">
+      <div class="nv-heading">
+        <p class="nv-kicker">My contribution</p>
+        <h2 id="nv-confirmation">Give the booking a clear finish.</h2>
+        <p>I led the Success Finalization storyboard and designed the Confirmation focus place. I wanted students to know their booking had gone through, check the details in one place and leave knowing what to expect.</p>
+      </div>
+      <div class="nv-pair">
+        <figure><a data-nv-image href="assets/navigate360/success-storyboard.jpg"><img src="assets/navigate360/success-storyboard.jpg" width="1408" height="774" alt="Yixiao Peng’s Success Finalization storyboard showing a student reviewing the appointment summary and adding it to a calendar" loading="lazy"></a><figcaption>Success Finalization storyboard · Yixiao Peng</figcaption></figure>
+        <figure><a data-nv-image href="assets/navigate360/confirmation-sketch.jpg"><img src="assets/navigate360/confirmation-sketch.jpg" width="1240" height="868" alt="Yixiao Peng’s original hand-drawn booking confirmation sketch" loading="lazy"></a><figcaption>Original vision sketch · Yixiao Peng</figcaption></figure>
+      </div>
+
+      <div class="nv-compare">
+        <div class="nv-before">
+          <p class="nv-kicker">Before · Existing flow</p>
+          <h3>“Is that it? Am I done?”</h3>
+          <p>One participant asked this while rereading the confirmation details.</p>
+          <p class="nv-missing">Original confirmation screenshot pending · Observation source: team report</p>
+        </div>
+        <figure class="nv-annotated">
+          <p class="nv-kicker">After · Figma prototype detail</p>
+          <a data-nv-image href="assets/navigate360/confirmation-detail.jpg"><img src="assets/navigate360/confirmation-detail.jpg" width="1340" height="909" alt="Confirmation detail with a success heading, Done status, appointment summary, next steps and Add to Calendar" loading="lazy">
+            <span class="nv-pin" style="--x:56%;--y:19%" aria-hidden="true">1</span>
+            <span class="nv-pin" style="--x:92%;--y:10%" aria-hidden="true">2</span>
+            <span class="nv-pin" style="--x:36%;--y:48%" aria-hidden="true">3</span>
+            <span class="nv-pin" style="--x:37%;--y:79%" aria-hidden="true">4</span>
+            <span class="nv-pin" style="--x:63%;--y:85%" aria-hidden="true">5</span>
+          </a>
+          <figcaption>Later Figma confirmation screen · Select image to enlarge</figcaption>
+        </figure>
+      </div>
+      <ol class="nv-callouts">
+        <li><h3>Success feedback</h3><p>A checkmark and “Appointment confirmed” give the result first.</p></li>
+        <li><h3>System status</h3><p>The “Done” indicator shows where the flow ends.</p></li>
+        <li><h3>Appointment summary</h3><p>Purpose, advisor, time and meeting format are together.</p></li>
+        <li><h3>What Happens Next</h3><p>Explain what to expect and where to change the booking.</p></li>
+        <li><h3>Add to Calendar</h3><p>Keep saving the appointment an optional action.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="nv-section nv-flow" id="flow" aria-labelledby="nv-flow">
+    <div class="wrap">
+      <div class="nv-heading">
+        <p class="nv-kicker">Team prototype</p>
+        <h2 id="nv-flow">From a student’s goal to a booked appointment.</h2>
+        <p>The team kept the redesign to one task. Students start with what they need, see relevant advisors and times, then get a clear confirmation.</p>
+      </div>
+      <div class="nv-journey">
+        <div class="nv-steps" role="group" aria-label="Booking flow steps" hidden>
+          <button type="button" data-nv-step="start"><span>01</span> <span>Home Dashboard</span></button>
+          <button type="button" data-nv-step="goal"><span>02</span> <span>Goal Selection</span></button>
+          <button type="button" data-nv-step="match"><span>03</span> <span>Advisor &amp; Time Selection</span></button>
+          <button type="button" data-nv-step="done"><span>04</span> <span>Confirmation</span></button>
+        </div>
+        <figure id="nv-step-start"><a data-nv-image href="assets/navigate360/home.jpg"><img src="assets/navigate360/home.jpg" width="1690" height="1235" alt="Prototype home with a Book advising action and goal shortcuts" loading="lazy"></a><figcaption>Start with a prominent booking entry and common student goals. · Pranu Sharma</figcaption></figure>
+        <figure id="nv-step-goal"><a data-nv-image href="assets/navigate360/goal.jpg"><img src="assets/navigate360/goal.jpg" width="1690" height="1365" alt="Prototype goal selection with course planning and graduation progress options" loading="lazy"></a><figcaption>Choose a goal written in the student’s own language. · Shounak Singh</figcaption></figure>
+        <figure id="nv-step-match"><a data-nv-image href="assets/navigate360/advisor.jpg"><img src="assets/navigate360/advisor.jpg" width="1690" height="1258" alt="Prototype advisor and time selection filtered to the chosen goal" loading="lazy"></a><figcaption>See advisors and times relevant to the selected goal. · Yuan Feng</figcaption></figure>
+        <figure id="nv-step-done"><a data-nv-image href="assets/navigate360/confirm.jpg"><img src="assets/navigate360/confirm.jpg" width="1690" height="1235" alt="Navigate360 desktop appointment confirmation" loading="lazy"></a><figcaption>Review the booking and decide whether to add it to a calendar. · Yixiao Peng</figcaption></figure>
+      </div>
+      <div class="nv-mobile-study">
+        <div><h3>The same decisions on a smaller screen.</h3><p>The mobile exploration keeps the same order and stacks the goal choices and booking summary for narrow screens. These Figma screens illustrate the direction.</p></div>
+        <div class="nv-phones">
+          <a data-nv-image href="assets/navigate360/mobile-goal.jpg"><img src="assets/navigate360/mobile-goal.jpg" width="588" height="1100" alt="Mobile exploration showing stacked advising goal choices" loading="lazy"></a>
+          <a data-nv-image href="assets/navigate360/mobile-confirm.jpg"><img src="assets/navigate360/mobile-confirm.jpg" width="588" height="1100" alt="Mobile exploration of the booking confirmation screen" loading="lazy"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="nv-section wrap" id="testing" aria-labelledby="nv-testing">
+    <div class="nv-heading">
+      <p class="nv-kicker">What the prototype test showed</p>
+      <h2 id="nv-testing">Everyone finished. Most felt sure they were done.</h2>
+      <p>Five Rutgers MBS students booked a course-registration advising appointment in a moderated think-aloud test. Three also took part in the earlier research.</p>
+    </div>
+    <dl class="nv-metrics">
+      <div><dt>5/5</dt><dd>Completed the task</dd></div>
+      <div><dt>77.5</dt><dd>Mean SUS score</dd></div>
+      <div><dt>2:14</dt><dd>Mean task time</dd></div>
+      <div><dt>4/5</dt><dd>Fully confident at confirmation</dd></div>
+    </dl>
+    <div class="nv-test-readout">
+      <p>All six participants in the original study also completed the task. In the prototype test, students hesitated less, and all five moved through advisor and time selection without backtracking.</p>
+      <p class="nv-scope">Results are from one five-person course prototype study. The Figma screens above include later explorations.</p>
+    </div>
+  </section>
+
+  <section class="nv-section nv-reflection" id="iteration" aria-labelledby="nv-iteration">
+    <div class="wrap">
+      <div class="nv-heading">
+        <p class="nv-kicker">Iteration &amp; reflection</p>
+        <h2 id="nv-iteration">What I would test next.</h2>
+      </div>
+      <dl class="nv-next">
+        <div><dt><span>2</span>participants hesitated between similar goals</dt><dd>Try a short explanation or contextual tooltip beside overlapping options, then see whether students can distinguish them on the first try.</dd></div>
+        <div><dt><span>1</span>participant asked about an email or calendar invitation</dt><dd>Test wording that spells out which notification to expect and when. The later Figma version shows an email message we can bring into that test.</dd></div>
+      </dl>
+      <div class="nv-takeaway">
+        <p class="nv-kicker">My takeaway</p>
+        <p>A task can be technically complete while still feeling incomplete to the user.</p>
+        <p>I now design the last screen around what people need to know before they can confidently move on.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="nv-footer"><div class="wrap"><a href="work.html#navigate360-project">← All work</a><a href="#top">Back to top ↑</a></div></footer>
+<dialog class="nv-dialog" aria-label="Expanded design image">
+  <div><a data-nv-full href="assets/navigate360/confirm.jpg" target="_blank" rel="noopener">Open full image ↗</a><form method="dialog"><button type="submit">Close image</button></form></div>
+  <img src="assets/navigate360/confirm.jpg" alt="" aria-hidden="true">
+</dialog>
+</body>
+</html>

@@ -31,11 +31,14 @@ assets += ["assets/wmmp/" + name for name in (
 )]
 assets += ["assets/wmmp/demo/" + name for name in case_demo]
 assets += ["assets/about/" + name for name in ("about.css", "portrait.webp", "portrait-small.webp", "model.webp", "footwear-sketch.webp", "sensory-garden-sketch.webp", "climb.webp", "detail.webp", "guitar.webp", "sim.webp", "snow.webp", "cat.webp", "steam-cs2.webp", "steam-apex.webp", "steam-wukong.webp", "steam-elden-ring.webp")]
+assets += ['navigate360.css', 'navigate360.js']
+assets += ['assets/navigate360/' + name + '.jpg' for name in ('home', 'goal', 'advisor', 'confirm', 'mobile-goal', 'mobile-confirm', 'confirmation-sketch', 'research-affinity', 'success-storyboard', 'ued', 'confirmation-detail')]
+
 for name in pages + assets:
     if not (root / name).is_file():
         raise FileNotFoundError(name)
 versions = {name: hashlib.sha256((root / name).read_bytes()).hexdigest()[:12]
-            for name in ["styles.css", "site.js", "wmmp-case.css", "wmmp-case.js", "signature-motion.css", "signature-motion.js", "project-transitions.css", "project-transitions.js", "immersive-case.css", "immersive-case.js", "localization.css", "i18n.js", "coming-soon.js", "ink-character.css", "ink-character.js", "assets/wmmp/editorial.css", "assets/about/about.css", "lexflow.css", "lexflow-case.css", "lexflow-editorial.css", "lexflow-case.js"]}
+            for name in ["styles.css", "site.js", "wmmp-case.css", "wmmp-case.js", "signature-motion.css", "signature-motion.js", "project-transitions.css", "project-transitions.js", "immersive-case.css", "immersive-case.js", "localization.css", "i18n.js", "coming-soon.js", "ink-character.css", "ink-character.js", "assets/wmmp/editorial.css", "assets/about/about.css", "lexflow.css", "lexflow-case.css", "lexflow-editorial.css", "lexflow-case.js", "navigate360.css", "navigate360.js"]}
 # Rebuild generated output so an older case study/image cannot survive locally
 # or in a restored build cache. Source files outside dist are never removed.
 if out.is_symlink():
